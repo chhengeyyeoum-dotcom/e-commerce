@@ -45,7 +45,7 @@
     align-items: center;
     justify-content: center;
     gap: 0.85rem;
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
 }
 
 
@@ -62,7 +62,7 @@
 .footer .btn-primary:focus-visible {
     background-color: #565449;
     border-color: #565449;
-    color: #fff;
+    color: #fffbf4;
 }
 
 /* make email inputs look like an outline field instead of a solid fill */
@@ -74,7 +74,7 @@
     border-radius: 0;
 }
 
-.footer input[type="email"].form-control::placeholder {
+.footer input[type="*email"].form-control::placeholder {
     font-size: smaller;
     color: #11120d;
     opacity: 1;
@@ -83,16 +83,6 @@
 .footer .footer-form {
     gap: 0.5rem;
     align-items: stretch;
-}
-
-.footer .footer-form .form-control[type="email"] {
-    flex: 1 1 16rem;
-    min-width: 0;
-}
-
-.footer .footer-form .btn-primary {
-    flex: 0 0 auto;
-    white-space: nowrap;
 }
 
 @media (max-width: 575.98px) {

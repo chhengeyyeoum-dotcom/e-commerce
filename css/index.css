@@ -452,9 +452,9 @@ a {
 }
 
 .toast-success {
-	background-color: #10b981;
-	color: white;
-	border-left: 4px solid #059669;
+	background-color: #c8b273;
+	color: #fffbf4;
+	border-left: 4px solid #ffbb00;
 }
 
 .toast.show {
