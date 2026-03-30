@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Lumen Moe | Product Detail</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+	
+	<!-- styles-->
+	<link rel="stylesheet" href="./css/productDetail.css">
+	<link rel="stylesheet" href="./css/footer.css">
+</head>
+<body>
+	<header>
+
+		<!--Navbar Section-->
+		<nav class="navbar navbar-expand-md py-3" id="mainNavbar" aria-label="Primary navigation">
+			<div class="container position-relative">
+				<button class="navbar-toggler border-0 p-0 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#primaryNav" aria-controls="primaryNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<ul class="navbar-nav d-none d-md-flex gap-4 align-items-center nav-left">
+					<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+					<li class="nav-item"><a class="nav-link" href="#our-story">Story</a></li>
+				</ul>
+				
+				<!--Logo-->
+				<a class="navbar-brand logo mx-auto" href="#" aria-label="Lumen Moe home">Lumen Moe</a>
+				
+				<!--Menu Icons-->
+				<div class="d-none d-md-flex gap-3 nav-icons nav-right" aria-label="Quick actions">
+					<a href="cart.html" class="icon-link" aria-label="Cart">
+						<i class="bi bi-bag"></i>
+					</a>
+					<a href="#" class="icon-link" aria-label="Profile">
+						<i class="bi bi-person"></i>
+					</a>
+				</div>
+
+				<a href="cart.html" class="icon-link d-md-none mobile-cart" aria-label="Cart">
+					<i class="bi bi-bag"></i>
+				</a>
+
+				<div class="collapse navbar-collapse mt-3 d-md-none" id="primaryNav">
+					<ul class="navbar-nav d-md-none gap-1 mobile-menu-list">
+						<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+						<li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+						<li class="nav-item"><a class="nav-link" href="#our-story">Story</a></li>
+						<li class="nav-item"><a class="nav-link" href="#" aria-label="Profile"><i class="bi bi-person me-2"></i>Profile</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+		<section class="product-detail py-4 py-md-5">
+			<div class="container">
+				<div class="row g-4 g-lg-5 align-items-start" id="productDetail">
+					<div class="col-12 col-lg-6">
+						<div class="gallery-wrapper">
+							<div class="thumbnail-gallery" id="thumbnailGallery" role="list" aria-label="Product image thumbnails"></div>
+							<div class="gallery-main-wrap">
+								<img id="mainProductImage" src="" alt="Product image" class="img-fluid main-product-image">
+							</div>
+						</div>
+					</div>
+
+					<div class="col-12 col-lg-6">
+						<div class="product-panel">
+							<p class="product-kicker mb-2" id="productCategory">Collection</p>
+							<h1 class="product-name mb-2" id="productName">Loading product...</h1>
+							<p class="product-price mb-3" id="productPrice">$0</p>
+							<p class="product-description mb-4" id="productDescription"></p>
+
+							<div class="quantity-wrap mb-3" aria-label="Select quantity" id="quantityWrap">
+								<span class="quantity-label">Quantity</span>
+								<div class="qty-control" role="group" aria-label="Quantity selector">
+									<button type="button" class="qty-btn" id="decreaseQty" aria-label="Decrease quantity">-</button>
+									<input type="text" id="quantityInput" value="1" inputmode="numeric" readonly aria-live="polite" aria-label="Selected quantity">
+									<button type="button" class="qty-btn" id="increaseQty" aria-label="Increase quantity">+</button>
+								</div>
+							</div>
+
+							<button type="button" class="add-cart-btn" id="addToCartBtn">Add to Cart</button>
+							<p class="cart-status mb-0 mt-3" id="cartStatus" aria-live="polite"></p>
+
+							<div class="product-accordion mt-4" role="region" aria-label="Product information">
+								<div class="accordion-item">
+									<button type="button" class="accordion-header" id="descriptionHeader" aria-expanded="false" aria-controls="descriptionContent">
+										<span>Description</span>
+										<i class="bi bi-plus"></i>
+									</button>
+									<div id="descriptionContent" class="accordion-content" role="region" aria-labelledby="descriptionHeader">
+										<p id="productDescriptionAccordion"></p>
+									</div>
+								</div>
+
+								<div class="accordion-item">
+									<button type="button" class="accordion-header" id="notesHeader" aria-expanded="false" aria-controls="notesContent">
+										<span>Tasting Notes</span>
+										<i class="bi bi-plus"></i>
+									</button>
+									<div id="notesContent" class="accordion-content" role="region" aria-labelledby="notesHeader">
+										<p id="productTastingNotes"></p>
+									</div>
+								</div>
+
+								<div class="accordion-item">
+									<button type="button" class="accordion-header" id="howHeader" aria-expanded="false" aria-controls="howContent">
+										<span>How Does It Work</span>
+										<i class="bi bi-plus"></i>
+									</button>
+									<div id="howContent" class="accordion-content" role="region" aria-labelledby="howHeader">
+										<p id="productHowItWorks"></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="related-products py-4 py-md-5" aria-labelledby="relatedProductsTitle">
+			<div class="container">
+				<div class="section-head text-start mb-4">
+					<p class="section-kicker mb-2">Curated For You</p>
+					<h2 class="section-title mb-0" id="relatedProductsTitle">You Might Like</h2>
+				</div>
+
+				<div class="row g-3 g-md-4" id="relatedProductsGrid" aria-live="polite"></div>
+			</div>
+		</section>
+	</main>
+
+	<!--FOOTER-->
+	<footer class="footer">
+		<div class="container">
+			<!-- First row: 3 columns -->
+			<div class="row gy-4 text-center text-md-center">
+				<div class="col-12 col-md-4 mt-5">
+					<h5 class="footer-title font-weight-bold">About Store</h5>
+					<p class="footer-text-center">Your one-stop shop for tech gear, delivered fast and backed by support.</p>
+					<div class="footer-payments mt-3">
+						<span class="footer-payment-label">We accept:</span>
+						<div class="footer-payment-icons mt-2">
+							<i class="fab fa-cc-visa" aria-hidden="true" title="Visa"></i>
+							<i class="fab fa-cc-mastercard" aria-hidden="true" title="Mastercard"></i>
+							<i class="fab fa-cc-amex" aria-hidden="true" title="Amex"></i>
+							<i class="fab fa-cc-paypal" aria-hidden="true" title="PayPal"></i>
+						</div>
+					</div>
+				</div>
+
+				<!-- FAQs Column -->
+				<div class="col-12 col-md-4 mt-5">
+					<h5 class="footer-title font-weight-bold">FAQs</h5>
+					<ul class="footer-links list-unstyled">
+						<li class="mb-2">
+							<button class="footer-faq-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#faqShipping" aria-expanded="false" aria-controls="faqShipping">
+								Shipping
+							</button>
+							<div id="faqShipping" class="collapse footer-faq-answer">
+								<b>Standard delivery takes 1-3 business days depending on your location.</b>
+							</div>
+						</li>
+						<li class="mb-2">
+							<button class="footer-faq-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#faqReturns" aria-expanded="false" aria-controls="faqReturns">
+								Returns
+							</button>
+							<div id="faqReturns" class="collapse footer-faq-answer">
+								<b>You can return items within 14 days in original condition with proof of purchase.</b>
+							</div>
+						</li>
+						<li class="mb-2">
+							<button class="footer-faq-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#faqWarranty" aria-expanded="false" aria-controls="faqWarranty">
+								How should I burn and care for the candle?
+							</button>
+							<div id="faqWarranty" class="collapse footer-faq-answer">
+								<b>Trim wick before each burn and allow the wax to melt evenly across the surface. Burn for 2-3 hours at a time and never leave unattended. Discontinue use when 1 cm of wax remains.</b>
+							</div>
+						</li>
+						<li class="mb-2">
+							<button class="footer-faq-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#faqSupport" aria-expanded="false" aria-controls="faqSupport">
+								Contact Support
+							</button>
+							<div id="faqSupport" class="collapse footer-faq-answer">
+								<b>Contact us via <a href="https://t.me/lumenmoe_cs"><u>Telegram</u></a> for quick assistance.</b>
+							</div>
+						</li>
+					</ul>
+				</div>
+
+				<!-- Hours Column -->
+				<div class="col-12 col-md-4 mt-5">
+					<h5 class="footer-title font-weight-bold">Hours</h5>
+					<ul class="footer-hours list-unstyled">
+						<li>Mon-Fri: 9am - 6pm</li>
+						<li>Sat: 10am - 4pm</li>
+						<li>Sun: Closed</li>
+						<li class="mt-2">Holiday hours vary.</li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- Second row: newsletter -->
+			<div class="row justify-content-center mt-5">
+				<div class="col-12 col-md-6">
+					<h5 class="footer-title text-center font-weight-bold">Newsletter</h5>
+					<p class="text-center">Subscribe to our newsletter for the latest updates and offers ^_^</p>
+					<form class="footer-form d-flex flex-column flex-sm-row justify-content-center" action="#" method="post">
+						<label class="sr-only" for="footer-email"></label>
+						<input id="footer-email" type="email" class="form-control mb-2 mb-sm-0 mr-sm-2" placeholder="Enter your email" required>
+						<button type="submit" class="btn btn-primary">Subscribe</button>
+					</form>
+				</div>
+			</div>
+
+			<!-- Third row: social -->
+			<div class="row justify-content-center mt-4">
+				<div class="col-auto">
+					<div class="footer-social">
+						<a href="https://www.instagram.com/lumenmoe/" aria-label="Instagram" class="footer-social-link"><i class="fab fa-instagram"></i></a>
+						<a href="https://www.facebook.com/LumenMoe/" aria-label="Facebook" class="footer-social-link"><i class="fab fa-facebook-f"></i></a>
+						<a href="https://www.pinterest.com/lumenmoe/" aria-label="Pinterest" class="footer-social-link"><i class="fab fa-pinterest"></i></a>
+						<a href="https://www.tiktok.com/@lumenmoe" aria-label="TikTok" class="footer-social-link"><i class="fab fa-tiktok"></i></a>
+						<a href="https://www.youtube.com/@lumenmoe" aria-label="YouTube" class="footer-social-link"><i class="fab fa-youtube"></i></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer-bottom text-center mt-4 pt-3 border-top border-secondary">
+				<small class="text-muted">&copy; <span id="currentYear"></span> <a href="index.html" class="text-decoration-none">Lumen Moe</a>. All rights reserved.</small>
+			</div>
+		</div>
+	</footer>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+	<script src="./js/navbar.js" defer></script>
+	<script src="./js/products.js" defer></script>
+	<script src="./js/productDetail.js" defer></script>
+</body>
+</html>
