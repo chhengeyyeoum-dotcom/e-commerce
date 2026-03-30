@@ -23,12 +23,12 @@
 			price: 38,
 			category: "Candle Jar",
 			badge: "",
-			image: "https://images.unsplash.com/photo-1612198790700-0ff08cb726e5?auto=format&fit=crop&w=800&h=1000&q=80",
+			image: "../img/pexels-flavia-hitomi-3334329-6421207.jpg",
 			images: [
-				"https://images.unsplash.com/photo-1612198790700-0ff08cb726e5?auto=format&fit=crop&w=800&h=1000&q=80",
-				"https://images.unsplash.com/photo-1608181831718-c9ffd2f77e47?auto=format&fit=crop&w=800&h=1000&q=80",
-				"https://images.unsplash.com/photo-1605041941277-4c26f8d2f78a?auto=format&fit=crop&w=800&h=1000&q=80",
-				"https://images.unsplash.com/photo-1543198126-a8ad8e47fb22?auto=format&fit=crop&w=800&h=1000&q=80"
+				"../img/pexels-flavia-hitomi-3334329-6421207.jpg",
+				"../img/pexels-liogooo-13898254.jpg",
+				"../img/pexels-gstudio-16212410.jpg",
+				"../img/pexels-alleksana-7670761.jpg"
 			],
 			description: "Fresh fig leaf and creamy woods create a clean, modern profile made for daytime rituals and airy interiors."
 		},
@@ -53,12 +53,12 @@
 			price: 44,
 			category: "Candle Jar",
 			badge: "",
-			image: "https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=800&h=1000&q=80",
+			image: "../img/pexels-rdne-8903690.jpg",
 			images: [
-				"https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=800&h=1000&q=80",
-				"https://images.unsplash.com/photo-1583947582886-f40ec95dd752?auto=format&fit=crop&w=800&h=1000&q=80",
-				"https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=800&h=1000&q=80",
-				"https://images.unsplash.com/photo-1619983081563-430f63602796?auto=format&fit=crop&w=800&h=1000&q=80"
+				"../img/pexels-rdne-8903690.jpg",
+				"../img/pexels-pavel-danilyuk-7222031.jpg",
+				"../img/pexels-peg1997-12503617.jpg",
+				"../img/pexels-flavia-hitomi-3334329-6421207.jpg"
 			],
 			description: "Velvety cedar, patchouli, and a hint of cocoa deliver a richer atmosphere for night routines and cozy spaces."
 		},
@@ -68,12 +68,12 @@
 			price: 24,
 			category: "Candle Tin",
 			badge: "New",
-			image: "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=800&h=1000&q=80",
+			image: "../img/pexels-liogooo-13898254.jpg",
 			images: [
-				"https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=800&h=1000&q=80",
-				"https://images.unsplash.com/photo-1619983081563-430f63602796?auto=format&fit=crop&w=800&h=1000&q=80",
-				"https://images.unsplash.com/photo-1583947582886-f40ec95dd752?auto=format&fit=crop&w=800&h=1000&q=80",
-				"https://images.unsplash.com/photo-1605041941277-4c26f8d2f78a?auto=format&fit=crop&w=800&h=1000&q=80"
+				"../img/pexels-liogooo-13898254.jpg",
+				"../img/pexels-828860-2586073.jpg",
+				"../img/pexels-medhat-ayad-122846-439227.jpg",
+				"../img/pexels-vika-glitter-392079-1648771.jpg"
 			],
 			description: "Travel-friendly tin with cotton linen and pale smoke for subtle scent moments in smaller rooms."
 		},
@@ -83,12 +83,12 @@
 			price: 22,
 			category: "Candle Tin",
 			badge: "",
-			image: "https://images.unsplash.com/photo-1619983081563-430f63602796?auto=format&fit=crop&w=800&h=1000&q=80",
+			image: "../img/pexels-peg1997-12503617.jpg",
 			images: [
-				"https://images.unsplash.com/photo-1619983081563-430f63602796?auto=format&fit=crop&w=800&h=1000&q=80",
-				"https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=800&h=1000&q=80",
-				"https://images.unsplash.com/photo-1608181831718-c9ffd2f77e47?auto=format&fit=crop&w=800&h=1000&q=80",
-				"https://images.unsplash.com/photo-1602872030219-ad2b9f37c0d2?auto=format&fit=crop&w=800&h=1000&q=80"
+				"../img/pexels-peg1997-12503617.jpg",
+				"../img/pexels-rdne-8903690.jpg",
+				"../img/pexels-flavia-hitomi-3334329-6421207.jpg",
+				"../img/pexels-pavel-danilyuk-7222031.jpg"
 			],
 			description: "Bright citrus peel and neroli notes in a compact tin designed for desks, travel bags, and gift sets."
 		},
@@ -113,12 +113,12 @@
 			price: 74,
 			category: "Bundle",
 			badge: "New",
-			image: "https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=800&h=1000&q=80",
+			image: "../img/pexels-pavel-danilyuk-7222031.jpg",
 			images: [
-				"https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=800&h=1000&q=80",
-				"https://images.unsplash.com/photo-1602872030219-ad2b9f37c0d2?auto=format&fit=crop&w=800&h=1000&q=80",
-				"https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=800&h=1000&q=80",
-				"https://images.unsplash.com/photo-1608181831718-c9ffd2f77e47?auto=format&fit=crop&w=800&h=1000&q=80"
+				"../img/pexels-pavel-danilyuk-7222031.jpg",
+				"../img/pexels-flavia-hitomi-3334329-6421207.jpg",
+				"../img/pexels-gstudio-16212410.jpg",
+				"../img/pexels-liogooo-13898254.jpg"
 			],
 			description: "Our best introductions in one set, ideal for gifting or discovering multiple scent moods at home."
 		},
@@ -128,12 +128,12 @@
 			price: 16,
 			category: "Accessories",
 			badge: "",
-			image: "https://images.unsplash.com/photo-1583947582886-f40ec95dd752?auto=format&fit=crop&w=800&h=1000&q=80",
+			image: "../img/pexels-medhat-ayad-122846-439227.jpg",
 			images: [
-				"https://images.unsplash.com/photo-1583947582886-f40ec95dd752?auto=format&fit=crop&w=800&h=1000&q=80",
-				"https://images.unsplash.com/photo-1596704017254-9f6f57e07447?auto=format&fit=crop&w=800&h=1000&q=80",
-				"https://images.unsplash.com/photo-1605041941277-4c26f8d2f78a?auto=format&fit=crop&w=800&h=1000&q=80",
-				"https://images.unsplash.com/photo-1619983081563-430f63602796?auto=format&fit=crop&w=800&h=1000&q=80"
+				"../img/pexels-medhat-ayad-122846-439227.jpg",
+				"../img/pexels-vika-glitter-392079-1648771.jpg",
+				"../img/pexels-alleksana-7670761.jpg",
+				"../img/pexels-828860-2586073.jpg"
 			],
 			description: "Precision steel trimmer to keep wicks clean, improve burn quality, and extend candle performance."
 		},
