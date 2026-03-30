@@ -652,7 +652,7 @@ a {
 	}
 
 	.product-panel {
-		padding: var(--panel-inset);
+		padding: 1.2rem;
 	}
 
 	.related-products .row {
