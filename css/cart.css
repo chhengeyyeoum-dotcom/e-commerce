@@ -157,14 +157,16 @@
 	height: 36px;
 	border: 0;
 	background: transparent;
+	color: #565449;
 	font-size: 1.15rem;
+	font-weight: 600;
 	line-height: 1;
 	transition: background-color 0.2s ease;
 }
 
 .qty-btn:hover,
 .qty-btn:focus-visible {
-	color: #11120d;
+	color: #565449;
 }
 
 .qty-input {
@@ -326,6 +328,18 @@
 
 .mobile-checkout-cta .checkout-btn {
 	width: 100%;
+}
+
+@media (max-width: 575.98px) {
+	.qty-btn {
+		width: 40px;
+		height: 38px;
+		font-size: 1.22rem;
+	}
+
+	.qty-input {
+		height: 38px;
+	}
 }
 
 @media (min-width: 576px) {
