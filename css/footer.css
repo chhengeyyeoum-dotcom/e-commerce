@@ -50,30 +50,70 @@
 
 
 /*buttons*/
-.btn-primary {
+.footer .btn-primary {
     font-size: smaller;
     background-color: #11120d;
     border-color: #11120d;
     border-radius: 0;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
-.btn-primary:hover {
+.footer .btn-primary:hover,
+.footer .btn-primary:focus-visible {
     background-color: #565449;
+    border-color: #565449;
+    color: #fff;
 }
 
 /* make email inputs look like an outline field instead of a solid fill */
-input[type="email"].form-control,
-.form-control[type="email"] {
+.footer input[type="email"].form-control,
+.footer .form-control[type="email"] {
     font-size: smaller;
     background-color: transparent;
     border: 1px solid #11120d;
     border-radius: 0;
 }
 
-input[type="email"].form-control::placeholder {
+.footer input[type="email"].form-control::placeholder {
     font-size: smaller;
     color: #11120d;
     opacity: 1;
+}
+
+.footer .footer-form {
+    gap: 0.5rem;
+    align-items: stretch;
+}
+
+.footer .footer-form .form-control[type="email"] {
+    flex: 1 1 16rem;
+    min-width: 0;
+}
+
+.footer .footer-form .btn-primary {
+    flex: 0 0 auto;
+    white-space: nowrap;
+}
+
+@media (max-width: 575.98px) {
+    .footer .footer-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer .footer-form .form-control[type="email"],
+    .footer .footer-form .btn-primary {
+        width: 100%;
+        margin-right: 0 !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .footer .footer-form {
+        max-width: 28rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 
