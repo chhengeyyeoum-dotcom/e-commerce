@@ -651,27 +651,18 @@ a {
 		padding: 0.7rem;
 	}
 
+	.qty-btn {
+		color: inherit;
+	}
+
+	.qty-btn:hover,
+	.qty-btn:focus-visible {
+		color: inherit;
+		background-color: transparent;
+	}
+
 	.product-panel {
-		padding: 1.2rem;
-	}
-
-	.add-cart-btn {
-		width: 100%;
-		border: 1px solid #11120d;
-		background-color: #11120d;
-		color: #fffbf4;
-		border-radius: 0;
-		padding: 0.8rem 1.2rem;
-		text-transform: uppercase;
-		letter-spacing: 0.09em;
-		font-size: 0.82rem;
-		font-weight: 700;
-	}
-
-	.add-cart-btn:hover,
-	.add-cart-btn:focus-visible {
-		background-color: #565449;
-		box-shadow: 0 8px 20px rgba(18, 18, 18, 0.16);
+		padding: var(--panel-inset);
 	}
 
 	.related-products .row {
