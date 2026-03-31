@@ -75,6 +75,14 @@ const updateCartBadge = () => {
 
     const count = getCartCount();
     cartLinks.forEach((link) => {
+        if (count <= 0) {
+            const badge = link.querySelector(".cart-count-badge");
+            if (badge) {
+                badge.remove();
+            }
+            return;
+        }
+
         const badge = getOrCreateBadge(link);
         badge.textContent = String(count);
     });
