@@ -11,6 +11,8 @@
 	const shippingNode = document.getElementById("cartShipping");
 	const totalNode = document.getElementById("cartTotal");
 	const mobileCheckoutBtn = document.getElementById("mobileCheckoutBtn");
+	const checkoutSection = document.querySelector(".checkout-section");
+	const desktopCheckoutBtn = document.querySelector(".desktop-checkout-btn");
 
 	if (!cartItemsNode || !subtotalNode || !shippingNode || !totalNode) {
 		return;
@@ -54,17 +56,41 @@
 		mobileCheckoutBtn.textContent = `Continue to checkout - ${store.formatPrice(amount)}`;
 	};
 
-	const goToCheckout = () => {
-		window.location.href = "checkout.html";
+	const setCheckoutState = ({ isEmpty, total = 0 }) => {
+		if (checkoutSection) {
+			checkoutSection.style.display = isEmpty ? "none" : "";
+		}
+
+		if (desktopCheckoutBtn) {
+			desktopCheckoutBtn.textContent = isEmpty ? "Go Shopping" : "Continue to checkout";
+			desktopCheckoutBtn.setAttribute("href", isEmpty ? "index.html" : "checkout.html");
+		}
+
+		if (mobileCheckoutBtn) {
+			mobileCheckoutBtn.textContent = isEmpty
+				? "Go Shopping"
+				: `Continue to checkout - ${store.formatPrice(total)}`;
+			mobileCheckoutBtn.dataset.destination = isEmpty ? "index.html" : "checkout.html";
+		}
+	};
+
+	const handleMobileCtaClick = () => {
+		const destination = mobileCheckoutBtn?.dataset.destination || "checkout.html";
+		window.location.href = destination;
 	};
 
 	const renderCart = () => {
 		if (!cart.length) {
-			cartItemsNode.innerHTML = "<p class=\"mb-0\">Your cart is empty. Browse the shop to add products.</p>";
+			cartItemsNode.innerHTML = `
+				<div>
+					<p class="mb-0">Your cart is empty. Browse the shop to add products.</p>
+					<a href="index.html" class="checkout-btn empty-cart-action mt-3">Go Shopping</a>
+				</div>
+			`;
 			subtotalNode.textContent = store.formatPrice(0);
 			shippingNode.textContent = store.formatPrice(0);
 			totalNode.textContent = store.formatPrice(0);
-			updateMobileCheckoutText(0);
+			setCheckoutState({ isEmpty: true });
 			return;
 		}
 
@@ -101,7 +127,7 @@
 		subtotalNode.textContent = store.formatPrice(subtotal);
 		shippingNode.textContent = store.formatPrice(subtotal > 0 ? SHIPPING : 0);
 		totalNode.textContent = store.formatPrice(total);
-		updateMobileCheckoutText(total);
+		setCheckoutState({ isEmpty: false, total });
 	};
 
 	cartItemsNode.addEventListener("click", (event) => {
@@ -144,7 +170,7 @@
 	});
 
 	if (mobileCheckoutBtn) {
-		mobileCheckoutBtn.addEventListener("click", goToCheckout);
+		mobileCheckoutBtn.addEventListener("click", handleMobileCtaClick);
 	}
 
 	renderCart();
