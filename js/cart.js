@@ -13,6 +13,11 @@
 	const mobileCheckoutBtn = document.getElementById("mobileCheckoutBtn");
 	const checkoutSection = document.querySelector(".checkout-section");
 	const desktopCheckoutBtn = document.querySelector(".desktop-checkout-btn");
+	const samplesBox = document.querySelector(".samples-box");
+	const checkoutHeading = document.querySelector(".checkout-heading");
+	const summaryBlock = document.querySelector(".summary-block");
+	const paymentBlock = document.querySelector(".payment-block");
+	const promoBlock = document.querySelector(".promo-block");
 
 	if (!cartItemsNode || !subtotalNode || !shippingNode || !totalNode) {
 		return;
@@ -57,8 +62,31 @@
 	};
 
 	const setCheckoutState = ({ isEmpty, total = 0 }) => {
+		const isMediumUp = window.matchMedia("(min-width: 768px)").matches;
+
+		if (samplesBox) {
+			samplesBox.style.display = isEmpty ? "none" : "";
+		}
+
 		if (checkoutSection) {
-			checkoutSection.style.display = isEmpty ? "none" : "";
+			checkoutSection.style.display = isEmpty && !isMediumUp ? "none" : "";
+			checkoutSection.classList.toggle("empty-state", isEmpty && isMediumUp);
+		}
+
+		if (checkoutHeading) {
+			checkoutHeading.style.display = isEmpty ? "none" : "";
+		}
+
+		if (summaryBlock) {
+			summaryBlock.style.display = isEmpty ? "none" : "";
+		}
+
+		if (paymentBlock) {
+			paymentBlock.style.display = isEmpty ? "none" : "";
+		}
+
+		if (promoBlock) {
+			promoBlock.style.display = isEmpty ? "none" : "";
 		}
 
 		if (desktopCheckoutBtn) {
@@ -82,9 +110,11 @@
 	const renderCart = () => {
 		if (!cart.length) {
 			cartItemsNode.innerHTML = `
-				<div>
-					<p class="mb-0">Your cart is empty. Browse the shop to add products.</p>
-					<a href="index.html" class="checkout-btn empty-cart-action mt-3">Go Shopping</a>
+				<div class="empty-cart-alert" role="status" aria-live="polite">
+					<p class="mb-0 d-flex align-items-center gap-2">
+						<i class="bi bi-exclamation-triangle-fill" aria-hidden="true"></i>
+						<span>Your cart is empty. Browse the shop to add products.</span>
+					</p>
 				</div>
 			`;
 			subtotalNode.textContent = store.formatPrice(0);
