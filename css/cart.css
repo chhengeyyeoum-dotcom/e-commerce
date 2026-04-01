@@ -330,6 +330,13 @@
 	width: 100%;
 }
 
+.empty-cart-action {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+}
+
 @media (max-width: 575.98px) {
 	.qty-btn {
 		width: 40px;
