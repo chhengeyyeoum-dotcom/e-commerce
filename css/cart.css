@@ -337,6 +337,19 @@
 	text-decoration: none;
 }
 
+.empty-cart-alert {
+	border: 1px solid rgba(220, 53, 69, 0.45);
+	padding: 1rem;
+	border-radius: 0;
+	color: #842029;
+	background: rgba(220, 53, 69, 0.06);
+}
+
+.empty-cart-alert i {
+	font-size: 1rem;
+	color: #b02a37;
+}
+
 @media (max-width: 575.98px) {
 	.qty-btn {
 		width: 40px;
@@ -377,6 +390,10 @@
 		position: sticky;
 		top: 20px;
 		padding: 1.3rem;
+	}
+
+	.checkout-section.empty-state {
+		margin-top: 5.3rem;
 	}
 
 	.desktop-checkout-btn {
