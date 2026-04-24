@@ -18,7 +18,7 @@
 
 body {
 	margin: 0;
-	font-family: "Manrope", sans-serif;
+	font-family: "Montserrat", sans-serif;
 	color: var(--text-main);
 	background: #fffbf4;
 	line-height: 1.6;
@@ -29,7 +29,7 @@ h2,
 h3,
 .logo,
 .footer-logo {
-	font-family: "Cormorant Garamond", serif;
+	font-family: "Playfair Display", serif;
 	letter-spacing: 0.02em;
 }
 

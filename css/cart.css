@@ -11,7 +11,7 @@
 .cart-page {
 	background: #fffbf4;
 	color: var(--cart-ink);
-	font-family: "Manrope", sans-serif;
+	font-family: "Montserrat", sans-serif;
 
 }
 
@@ -107,7 +107,7 @@
 
 .cart-item-name {
 	margin: 0;
-	font-family: "Cormorant Garamond", serif;
+	font-family: "Playfair Display", serif;
 	font-size: 1.55rem;
 	line-height: 1;
 }
@@ -199,7 +199,7 @@
 }
 
 .checkout-title {
-	font-family: "Cormorant Garamond", serif;
+	font-family: "Playfair Display", serif;
 	font-size: 2rem;
 	line-height: 1;
 }
