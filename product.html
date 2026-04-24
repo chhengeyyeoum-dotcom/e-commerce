@@ -7,7 +7,7 @@
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+	<link href="https.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
@@ -20,6 +20,8 @@
 <body>
 	<header>
 
+		<!--Note: The collapse button tasting note needed to seperate the ids for each product items description, tasting notes, and how it works sections. Otherwise, the accordion would open all sections with the same id across different products. This allows each product detail page to have its own independent accordion functionality without interference.-->
+
 		<!--Navbar Section-->
 		<nav class="navbar navbar-expand-md py-3" id="mainNavbar" aria-label="Primary navigation">
 			<div class="container position-relative">
@@ -29,21 +31,23 @@
 
 				<ul class="navbar-nav d-none d-md-flex gap-4 align-items-center nav-left">
 					<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-					<li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
-					<li class="nav-item"><a class="nav-link" href="#our-story">Story</a></li>
+					<li class="nav-item"><a class="nav-link" href="shop.html">Shop All</a></li>
+					<li class="nav-item"><a class="nav-link" href="index.html#our-story">About Us</a></li>
 				</ul>
 				
 				<!--Logo-->
-				<a class="navbar-brand logo mx-auto" href="#" aria-label="Lumen Moe home">Lumen Moe</a>
+				<a class="navbar-brand logo mx-auto" href="index.html" aria-label="Lumen Moe home">
+					<img src="img/web.png" alt="Lumen Moe" style="height: 50px;"> <!-- Adjust height as needed -->
+				</a>
 				
 				<!--Menu Icons-->
 				<div class="d-none d-md-flex gap-3 nav-icons nav-right" aria-label="Quick actions">
 					<a href="cart.html" class="icon-link" aria-label="Cart">
 						<i class="bi bi-bag"></i>
 					</a>
-					<a href="#" class="icon-link" aria-label="Profile">
+					<!--<a href="#" class="icon-link" aria-label="Profile">
 						<i class="bi bi-person"></i>
-					</a>
+					</a>-->
 				</div>
 
 				<a href="cart.html" class="icon-link d-md-none mobile-cart" aria-label="Cart">
@@ -53,9 +57,9 @@
 				<div class="collapse navbar-collapse mt-3 d-md-none" id="primaryNav">
 					<ul class="navbar-nav d-md-none gap-1 mobile-menu-list">
 						<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-						<li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
-						<li class="nav-item"><a class="nav-link" href="#our-story">Story</a></li>
-						<li class="nav-item"><a class="nav-link" href="#" aria-label="Profile"><i class="bi bi-person me-2"></i>Profile</a></li>
+						<li class="nav-item"><a class="nav-link" href="shop.html">Shop All</a></li>
+						<li class="nav-item"><a class="nav-link" href="index.html#our-story">About Us</a></li>
+						<!--<li class="nav-item"><a class="nav-link" href="#" aria-label="Profile"><i class="bi bi-person me-2"></i>Profile</a></li>-->
 					</ul>
 				</div>
 			</div>
@@ -94,36 +98,8 @@
 							<button type="button" class="add-cart-btn" id="addToCartBtn">Add to Cart</button>
 							<p class="cart-status mb-0 mt-3" id="cartStatus" aria-live="polite"></p>
 
-							<div class="product-accordion mt-4" role="region" aria-label="Product information">
-								<div class="accordion-item">
-									<button type="button" class="accordion-header" id="descriptionHeader" aria-expanded="false" aria-controls="descriptionContent">
-										<span>Description</span>
-										<i class="bi bi-plus"></i>
-									</button>
-									<div id="descriptionContent" class="accordion-content" role="region" aria-labelledby="descriptionHeader">
-										<p id="productDescriptionAccordion"></p>
-									</div>
-								</div>
-
-								<div class="accordion-item">
-									<button type="button" class="accordion-header" id="notesHeader" aria-expanded="false" aria-controls="notesContent">
-										<span>Tasting Notes</span>
-										<i class="bi bi-plus"></i>
-									</button>
-									<div id="notesContent" class="accordion-content" role="region" aria-labelledby="notesHeader">
-										<p id="productTastingNotes"></p>
-									</div>
-								</div>
-
-								<div class="accordion-item">
-									<button type="button" class="accordion-header" id="howHeader" aria-expanded="false" aria-controls="howContent">
-										<span>How Does It Work</span>
-										<i class="bi bi-plus"></i>
-									</button>
-									<div id="howContent" class="accordion-content" role="region" aria-labelledby="howHeader">
-										<p id="productHowItWorks"></p>
-									</div>
-								</div>
+							<div class="product-accordion mt-4" id="productAccordion" role="region" aria-label="Product information">
+								<!-- Accordion items will be dynamically inserted here -->
 							</div>
 						</div>
 					</div>
@@ -151,7 +127,8 @@
 				<div class="col-12 col-md-4 mt-5">
 					<h5 class="footer-title font-weight-bold">About Store</h5>
 					<p class="footer-text-center">Your one-stop shop for tech gear, delivered fast and backed by support.</p>
-					<div class="footer-payments mt-3">
+					<p class="footer-text-center"><small><i class="bi bi-geo-alt"></i> Located in Phnom Penh, Cambodia</small></p>
+					<!--<div class="footer-payments mt-3">
 						<span class="footer-payment-label">We accept:</span>
 						<div class="footer-payment-icons mt-2">
 							<i class="fab fa-cc-visa" aria-hidden="true" title="Visa"></i>
@@ -159,7 +136,7 @@
 							<i class="fab fa-cc-amex" aria-hidden="true" title="Amex"></i>
 							<i class="fab fa-cc-paypal" aria-hidden="true" title="PayPal"></i>
 						</div>
-					</div>
+					</div>-->
 				</div>
 
 				<!-- FAQs Column -->
@@ -172,14 +149,6 @@
 							</button>
 							<div id="faqShipping" class="collapse footer-faq-answer">
 								<b>Standard delivery takes 1-3 business days depending on your location.</b>
-							</div>
-						</li>
-						<li class="mb-2">
-							<button class="footer-faq-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#faqReturns" aria-expanded="false" aria-controls="faqReturns">
-								Returns
-							</button>
-							<div id="faqReturns" class="collapse footer-faq-answer">
-								<b>You can return items within 14 days in original condition with proof of purchase.</b>
 							</div>
 						</li>
 						<li class="mb-2">
@@ -213,7 +182,7 @@
 				</div>
 			</div>
 
-			<!-- Second row: newsletter -->
+			<!-- Second row: newsletter 
 			<div class="row justify-content-center mt-5">
 				<div class="col-12 col-md-6">
 					<h5 class="footer-title text-center font-weight-bold">Newsletter</h5>
@@ -224,7 +193,7 @@
 						<button type="submit" class="btn btn-primary">Subscribe</button>
 					</form>
 				</div>
-			</div>
+			</div>-->
 
 			<!-- Third row: social -->
 			<div class="row justify-content-center mt-4">

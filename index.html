@@ -3,11 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Lumen Moe | Luxury Candles</title>
+	<title>Lumen Moe | Home Page</title>
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
@@ -26,21 +26,23 @@
 
 				<ul class="navbar-nav d-none d-md-flex gap-4 align-items-center nav-left">
 					<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-					<li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+					<li class="nav-item"><a class="nav-link" href="shop.html">Shop All</a></li>
 					<li class="nav-item"><a class="nav-link" href="#our-story">Story</a></li>
 				</ul>
 				
 				<!--Logo-->
-				<a class="navbar-brand logo mx-auto" href="#" aria-label="Lumen Moe home">Lumen Moe</a>
+				<a class="navbar-brand logo mx-auto" href="index.html" aria-label="Lumen Moe home">
+					<img src="img/web.png" alt="Lumen Moe" style="height: 50px;"> <!-- Adjust height as needed -->
+				</a>
 				
 				<!--Menu Icons-->
 				<div class="d-none d-md-flex gap-3 nav-icons nav-right" aria-label="Quick actions">
 					<a href="cart.html" class="icon-link" aria-label="Cart">
 						<i class="bi bi-bag"></i>
 					</a>
-					<a href="#" class="icon-link" aria-label="Profile">
+					<!--<a href="#" class="icon-link" aria-label="Profile">
 						<i class="bi bi-person"></i>
-					</a>
+					</a>-->
 				</div>
 
 				<a href="cart.html" class="icon-link d-md-none mobile-cart" aria-label="Cart">
@@ -50,9 +52,9 @@
 				<div class="collapse navbar-collapse mt-3 d-md-none" id="primaryNav">
 					<ul class="navbar-nav d-md-none gap-1 mobile-menu-list">
 						<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-						<li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
-						<li class="nav-item"><a class="nav-link" href="#our-story">Story</a></li>
-						<li class="nav-item"><a class="nav-link" href="#" aria-label="Profile"><i class="bi bi-person me-2"></i>Profile</a></li>
+						<li class="nav-item"><a class="nav-link" href="shop.html">Shop All</a></li>
+						<li class="nav-item"><a class="nav-link" href="#our-story">About Us</a></li>
+						<!--<li class="nav-item"><a class="nav-link" href="#" aria-label="Profile"><i class="bi bi-person me-2"></i>Profile</a></li>-->
 					</ul>
 				</div>
 			</div>
@@ -68,7 +70,7 @@
 								<p class="hero-kicker mb-2">Hand-poured luxury scents</p>
 								<h1 class="display-4 hero-title mb-3">Elevate Your Space</h1>
 								<p class="hero-subtext mx-auto mb-4">Discover modern candle compositions crafted to bring warmth, calm, and understated elegance into your daily rituals.</p>
-								<a href="#featured-products" class="btn btn-hero">Shop Now</a>
+								<a href="shop.html" class="btn btn-hero">Shop Now</a>
 							</div>
 						</div>
 					</div>
@@ -78,7 +80,7 @@
 								<p class="hero-kicker mb-2">Seasonal Collection</p>
 								<h1 class="display-4 hero-title mb-3">Warm Notes, Soft Glow</h1>
 								<p class="hero-subtext mx-auto mb-4">From amber and fig to cedar and musk, discover curated scents designed to elevate quiet evenings and mindful mornings.</p>
-								<a href="#featured-products" class="btn btn-hero">Shop Now</a>
+								<a href="shop.html" class="btn btn-hero">Shop Now</a>
 							</div>
 						</div>
 					</div>
@@ -88,7 +90,7 @@
 								<p class="hero-kicker mb-2">Modern Rituals</p>
 								<h1 class="display-4 hero-title mb-3">Scented Simplicity</h1>
 								<p class="hero-subtext mx-auto mb-4">Crafted in small batches for homes that value subtle details, intentional design, and the art of everyday comfort.</p>
-								<a href="#featured-products" class="btn btn-hero">Shop Now</a>
+								<a href="shop.html" class="btn btn-hero">Shop Now</a>
 							</div>
 						</div>
 					</div>
@@ -134,9 +136,15 @@
 					<div class="col-12 col-md-6">
 						<div class="story-content">
 							<p class="section-kicker mb-2">Our Story</p>
-							<h2 class="section-title mb-3">Designed for Quiet Luxury</h2>
-							<p class="story-text">Lumen Moe began with a simple intention: to create fragrance experiences that feel intimate, refined, and effortlessly modern. Every candle is hand-poured in small batches using premium wax blends and thoughtfully layered scent notes.</p>
-							<p class="story-text mb-0">From soft florals to warm woods, each composition is crafted to transform ordinary moments into meaningful rituals while complementing the clean aesthetics of contemporary interiors.</p>
+							<h2 class="section-title mb-3">Where Scent Becomes Reflection</h2>
+							<p class="story-text">LUMEN MOE was born from a desire to bring 
+								calm and meaning into everyday rituals. 
+								Each candle transforms scent into a quiet language of 
+								reflection an invitation to slow down, soften, and turn inward.</p>
+							<p class="story-text mb-0">Rooted in honesty, kindness, 
+								and thoughtful craftsmanship, every piece blends fine 
+								fragrance with emotional clarity, shaping an atmosphere 
+								where light, scent, and self-awareness exist in gentle harmony.</p>
 						</div>
 					</div>
 				</div>
@@ -152,7 +160,9 @@
 				<div class="col-12 col-md-4 mt-5">
 					<h5 class="footer-title font-weight-bold">About Store</h5>
 					<p class="footer-text-center">Your one-stop shop for tech gear, delivered fast and backed by support.</p>
-					<div class="footer-payments mt-3">
+					<p class="footer-text-center"><small><i class="bi bi-geo-alt"></i> Located in Phnom Penh, Cambodia</small></p>
+					
+					<!--<div class="footer-payments mt-3">
 						<span class="footer-payment-label">We accept:</span>
 						<div class="footer-payment-icons mt-2">
 							<i class="fab fa-cc-visa" aria-hidden="true" title="Visa"></i>
@@ -160,7 +170,7 @@
 							<i class="fab fa-cc-amex" aria-hidden="true" title="Amex"></i>
 							<i class="fab fa-cc-paypal" aria-hidden="true" title="PayPal"></i>
 						</div>
-					</div>
+					</div>-->
 				</div>
 
 				<!-- FAQs Column -->
@@ -173,14 +183,6 @@
 							</button>
 							<div id="faqShipping" class="collapse footer-faq-answer">
 								<b>Standard delivery takes 1-3 business days depending on your location.</b>
-							</div>
-						</li>
-						<li class="mb-2">
-							<button class="footer-faq-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#faqReturns" aria-expanded="false" aria-controls="faqReturns">
-								Returns
-							</button>
-							<div id="faqReturns" class="collapse footer-faq-answer">
-								<b>You can return items within 14 days in original condition with proof of purchase.</b>
 							</div>
 						</li>
 						<li class="mb-2">
@@ -214,7 +216,7 @@
 				</div>
 			</div>
 
-			<!-- Second row: newsletter -->
+			<!-- Second row: newsletter 
 			<div class="row justify-content-center mt-5">
 				<div class="col-12 col-md-6">
 					<h5 class="footer-title text-center font-weight-bold">Newsletter</h5>
@@ -225,7 +227,7 @@
 						<button type="submit" class="btn btn-primary">Subscribe</button>
 					</form>
 				</div>
-			</div>
+			</div>-->
 
 			<!-- Third row: social -->
 			<div class="row justify-content-center mt-4">
