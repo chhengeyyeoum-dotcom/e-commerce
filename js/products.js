@@ -3,9 +3,9 @@
 (() => {
 	const PRODUCT_CATALOG = [
 		{
-			id: "amber-nocturne-jar",
-			name: "Amber Nocturne",
-			price: 42,
+			id: "quiet-chypre-jar",
+			name: "Quiet Chypre",
+			price: 17,
 			category: "Candle Jar",
 			badge: "New",
 			image: "../img/pexels-828860-2586073.jpg",
@@ -15,12 +15,44 @@
 				"../img/pexels-828860-2586073.jpg",
 				"../img/pexels-828860-2586073.jpg"
 			],
-			description: "Warm amber, spiced vanilla, and soft musk in a hand-poured glass vessel for slow evenings and layered ambience."
+			description: "Quiet Chypre brings a sense of calm, intention, and quiet balance to your space. It opens with soft clarity and settles into a clean, earthy warmth that never overwhelms creating a steady atmosphere for slow routines, focused moments, and reflective evenings.",
+			details: [
+				
+				{
+					title: "Product Details",
+					description: "10 oz / 283 g candle crafted with a natural coconut soy wax blend for a clean, even burn. Infused with fine fragrance oils for a long-lasting scent experience, with a burn time of up to 40 hours.<br><br>Plant-based and non-toxic, free from phthalates, and safe for everyday indoor use when used as directed. Designed for consistent performance and quiet, intentional moments."
+				},
+				{
+					title: "Scent Details",
+					notes: [
+						{
+							title: "Mood",
+							description: "Calm · Grounded · Restful"
+						},
+						{
+							title: "Vibe",
+							description: "Thoughtful · Balanced · Introspective"
+						},
+						{
+							title: "Smells Like",
+							description: "Fresh dark fruits at first light, unfolding into gentle florals layered with earthy depth. Settles into a soft, mossy base with a subtle, lingering warmth."
+						},
+						{
+							title: "Fragrance Notes",
+							description: "Top: Blackcurrant · Pineapple · Apple<br>Middle: Patchouli · Rose · Jasmine<br>Base: Oakmoss · Vanilla · Ambergris"
+						}
+					]
+				},
+				{
+					title: "Benefits",
+					description: "Helps ease restlessness and quiet mental noise, supporting a sense of calm and emotional balance. Creates a composed, settled atmosphere—ideal for evening routines, unwinding, and moments of quiet focus. Well suited for spaces dedicated to rest, reading, or reflective work."
+				}
+			]
 		},
 		{
-			id: "white-fig-jar",
-			name: "White Fig",
-			price: 38,
+			id: "clear-night-jar",
+			name: "Clear Night",
+			price: 17,
 			category: "Candle Jar",
 			badge: "",
 			image: "../img/pexels-flavia-hitomi-3334329-6421207.jpg",
@@ -30,12 +62,44 @@
 				"../img/pexels-gstudio-16212410.jpg",
 				"../img/pexels-alleksana-7670761.jpg"
 			],
-			description: "Fresh fig leaf and creamy woods create a clean, modern profile made for daytime rituals and airy interiors."
+			description: "A clean, minimal gourmand fragrance inspired by the quiet neutrality of vodka. Smooth and weightless, it brings clarity without sweetness designed to reset the atmosphere and support focus, stillness, and balance.",
+			details: [
+				
+				{
+					title: "Product Details",
+					description: "10 oz / 283 g candle crafted with a natural coconut soy wax blend for a clean, even burn. Infused with fine fragrance oils for a long-lasting scent experience, with a burn time of up to 40 hours.<br><br>Plant-based and non-toxic, free from phthalates, and safe for everyday indoor use when used as directed. Designed for consistent performance and quiet, intentional moments."
+				},
+				{
+					title: "Scent Details",
+					notes: [
+						{
+							title: "Mood",
+							description: "Clean · Calm · Neutral"
+						},
+						{
+							title: "Vibe",
+							description: "Minimal · Modern · Clear"
+						},
+						{
+							title: "Smells Like",
+							description: "Soft, cool neutrality—like clean air with a smooth, weightless finish. No sweetness, heaviness, or sharp edges."
+						},
+						{
+							title: "Aroma Profile",
+							description: "Gourmand fragrance inspired by the clean, neutral character of vodka"
+						}
+					]
+				},
+				{
+					title: "Benefits",
+					description: "Helps clear mental clutter, support focus, and reduce sensory overload. Creates a calm, controlled atmosphere—ideal for workspaces, studios, and quiet routines."
+				}
+			]
 		},
 		{
-			id: "santal-dusk-jar",
-			name: "Santal Dusk",
-			price: 46,
+			id: "neroli-veil-jar",
+			name: "Neroli Veil",
+			price: 17,
 			category: "Candle Jar",
 			badge: "Best Seller",
 			image: "../img/pexels-medhat-ayad-122846-439227.jpg",
@@ -45,12 +109,45 @@
 				"../img/pexels-liogooo-13898254.jpg",
 				"../img/pexels-vika-glitter-392079-1648771.jpg"
 			],
-			description: "Sandalwood and dry cedar notes settle into a smoky finish that gives depth, calm, and quiet sophistication."
+			description: "Neroli Veil brings a sense of gentle clarity and quiet refreshment. It opens with soft citrus brightness, then settles into an airy floral calm—creating a light, restorative atmosphere. Subtle and refined, it’s designed for slow mornings, open spaces, and moments of emotional reset.",
+			details: [
+				
+				{
+					title: "Product Details",
+					description: "10 oz / 283 g candle crafted with a natural coconut soy wax blend for a clean, even burn. Infused with fine fragrance oils for a long-lasting scent experience, with a burn time of up to 40 hours.<br><br>Plant-based and non-toxic, free from phthalates, and safe for everyday indoor use when used as directed. Designed for consistent performance and quiet, intentional moments."
+				},
+				{
+					title: "Scent Details",
+					notes: [
+						{
+							title: "Mood",
+							description: "Fresh · Calm · Clear"
+						},
+						{
+							title: "Vibe",
+							description: "Soft · Minimal · Restful"
+						},
+						{
+							title: "Smells Like",
+							description: "Fresh orange peel on first impression, unfolding into smooth floral citrus from neroli, and finishing with a clean, softly sweet orange blossom."
+						},
+						{
+							title: "Fragrance Notes",
+							description: "Top: Orange<br>Middle: Neroli Oilne<br>Base: Orange Blossom"
+						}
+					]
+				},
+				{
+					title: "Benefits",
+					description: "Supports emotional calm without heaviness. Helps ease mental tension and restlessness while encouraging a light, positive mood. Promotes gentle focus and clarity, creating an atmosphere that feels clean, open, and breathable. Ideal for mornings, light spaces, and moments when you want a subtle refresh."
+				}
+
+			]
 		},
 		{
-			id: "velvet-cedar-jar",
-			name: "Velvet Cedar",
-			price: 44,
+			id: "soft-resin-jar",
+			name: "Soft Resin",
+			price: 17,
 			category: "Candle Jar",
 			badge: "",
 			image: "../img/pexels-rdne-8903690.jpg",
@@ -60,12 +157,45 @@
 				"../img/pexels-peg1997-12503617.jpg",
 				"../img/pexels-flavia-hitomi-3334329-6421207.jpg"
 			],
-			description: "Velvety cedar, patchouli, and a hint of cocoa deliver a richer atmosphere for night routines and cozy spaces."
+			description: "Soft Resin is a warm, muted scent that feels quietly grounding. It opens with dry herbal clarity, then softens into gentle spice and resin warmth. The result is a calm, steady atmosphere—like a quiet presence that settles the space without demanding attention. Designed to slow the pace and restore balance, it feels earthy, composed, and reassuring.",
+			details: [
+				
+				{
+					title: "Product Details",
+					description: "10 oz / 283 g candle crafted with a natural coconut soy wax blend for a clean, even burn. Infused with fine fragrance oils for a long-lasting scent experience, with a burn time of up to 40 hours.<br><br>Plant-based and non-toxic, free from phthalates, and safe for everyday indoor use when used as directed. Designed for consistent performance and quiet, intentional moments."
+				},
+				{
+					title: "Scent Details",
+					notes: [
+						{
+							title: "Mood",
+							description: "Grounded · Calm · Quiet Warmth "
+						},
+						{
+							title: "Vibe",
+							description: "Earthy · Minimal · Centered"
+						},
+						{
+							title: "Smells Like",
+							description: "Dry tea leaves with a subtle herbal edge, softened by warm spices and delicate florals. It settles into a smooth resin base of musk, wood, and amber."
+						},
+						{
+							title: "Fragrance Notes",
+							description: "Top: Tea Leaves · Mugwort<br>Middle: Orange Blossom · Pepper · Cardamom · Coriander<br>Base: Musk · Woody Notes · Amber"
+						}
+					]
+				},
+				{
+					title: "Benefits",
+					description: "Helps reduce mental overstimulation supports emotional grounding and stability. Encourages calm focus and inward attention creates a comforting, settled atmosphere ideal for rest, reflection, and end-of-day routines"
+				}
+
+			]
 		},
 		{
-			id: "linen-smoke-tin",
-			name: "Linen Smoke Tin",
-			price: 24,
+			id: "soft-resin-tin",
+			name: "Soft Resin Tin",
+			price: 8,
 			category: "Candle Tin",
 			badge: "New",
 			image: "../img/pexels-liogooo-13898254.jpg",
@@ -75,12 +205,44 @@
 				"../img/pexels-medhat-ayad-122846-439227.jpg",
 				"../img/pexels-vika-glitter-392079-1648771.jpg"
 			],
-			description: "Travel-friendly tin with cotton linen and pale smoke for subtle scent moments in smaller rooms."
+			description: "Soft Resin is a warm, muted scent with a grounded character. It opens with dry herbal notes, softens into gentle spices, and settles into a light resinous warmth. The atmosphere is calm and steady, designed to slow the pace and restore balance. Poured in a compact tin, suitable for travel and small spaces.",
+			details: [
+				{
+					title: "Product Details",
+					description: "10 oz / 283 g candle crafted with a natural coconut soy wax blend for a clean, even burn. Infused with fine fragrance oils for a long-lasting scent experience, with a burn time of up to 40 hours.<br><br>Plant-based and non-toxic, free from phthalates, and safe for everyday indoor use when used as directed. Designed for consistent performance and quiet, intentional moments."
+				},
+				
+				{
+					title: "Scent Details",
+					notes: [
+						{
+							title: "Mood",
+							description: "Grounded · Calm · Quiet Warmth "
+						},
+						{
+							title: "Vibe",
+							description: "Earthy · Minimal · Centered"
+						},
+						{
+							title: "Smells Like",
+							description: "Dry tea leaves with a subtle herbal edge, softened by warm spices and delicate florals. It settles into a smooth resin base of musk, wood, and amber."
+						},
+						{
+							title: "Fragrance Notes",
+							description: "Top: Tea Leaves · Mugwort<br>Middle: Orange Blossom · Pepper · Cardamom · Coriander<br>Base: Musk · Woody Notes · Amber"
+						}
+					]
+				},
+				{
+					title: "Benefits",
+					description: "Helps reduce mental overstimulation supports emotional grounding and stability. Encourages calm focus and inward attention creates a comforting, settled atmosphere ideal for rest, reflection, and end-of-day routines"
+				}
+			]
 		},
 		{
-			id: "citrus-halo-tin",
-			name: "Citrus Halo Tin",
-			price: 22,
+			id: "neroli-veil-tin",
+			name: "Neroli Veil Tin",
+			price: 8,
 			category: "Candle Tin",
 			badge: "",
 			image: "../img/pexels-peg1997-12503617.jpg",
@@ -90,14 +252,47 @@
 				"../img/pexels-flavia-hitomi-3334329-6421207.jpg",
 				"../img/pexels-pavel-danilyuk-7222031.jpg"
 			],
-			description: "Bright citrus peel and neroli notes in a compact tin designed for desks, travel bags, and gift sets."
+			description: "Neroli Veil brings a sense of gentle clarity and quiet refreshment. It opens with soft citrus brightness, then settles into an airy floral calm—creating a light, restorative atmosphere. Subtle and refined, it’s designed for slow mornings, open spaces, and moments of emotional reset.",
+			details: [
+				
+				{
+					title: "Product Details",
+					description: "4 oz / 113 g candle crafted with a natural coconut soy wax blend for a clean, even burn. Infused with fine fragrance oils for a long-lasting scent experience, with a burn time of up to 40 hours.<br><br>Plant-based and non-toxic, free from phthalates, and safe for everyday indoor use when used as directed. Designed for consistent performance and quiet, intentional moments."
+				},
+				{
+					title: "Scent Details",
+					notes: [
+						{
+							title: "Mood",
+							description: "Fresh · Calm · Clear"
+						},
+						{
+							title: "Vibe",
+							description: "Soft · Minimal · Restful"
+						},
+						{
+							title: "Smells Like",
+							description: "Fresh orange peel on first impression, unfolding into smooth floral citrus from neroli, and finishing with a clean, softly sweet orange blossom."
+						},
+						{
+							title: "Fragrance Notes",
+							description: "Top: Orange<br>Middle: Neroli Oilne<br>Base: Orange Blossom"
+						}
+					]
+				},
+				{
+					title: "Benefits",
+					description: "Supports emotional calm without heaviness. Helps ease mental tension and restlessness while encouraging a light, positive mood. Promotes gentle focus and clarity, creating an atmosphere that feels clean, open, and breathable. Ideal for mornings, light spaces, and moments when you want a subtle refresh."
+				}
+
+			]
 		},
 		{
-			id: "evening-ritual-duo",
-			name: "Evening Ritual Duo",
-			price: 68,
-			category: "Bundle",
-			badge: "Bundle",
+			id: "clear-night-tin",
+			name: "Clear Night Tin",
+			price: 8,
+			category: "Candle Tin",
+			badge: "New",
 			image: "../img/pexels-peg1997-12503617.jpg",
 			images: [
 				"../img/pexels-peg1997-12503617.jpg",
@@ -105,13 +300,45 @@
 				"../img/pexels-flavia-hitomi-3334329-6421207.jpg",
 				"../img/pexels-pavel-danilyuk-7222031.jpg"
 			],
-			description: "A pairing of warm woods and resinous amber candles curated to set a calm evening atmosphere."
+			description: "A clean, minimal gourmand fragrance inspired by the quiet neutrality of vodka. Smooth and weightless, it brings clarity without sweetness designed to reset the atmosphere and support focus, stillness, and balance.",
+			details: [
+				
+				{
+					title: "Product Details",
+					description: "10 oz / 283 g candle crafted with a natural coconut soy wax blend for a clean, even burn. Infused with fine fragrance oils for a long-lasting scent experience, with a burn time of up to 40 hours.<br><br>Plant-based and non-toxic, free from phthalates, and safe for everyday indoor use when used as directed. Designed for consistent performance and quiet, intentional moments."
+				},
+				{
+					title: "Scent Details",
+					notes: [
+						{
+							title: "Mood",
+							description: "Clean · Calm · Neutral"
+						},
+						{
+							title: "Vibe",
+							description: "Minimal · Modern · Clear"
+						},
+						{
+							title: "Smells Like",
+							description: "Soft, cool neutrality—like clean air with a smooth, weightless finish. No sweetness, heaviness, or sharp edges."
+						},
+						{
+							title: "Aroma Profile",
+							description: "Gourmand fragrance inspired by the clean, neutral character of vodka"
+						}
+					]
+				},
+				{
+					title: "Benefits",
+					description: "Helps clear mental clutter, support focus, and reduce sensory overload. Creates a calm, controlled atmosphere—ideal for workspaces, studios, and quiet routines."
+				}
+			]
 		},
 		{
-			id: "signature-discovery-set",
-			name: "Signature Discovery Set",
-			price: 74,
-			category: "Bundle",
+			id: "quiet-chypre-tin",
+			name: "Quiet Chypre",
+			price: 8,
+			category: "Candle Tin",
 			badge: "New",
 			image: "../img/pexels-pavel-danilyuk-7222031.jpg",
 			images: [
@@ -120,14 +347,46 @@
 				"../img/pexels-gstudio-16212410.jpg",
 				"../img/pexels-liogooo-13898254.jpg"
 			],
-			description: "Our best introductions in one set, ideal for gifting or discovering multiple scent moods at home."
+			description: "Quiet Chypre brings a sense of calm, intention, and quiet balance to your space. It opens with soft clarity and settles into a clean, earthy warmth that never overwhelms creating a steady atmosphere for slow routines, focused moments, and reflective evenings.",
+			details: [
+				
+				{
+					title: "Product Details",
+					description: "4 oz / 113 g candle crafted with a natural coconut soy wax blend for a clean, even burn. Infused with fine fragrance oils for a long-lasting scent experience, with a burn time of up to 40 hours.<br><br>Plant-based and non-toxic, free from phthalates, and safe for everyday indoor use when used as directed. Designed for consistent performance and quiet, intentional moments."
+				},
+				{
+					title: "Scent Details",
+					notes: [
+						{
+							title: "Mood",
+							description: "Calm · Grounded · Restful"
+						},
+						{
+							title: "Vibe",
+							description: "Thoughtful · Balanced · Introspective"
+						},
+						{
+							title: "Smells Like",
+							description: "Fresh dark fruits at first light, unfolding into gentle florals layered with earthy depth. Settles into a soft, mossy base with a subtle, lingering warmth."
+						},
+						{
+							title: "Fragrance Notes",
+							description: "Top: Blackcurrant · Pineapple · Apple<br>Middle: Patchouli · Rose · Jasmine<br>Base: Oakmoss · Vanilla · Ambergris"
+						}
+					]
+				},
+				{
+					title: "Benefits",
+					description: "Helps ease restlessness and quiet mental noise, supporting a sense of calm and emotional balance. Creates a composed, settled atmosphere—ideal for evening routines, unwinding, and moments of quiet focus. Well suited for spaces dedicated to rest, reading, or reflective work."
+				}
+			]
 		},
 		{
-			id: "matte-wick-trimmer",
-			name: "Matte Wick Trimmer",
-			price: 16,
-			category: "Accessories",
-			badge: "",
+			id: "candle-tin-set",
+			name: "Candle Tin Set",
+			price: 27,
+			category: "Bundle",
+			badge: "New",
 			image: "../img/pexels-medhat-ayad-122846-439227.jpg",
 			images: [
 				"../img/pexels-medhat-ayad-122846-439227.jpg",
@@ -135,7 +394,7 @@
 				"../img/pexels-alleksana-7670761.jpg",
 				"../img/pexels-828860-2586073.jpg"
 			],
-			description: "Precision steel trimmer to keep wicks clean, improve burn quality, and extend candle performance."
+			description: "Candle tin set of 4 featuring a curated scent bundle designed for different moods and moments. Each tin is compact and travel-friendly, offering a balanced range of calm, grounding, and warm atmospheres. Suitable for daily use, rotation, or gifting."
 		},
 		{
 			id: "candle-care-kit",

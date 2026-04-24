@@ -24,6 +24,7 @@
 	}
 
 	const SHIPPING = 2;
+	const INSTAGRAM_CHECKOUT_URL = "https://www.instagram.com/lumenmoe/";
 	let cart = store.getCart();
 
 	const persistCart = () => {
@@ -58,7 +59,7 @@
 			return;
 		}
 
-		mobileCheckoutBtn.textContent = `Continue to checkout - ${store.formatPrice(amount)}`;
+		mobileCheckoutBtn.textContent = `Continue to Instagram Checkout - ${store.formatPrice(amount)}`;
 	};
 
 	const setCheckoutState = ({ isEmpty, total = 0 }) => {
@@ -90,20 +91,20 @@
 		}
 
 		if (desktopCheckoutBtn) {
-			desktopCheckoutBtn.textContent = isEmpty ? "Go Shopping" : "Continue to checkout";
-			desktopCheckoutBtn.setAttribute("href", isEmpty ? "index.html" : "checkout.html");
+			desktopCheckoutBtn.textContent = isEmpty ? "Go Shopping" : "Continue to Instagram Checkout";
+			desktopCheckoutBtn.setAttribute("href", isEmpty ? "index.html" : INSTAGRAM_CHECKOUT_URL);
 		}
 
 		if (mobileCheckoutBtn) {
 			mobileCheckoutBtn.textContent = isEmpty
 				? "Go Shopping"
-				: `Continue to checkout - ${store.formatPrice(total)}`;
-			mobileCheckoutBtn.dataset.destination = isEmpty ? "index.html" : "checkout.html";
+				: `Continue to Instagram Checkout - ${store.formatPrice(total)}`;
+			mobileCheckoutBtn.dataset.destination = isEmpty ? "index.html" : INSTAGRAM_CHECKOUT_URL;
 		}
 	};
 
 	const handleMobileCtaClick = () => {
-		const destination = mobileCheckoutBtn?.dataset.destination || "checkout.html";
+		const destination = mobileCheckoutBtn?.dataset.destination || INSTAGRAM_CHECKOUT_URL;
 		window.location.href = destination;
 	};
 

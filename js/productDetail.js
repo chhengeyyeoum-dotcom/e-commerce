@@ -29,6 +29,8 @@
 	const howItWorksNode = document.getElementById("productHowItWorks");
 	const accordionHeaders = document.querySelectorAll(".accordion-header");
 
+	const accordionContainer = document.getElementById("productAccordion");
+
 	if (!product || !nameNode || !priceNode || !mainImageNode || !thumbnailsNode || !relatedGridNode) {
 		return;
 	}
@@ -73,19 +75,77 @@
 			descriptionNode.textContent = product.description || "Hand-poured in small batches for clean burn performance and modern atmosphere.";
 		}
 
-		if (descriptionAccordionNode) {
-			descriptionAccordionNode.textContent = product.description || "Hand-poured in small batches for clean burn performance and modern atmosphere.";
-		}
-
-		if (tastingNotesNode) {
-			tastingNotesNode.textContent = product.tastingNotes || "Warm amber, vanilla, cedarwood.";
-		}
-
-		if (howItWorksNode) {
-			howItWorksNode.textContent = product.howItWorks || "Trim wick before each burn and allow wax to melt evenly. Burn for 2-3 hours at a time. Discontinue use when 1cm of wax remains.";
-		}
-
+		renderAccordion();
 		renderThumbnails();
+	};
+
+	const renderAccordion = () => {
+		if (!accordionContainer || !product.details) {
+			return;
+		}
+
+		accordionContainer.innerHTML = product.details.map((item, index) => {
+			const isFirst = index === 0;
+			const contentId = `accordion-content-${index}`;
+			const headerId = `accordion-header-${index}`;
+
+			let contentHtml;
+			if (item.notes) {
+				contentHtml = item.notes.map(note => `
+					<div class="note-item">
+						<h4 class="note-title">${note.title}</h4>
+						<p class="note-description">${note.description}</p>
+					</div>
+				`).join("");
+			} else {
+				contentHtml = `<p>${item.description}</p>`;
+			}
+
+			return `
+				<div class="accordion-item">
+					<button type="button" class="accordion-header" id="${headerId}" aria-expanded="${isFirst}" aria-controls="${contentId}">
+						<span>${item.title}</span>
+						<i class="bi bi-plus"></i>
+					</button>
+					<div id="${contentId}" class="accordion-content ${isFirst ? 'show' : ''}" role="region" aria-labelledby="${headerId}">
+						<div class="accordion-body">
+							${contentHtml}
+						</div>
+					</div>
+				</div>
+			`;
+		}).join("");
+
+		// Re-add event listeners to the new accordion headers
+		const newAccordionHeaders = accordionContainer.querySelectorAll(".accordion-header");
+		newAccordionHeaders.forEach((header) => {
+			header.addEventListener("click", () => {
+				const content = header.nextElementSibling;
+				const isExpanded = header.getAttribute("aria-expanded") === "true";
+
+				// Close all sections
+				accordionContainer.querySelectorAll(".accordion-header").forEach(h => {
+					if (h !== header) {
+						h.setAttribute("aria-expanded", "false");
+						h.nextElementSibling.classList.remove("show");
+						h.querySelector("i").classList.remove("bi-dash");
+						h.querySelector("i").classList.add("bi-plus");
+					}
+				});
+
+				// Toggle current section
+				header.setAttribute("aria-expanded", String(!isExpanded));
+				content.classList.toggle("show");
+				const icon = header.querySelector("i");
+				if (!isExpanded) {
+					icon.classList.remove("bi-plus");
+					icon.classList.add("bi-dash");
+				} else {
+					icon.classList.remove("bi-dash");
+					icon.classList.add("bi-plus");
+				}
+			});
+		});
 	};
 
 	const renderRelatedProducts = () => {
