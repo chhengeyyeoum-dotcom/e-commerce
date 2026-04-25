@@ -16,7 +16,10 @@
 	const descriptionNode = document.getElementById("productDescription");
 	const mainImageNode = document.getElementById("mainProductImage");
 	const thumbnailsNode = document.getElementById("thumbnailGallery");
+	const galleryMainWrapNode = document.querySelector(".gallery-main-wrap");
 	const relatedGridNode = document.getElementById("relatedProductsGrid");
+	const relatedPrevBtn = document.getElementById("relatedPrevBtn");
+	const relatedNextBtn = document.getElementById("relatedNextBtn");
 
 	const quantityInput = document.getElementById("quantityInput");
 	const increaseQtyBtn = document.getElementById("increaseQty");
@@ -58,6 +61,32 @@
 					<button type="button" class="thumb-btn ${isActive}" data-image="${image}" aria-label="View image ${index + 1} of ${product.name}">
 						<img src="${image}" alt="${product.name} thumbnail ${index + 1}" loading="lazy">
 					</button>
+				`;
+			})
+			.join("");
+
+		renderMobileCarousel(gallery);
+	};
+
+	const renderMobileCarousel = (gallery) => {
+		if (!galleryMainWrapNode) {
+			return;
+		}
+
+		let carouselNode = galleryMainWrapNode.querySelector(".mobile-gallery-carousel");
+
+		if (!carouselNode) {
+			carouselNode = document.createElement("div");
+			carouselNode.className = "mobile-gallery-carousel";
+			galleryMainWrapNode.appendChild(carouselNode);
+		}
+
+		carouselNode.innerHTML = gallery
+			.map((image, index) => {
+				return `
+					<div class="mobile-gallery-slide" aria-label="Image ${index + 1} of ${gallery.length}">
+							<img src="${image}" alt="${product.name} image ${index + 1}" loading="lazy">
+					</div>
 				`;
 			})
 			.join("");
@@ -188,6 +217,26 @@
 		}
 	};
 
+	const scrollRelatedProducts = (direction) => {
+		if (!relatedGridNode) {
+			return;
+		}
+
+		const firstItem = relatedGridNode.querySelector("[class*='col-']");
+		if (!firstItem) {
+			return;
+		}
+
+		const gridStyle = window.getComputedStyle(relatedGridNode);
+		const gap = Number.parseFloat(gridStyle.columnGap || gridStyle.gap || "0") || 0;
+		const step = firstItem.getBoundingClientRect().width + gap;
+
+		relatedGridNode.scrollBy({
+			left: step * direction,
+			behavior: "smooth",
+		});
+	};
+
 	const closeAllAccordionSections = () => {
 		document.querySelectorAll(".accordion-content.show").forEach((openContent) => {
 			openContent.classList.remove("show");
@@ -235,6 +284,18 @@
 			store.addToCart(product, quantity);
 			store.showToast(`${quantity} ${quantity === 1 ? "item" : "items"} added to cart`);
 			setStatus("");
+		});
+	}
+
+	if (relatedPrevBtn) {
+		relatedPrevBtn.addEventListener("click", () => {
+			scrollRelatedProducts(-1);
+		});
+	}
+
+	if (relatedNextBtn) {
+		relatedNextBtn.addEventListener("click", () => {
+			scrollRelatedProducts(1);
 		});
 	}
 

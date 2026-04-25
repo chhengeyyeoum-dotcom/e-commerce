@@ -133,7 +133,7 @@
 						},
 						{
 							title: "Fragrance Notes",
-							description: "Top: Orange<br>Middle: Neroli Oilne<br>Base: Orange Blossom"
+							description: "Top: Orange<br>Middle: Neroli Oil<br>Base: Orange Blossom"
 						}
 					]
 				},
@@ -276,7 +276,7 @@
 						},
 						{
 							title: "Fragrance Notes",
-							description: "Top: Orange<br>Middle: Neroli Oilne<br>Base: Orange Blossom"
+							description: "Top: Orange<br>Middle: Neroli Oil<br>Base: Orange Blossom"
 						}
 					]
 				},
