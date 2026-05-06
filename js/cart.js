@@ -23,7 +23,7 @@
 		return;
 	}
 
-	const SHIPPING = 2;
+	const SHIPPING = 1.5;
 	const INSTAGRAM_CHECKOUT_URL = "https://www.instagram.com/lumenmoe/";
 	let cart = store.getCart();
 

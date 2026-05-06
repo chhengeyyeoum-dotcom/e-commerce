@@ -5,15 +5,16 @@
 		{
 			id: "quiet-chypre-jar",
 			name: "Quiet Chypre",
-			price: 17,
+			price: 22,
 			category: "Candle Jar",
 			badge: "New",
-			image: "../img/pexels-828860-2586073.jpg",
+			image: "../img/quiet chypre box.jpg",
 			images: [
-				"../img/pexels-828860-2586073.jpg",
-				"../img/pexels-alleksana-7670761.jpg",
-				"../img/pexels-828860-2586073.jpg",
-				"../img/pexels-828860-2586073.jpg"
+				"../img/quiet chypre box.jpg",
+				"../img/quiet chypre s1.jpg",
+				"../img/quiet chypre set.jpg",
+				"../img/quiet chypre single.jpg",
+				
 			],
 			description: "Quiet Chypre brings a sense of calm, intention, and quiet balance to your space. It opens with soft clarity and settles into a clean, earthy warmth that never overwhelms creating a steady atmosphere for slow routines, focused moments, and reflective evenings.",
 			details: [
@@ -52,15 +53,16 @@
 		{
 			id: "clear-night-jar",
 			name: "Clear Night",
-			price: 17,
+			price: 22,
 			category: "Candle Jar",
 			badge: "",
-			image: "../img/pexels-flavia-hitomi-3334329-6421207.jpg",
+			image: "../img/clear night box.jpg",
 			images: [
-				"../img/pexels-flavia-hitomi-3334329-6421207.jpg",
-				"../img/pexels-liogooo-13898254.jpg",
-				"../img/pexels-gstudio-16212410.jpg",
-				"../img/pexels-alleksana-7670761.jpg"
+				"../img/clear night box.jpg",
+				"../img/clear night pair.jpg",
+				"../img/clear night set.jpg",
+				"../img/clear night single.jpg",
+				
 			],
 			description: "A clean, minimal gourmand fragrance inspired by the quiet neutrality of vodka. Smooth and weightless, it brings clarity without sweetness designed to reset the atmosphere and support focus, stillness, and balance.",
 			details: [
@@ -99,15 +101,16 @@
 		{
 			id: "neroli-veil-jar",
 			name: "Neroli Veil",
-			price: 17,
+			price: 22,
 			category: "Candle Jar",
 			badge: "Best Seller",
-			image: "../img/pexels-medhat-ayad-122846-439227.jpg",
+			image: "../img/neroli veil box.jpg",
 			images: [
-				"../img/pexels-medhat-ayad-122846-439227.jpg",
-				"../img/pexels-gstudio-16212410.jpg",
-				"../img/pexels-liogooo-13898254.jpg",
-				"../img/pexels-vika-glitter-392079-1648771.jpg"
+				"../img/neroli veil box.jpg",
+				"../img/neroli set.jpg",
+				"../img/neroli veil pair.jpg",
+				"../img/neroli veil single.jpg",
+				
 			],
 			description: "Neroli Veil brings a sense of gentle clarity and quiet refreshment. It opens with soft citrus brightness, then settles into an airy floral calm—creating a light, restorative atmosphere. Subtle and refined, it’s designed for slow mornings, open spaces, and moments of emotional reset.",
 			details: [
@@ -147,15 +150,16 @@
 		{
 			id: "soft-resin-jar",
 			name: "Soft Resin",
-			price: 17,
+			price: 22,
 			category: "Candle Jar",
 			badge: "",
-			image: "../img/pexels-rdne-8903690.jpg",
+			image: "../img/soft resin box.jpg",
 			images: [
-				"../img/pexels-rdne-8903690.jpg",
-				"../img/pexels-pavel-danilyuk-7222031.jpg",
-				"../img/pexels-peg1997-12503617.jpg",
-				"../img/pexels-flavia-hitomi-3334329-6421207.jpg"
+				"../img/soft resin box.jpg",
+				"../img/soft resin s1.jpg",
+				"../img/soft resin set.jpg",
+				"../img/soft resin single.jpg",
+				
 			],
 			description: "Soft Resin is a warm, muted scent that feels quietly grounding. It opens with dry herbal clarity, then softens into gentle spice and resin warmth. The result is a calm, steady atmosphere—like a quiet presence that settles the space without demanding attention. Designed to slow the pace and restore balance, it feels earthy, composed, and reassuring.",
 			details: [
@@ -195,15 +199,13 @@
 		{
 			id: "soft-resin-tin",
 			name: "Soft Resin Tin",
-			price: 8,
+			price: 10,
 			category: "Candle Tin",
 			badge: "New",
-			image: "../img/pexels-liogooo-13898254.jpg",
+			image: "../img/soft resin tin.JPG",
 			images: [
-				"../img/pexels-liogooo-13898254.jpg",
-				"../img/pexels-828860-2586073.jpg",
-				"../img/pexels-medhat-ayad-122846-439227.jpg",
-				"../img/pexels-vika-glitter-392079-1648771.jpg"
+				"../img/soft resin tin.JPG",
+				
 			],
 			description: "Soft Resin is a warm, muted scent with a grounded character. It opens with dry herbal notes, softens into gentle spices, and settles into a light resinous warmth. The atmosphere is calm and steady, designed to slow the pace and restore balance. Poured in a compact tin, suitable for travel and small spaces.",
 			details: [
@@ -242,15 +244,14 @@
 		{
 			id: "neroli-veil-tin",
 			name: "Neroli Veil Tin",
-			price: 8,
+			price: 10,
 			category: "Candle Tin",
 			badge: "",
-			image: "../img/pexels-peg1997-12503617.jpg",
+			image: "../img/neroli veil tin.JPG",
 			images: [
-				"../img/pexels-peg1997-12503617.jpg",
-				"../img/pexels-rdne-8903690.jpg",
-				"../img/pexels-flavia-hitomi-3334329-6421207.jpg",
-				"../img/pexels-pavel-danilyuk-7222031.jpg"
+				"../img/neroli veil tin.JPG",
+				
+				
 			],
 			description: "Neroli Veil brings a sense of gentle clarity and quiet refreshment. It opens with soft citrus brightness, then settles into an airy floral calm—creating a light, restorative atmosphere. Subtle and refined, it’s designed for slow mornings, open spaces, and moments of emotional reset.",
 			details: [
@@ -290,15 +291,14 @@
 		{
 			id: "clear-night-tin",
 			name: "Clear Night Tin",
-			price: 8,
+			price: 10,
 			category: "Candle Tin",
 			badge: "New",
-			image: "../img/pexels-peg1997-12503617.jpg",
+			image: "../img/clear night tin.JPG",
 			images: [
-				"../img/pexels-peg1997-12503617.jpg",
-				"../img/pexels-rdne-8903690.jpg",
-				"../img/pexels-flavia-hitomi-3334329-6421207.jpg",
-				"../img/pexels-pavel-danilyuk-7222031.jpg"
+				"../img/clear night tin.JPG",
+				
+				
 			],
 			description: "A clean, minimal gourmand fragrance inspired by the quiet neutrality of vodka. Smooth and weightless, it brings clarity without sweetness designed to reset the atmosphere and support focus, stillness, and balance.",
 			details: [
@@ -337,15 +337,13 @@
 		{
 			id: "quiet-chypre-tin",
 			name: "Quiet Chypre",
-			price: 8,
+			price: 10,
 			category: "Candle Tin",
 			badge: "New",
-			image: "../img/pexels-pavel-danilyuk-7222031.jpg",
+			image: "../img/quiet chypre tin.JPG",
 			images: [
-				"../img/pexels-pavel-danilyuk-7222031.jpg",
-				"../img/pexels-flavia-hitomi-3334329-6421207.jpg",
-				"../img/pexels-gstudio-16212410.jpg",
-				"../img/pexels-liogooo-13898254.jpg"
+				"../img/quiet chypre tin.JPG",
+				
 			],
 			description: "Quiet Chypre brings a sense of calm, intention, and quiet balance to your space. It opens with soft clarity and settles into a clean, earthy warmth that never overwhelms creating a steady atmosphere for slow routines, focused moments, and reflective evenings.",
 			details: [
@@ -382,34 +380,131 @@
 			]
 		},
 		{
-			id: "candle-tin-set",
-			name: "Candle Tin Set",
+			id: "night-resin-set",
+			name: "Night Resin Set",
 			price: 27,
 			category: "Bundle",
-			badge: "New",
-			image: "../img/pexels-medhat-ayad-122846-439227.jpg",
+			badge: "$32 Value",
+			image: "../img/bundle 1.JPG",
 			images: [
-				"../img/pexels-medhat-ayad-122846-439227.jpg",
-				"../img/pexels-vika-glitter-392079-1648771.jpg",
+				"../img/bundle 1.JPG",
+				/*"../img/pexels-vika-glitter-392079-1648771.jpg",
 				"../img/pexels-alleksana-7670761.jpg",
-				"../img/pexels-828860-2586073.jpg"
+				"../img/pexels-828860-2586073.jpg"*/
 			],
-			description: "Candle tin set of 4 featuring a curated scent bundle designed for different moods and moments. Each tin is compact and travel-friendly, offering a balanced range of calm, grounding, and warm atmospheres. Suitable for daily use, rotation, or gifting."
+			description: "A calm, low-light pairing. Clear Night brings a cool, quiet atmosphere, while Soft Resin adds a warm, grounded layer. The balance feels steady and composed, suited for evening routines and slow transitions.",
+			details: [
+				{
+					title: "Bundle Contents",
+					description: "Includes 10 oz / 283 g Clear Night candle jar and 4 oz / 113 g Soft Resin candle tin. Both crafted with a natural coconut soy wax blend for a clean, even burn. Infused with fine fragrance oils for a long-lasting scent experience, with a burn time of up to 65 hours each.<br><br>Plant-based and non-toxic, free from phthalates, and safe for everyday indoor use when used as directed. Designed for consistent performance and quiet, intentional moments."
+				},
+				{
+					title: "Fragrance Pairing",
+					notes: [
+						{
+							title: "Clear Night",
+							description: "Clean · Calm · Neutral - A minimal gourmand fragrance inspired by vodka's quiet neutrality"
+						},
+						{
+							title: "Soft Resin",
+							description: "Grounded · Calm · Quiet Warmth - A warm, muted scent with dry herbal clarity softening into gentle spice and resin warmth"
+						},
+						{
+							title: "Together",
+							description: "These two fragrances create a balanced, composed atmosphere. Clear Night's cool clarity complements Soft Resin's warm grounding, creating a versatile pairing for any moment."
+						}
+					]
+				},
+				{
+					title: "Benefits",
+					description: "Experience the harmony of complementary scents that work together to create a calm, settled atmosphere. Save 15% compared to purchasing individually. Perfect for personal use or as a thoughtfully curated gift for someone who appreciates intentional fragrance experiences."
+				}
+			]
 		},
 		{
-			id: "candle-care-kit",
-			name: "Candle Care Kit",
-			price: 28,
-			category: "Accessories",
-			badge: "New",
-			image: "../img/pexels-alleksana-7670761.jpg",
+			id: "veiled-chypre-set",
+			name: "Veiled Chypre Set",
+			price: 27,
+			category: "Bundle",
+			badge: "$32 Value",
+			image: "../img/bunle 2.JPG",
 			images: [
-				"../img/pexels-alleksana-7670761.jpg",
-				"../img/pexels-828860-2586073.jpg",
-				"../img/pexels-medhat-ayad-122846-439227.jpg",
-				"../img/pexels-vika-glitter-392079-1648771.jpg"
+				"../img/bunle 2.JPG",
+		
 			],
-			description: "Complete maintenance set with trimmer and snuffer to keep every burn cleaner and longer lasting."
+			description: "A balanced contrast. Quiet Chypre brings an earthy structure. Neroli Veil adds a light, clean lift. The result feels composed and softly refreshing. It's a versatile pairing that works for both mornings and evenings, and creates a calm, steady atmosphere in any space.",
+			details: [
+				{
+					title: "Bundle Contents",
+					description: "Includes 10 oz / 283 g Quiet Chypre candle jar and 4 oz / 113 g Neroli Veil candle tin. Both crafted with a natural coconut soy wax blend for a clean, even burn. Infused with fine fragrance oils for a long-lasting scent experience, with a burn time of up to 65 hours each.<br><br>Plant-based and non-toxic, free from phthalates, and safe for everyday indoor use when used as directed. Designed for consistent performance and quiet, intentional moments."
+				},
+				{
+					title: "Fragrance Pairing",
+					notes: [
+						{
+							title: "Quiet Chypre",
+							description: "Calm · Grounded · Restful - Opens with soft clarity and settles into clean, earthy warmth"
+						},
+						{
+							title: "Neroli Veil",
+							description: "Fresh · Calm · Clear - Soft citrus brightness unfolding into airy floral calm"
+						},
+						{
+							title: "Together",
+							description: "These fragrances create a balanced contrast that feels composed and softly refreshing. The earthy grounding of Quiet Chypre balances the light lift of Neroli Veil, creating a versatile pairing for both mornings and evenings."
+						}
+					]
+				},
+				{
+					title: "Benefits",
+					description: "Experience the harmony of complementary scents designed to work together. Save 15% compared to purchasing individually. Perfect for creating a personalized scent journey, or as a thoughtfully curated gift for someone who values intentional fragrance experiences."
+				}
+			]
+		},
+		{
+			id: "candle-tin-set-4",
+			name: "Candle Tin Set of 4",
+			price: 32,
+			category: "Bundle",
+			badge: "$40 Value",
+			image: "../img/tin set.jpg",
+			images: [
+		
+				"../img/tin set.jpg",
+				"../img/tin sett.jpg",
+			],
+			description: "A complete sensory journey with all four signature tin scents. This curated collection brings variety and balance to any space, allowing you to explore each fragrance and discover your perfect moments.",
+			details: [
+				{
+					title: "Bundle Contents",
+					description: "Includes four 4 oz / 113 g candle tins: Clear Night, Soft Resin, Neroli Veil, and Quiet Chypre. Each crafted with a natural coconut soy wax blend for a clean, even burn. Infused with fine fragrance oils for a long-lasting scent experience, with a burn time of up to 20 hours each.<br><br>Plant-based and non-toxic, free from phthalates, and safe for everyday indoor use when used as directed. Designed for consistent performance and quiet, intentional moments."
+				},
+				{
+					title: "Fragrance Collection",
+					notes: [
+						{
+							title: "Clear Night",
+							description: "Clean · Calm · Neutral - A minimal gourmand fragrance inspired by vodka's quiet neutrality"
+						},
+						{
+							title: "Soft Resin",
+							description: "Grounded · Calm · Quiet Warmth - A warm, muted scent with dry herbal clarity softening into gentle spice and resin warmth"
+						},
+						{
+							title: "Neroli Veil",
+							description: "Fresh · Calm · Clear - Soft citrus brightness unfolding into airy floral calm"
+						},
+						{
+							title: "Quiet Chypre",
+							description: "Calm · Grounded · Restful - Opens with soft clarity and settles into clean, earthy warmth"
+						}
+					]
+				},
+				{
+					title: "Benefits",
+					description: "Explore a complete palette of our signature scents. Perfect for discovering new favorites, layering fragrances in different spaces, or sharing the Lumen experience with loved ones. Save 20% compared to purchasing tins individually. Ideal as a gift for fragrance enthusiasts."
+				}
+			]
 		}
 	];
 
