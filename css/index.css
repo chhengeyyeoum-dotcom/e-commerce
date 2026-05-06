@@ -178,15 +178,15 @@ a {
 }
 
 .hero-slide-1 {
-	background-image: url("../img/pexels-medhat-ayad-122846-439227.jpg");
+	background-image: url("../img/collection1.png");
 }
 
 .hero-slide-2 {
-	background-image: url("../img/pexels-vika-glitter-392079-1648771.jpg");
+	background-image: url("../img/Tin collection.png");
 }
 
 .hero-slide-3 {
-	background-image: url("../img/pexels-pavel-danilyuk-7222031.jpg");
+	background-image: url("../img/ritual bath.jpg");
 }
 
 .hero-content {
@@ -465,9 +465,9 @@ a {
 }
 
 .toast-success {
-	background-color: #c8b273;
+	background-color: #11120d;
 	color: #fffbf4;
-	border-left: 4px solid #ffbb00;
+	
 }
 
 .toast.show {
