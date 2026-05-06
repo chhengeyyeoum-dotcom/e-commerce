@@ -202,9 +202,9 @@
 			price: 10,
 			category: "Candle Tin",
 			badge: "New",
-			image: "../img/soft resin tin.JPG",
+			image: "../img/soft resin Tin.JPG",
 			images: [
-				"../img/soft resin tin.JPG",
+				"../img/soft resin Tin.JPG",
 				
 			],
 			description: "Soft Resin is a warm, muted scent with a grounded character. It opens with dry herbal notes, softens into gentle spices, and settles into a light resinous warmth. The atmosphere is calm and steady, designed to slow the pace and restore balance. Poured in a compact tin, suitable for travel and small spaces.",
@@ -247,9 +247,9 @@
 			price: 10,
 			category: "Candle Tin",
 			badge: "",
-			image: "../img/neroli veil tin.JPG",
+			image: "../img/neroli veil Tin.JPG",
 			images: [
-				"../img/neroli veil tin.JPG",
+				"../img/neroli veil Tin.JPG",
 				
 				
 			],
@@ -294,9 +294,9 @@
 			price: 10,
 			category: "Candle Tin",
 			badge: "New",
-			image: "../img/clear night tin.JPG",
+			image: "../img/clear night Tin.JPG",
 			images: [
-				"../img/clear night tin.JPG",
+				"../img/clear night Tin.JPG",
 				
 				
 			],
@@ -340,9 +340,9 @@
 			price: 10,
 			category: "Candle Tin",
 			badge: "New",
-			image: "../img/quiet chypre tin.JPG",
+			image: "../img/quiet chypre Tin.JPG",
 			images: [
-				"../img/quiet chypre tin.JPG",
+				"../img/quiet chypre Tin.JPG",
 				
 			],
 			description: "Quiet Chypre brings a sense of calm, intention, and quiet balance to your space. It opens with soft clarity and settles into a clean, earthy warmth that never overwhelms creating a steady atmosphere for slow routines, focused moments, and reflective evenings.",
