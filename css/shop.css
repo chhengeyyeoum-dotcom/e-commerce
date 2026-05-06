@@ -162,15 +162,15 @@ a {
 }
 
 .section-title {
-	font-size: clamp(2rem, 4vw, 3rem);
+	font-size: clamp(1.9rem, 3vw, 2.7rem);
 	line-height: 1.05;
 }
 
 .hero-copy {
-	font-size: clamp(1.9rem, 3vw, 2.7rem);
-	max-width: 620px;
-	margin-inline: auto;
+	font-size: smaller;
 	color: var(--text-muted);
+	
+	
 }
 
 .shop-controls-mobile {
