@@ -8,12 +8,12 @@
 			price: 22,
 			category: "Candle Jar",
 			badge: "New",
-			image: "../img/quiet chypre box.jpg",
+			image: "../img/quiet chypre box.JPG",
 			images: [
-				"../img/quiet chypre box.jpg",
-				"../img/quiet chypre s1.jpg",
-				"../img/quiet chypre set.jpg",
-				"../img/quiet chypre single.jpg",
+				"../img/quiet chypre box.JPG",
+				"../img/quiet chypre s1.JPG",
+				"../img/quiet chypre set.JPG",
+				"../img/quiet chypre single.JPG",
 				
 			],
 			description: "Quiet Chypre brings a sense of calm, intention, and quiet balance to your space. It opens with soft clarity and settles into a clean, earthy warmth that never overwhelms creating a steady atmosphere for slow routines, focused moments, and reflective evenings.",
@@ -107,9 +107,9 @@
 			image: "../img/neroli veil box.jpg",
 			images: [
 				"../img/neroli veil box.jpg",
-				"../img/neroli set.jpg",
-				"../img/neroli veil pair.jpg",
-				"../img/neroli veil single.jpg",
+				"../img/neroli set.JPG",
+				"../img/neroli veil pair.JPG",
+				"../img/neroli veil single.JPG",
 				
 			],
 			description: "Neroli Veil brings a sense of gentle clarity and quiet refreshment. It opens with soft citrus brightness, then settles into an airy floral calm—creating a light, restorative atmosphere. Subtle and refined, it’s designed for slow mornings, open spaces, and moments of emotional reset.",
@@ -153,12 +153,12 @@
 			price: 22,
 			category: "Candle Jar",
 			badge: "",
-			image: "../img/soft resin box.jpg",
+			image: "../img/soft resin box.JPG",
 			images: [
-				"../img/soft resin box.jpg",
-				"../img/soft resin s1.jpg",
-				"../img/soft resin set.jpg",
-				"../img/soft resin single.jpg",
+				"../img/soft resin box.JPG",
+				"../img/soft resin s1.JPG",
+				"../img/soft resin set.JPG",
+				"../img/soft resin single.JPG",
 				
 			],
 			description: "Soft Resin is a warm, muted scent that feels quietly grounding. It opens with dry herbal clarity, then softens into gentle spice and resin warmth. The result is a calm, steady atmosphere—like a quiet presence that settles the space without demanding attention. Designed to slow the pace and restore balance, it feels earthy, composed, and reassuring.",
@@ -467,11 +467,11 @@
 			price: 32,
 			category: "Bundle",
 			badge: "$40 Value",
-			image: "../img/tin set.jpg",
+			image: "../img/tin set.JPG",
 			images: [
 		
-				"../img/tin set.jpg",
-				"../img/tin sett.jpg",
+				"../img/tin set.JPG",
+				"../img/tin sett.JPG",
 			],
 			description: "A complete sensory journey with all four signature tin scents. This curated collection brings variety and balance to any space, allowing you to explore each fragrance and discover your perfect moments.",
 			details: [
