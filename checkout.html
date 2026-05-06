@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Lumen Moe | Home Page</title>
+	<title>Lumen Moe | Checkout</title>
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,13 +11,12 @@
 
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
-	<link rel="stylesheet" href="./css/index.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+	<link rel="stylesheet" href="./css/checkout.css">
 	<link rel="stylesheet" href="./css/footer.css">
 </head>
 <body>
 	<header>
-
-		<!--Navbar Section-->
 		<nav class="navbar navbar-expand-md py-3" id="mainNavbar" aria-label="Primary navigation">
 			<div class="container position-relative">
 				<button class="navbar-toggler border-0 p-0 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#primaryNav" aria-controls="primaryNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,15 +26,14 @@
 				<ul class="navbar-nav d-none d-md-flex gap-4 align-items-center nav-left">
 					<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
 					<li class="nav-item"><a class="nav-link" href="shop.html">Shop All</a></li>
-					<li class="nav-item"><a class="nav-link" href="#our-story">Story</a></li>
+					<li class="nav-item"><a class="nav-link" href="index.html#our-story">About Us</a></li>
 				</ul>
-				
+
 				<!--Logo-->
 				<a class="navbar-brand logo mx-auto" href="index.html" aria-label="Lumen Moe home">
 					<img src="img/web.png" alt="Lumen Moe" class="logo-image">
 				</a>
-				
-				<!--Menu Icons-->
+
 				<div class="d-none d-md-flex gap-3 nav-icons nav-right" aria-label="Quick actions">
 					<a href="cart.html" class="icon-link" aria-label="Cart">
 						<i class="bi bi-bag"></i>
@@ -53,104 +51,92 @@
 					<ul class="navbar-nav d-md-none gap-1 mobile-menu-list">
 						<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
 						<li class="nav-item"><a class="nav-link" href="shop.html">Shop All</a></li>
-						<li class="nav-item"><a class="nav-link" href="#our-story">About Us</a></li>
+						<li class="nav-item"><a class="nav-link" href="index.html#our-story">About Us</a></li>
 						<!--<li class="nav-item"><a class="nav-link" href="#" aria-label="Profile"><i class="bi bi-person me-2"></i>Profile</a></li>-->
 					</ul>
 				</div>
 			</div>
 		</nav>
-
-		<!--Hero Section-->
-		<section class="hero text-light">
-			<div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4200" data-bs-pause="false">
-				<div class="carousel-inner">
-					<div class="carousel-item active">
-						<div class="hero-slide hero-slide-1 d-flex align-items-center justify-content-center text-center">
-							<div class="container hero-content position-relative">
-								<p class="hero-kicker mb-2">Hand-poured luxury scents</p>
-								<h1 class="display-4 hero-title mb-3">Elevate Your Space</h1>
-								<!--<p class="hero-subtext mx-auto mb-4">Discover modern candle compositions crafted to bring warmth, calm, and understated elegance into your daily rituals.</p>-->
-								<a href="shop.html" class="btn btn-hero">Shop Now</a>
-							</div>
-						</div>
-					</div>
-					<div class="carousel-item">
-						<div class="hero-slide hero-slide-2 d-flex align-items-center justify-content-center text-center">
-							<div class="container hero-content position-relative">
-								<p class="hero-kicker mb-2">Seasonal Collection</p>
-								<h1 class="display-4 hero-title mb-3">Warm Notes, Soft Glow</h1>
-								<!--<p class="hero-subtext mx-auto mb-4">From amber and fig to cedar and musk, discover curated scents designed to elevate quiet evenings and mindful mornings.</p>-->
-								<a href="shop.html" class="btn btn-hero">Shop Now</a>
-							</div>
-						</div>
-					</div>
-					<div class="carousel-item">
-						<div class="hero-slide hero-slide-3 d-flex align-items-center justify-content-center text-center">
-							<div class="container hero-content position-relative">
-								<p class="hero-kicker mb-2">Modern Rituals</p>
-								<h1 class="display-4 hero-title mb-3">Scented Simplicity</h1>
-								<!--<p class="hero-subtext mx-auto mb-4">Crafted in small batches for homes that value subtle details, intentional design, and the art of everyday comfort.</p>-->
-								<a href="shop.html" class="btn btn-hero">Shop Now</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
 	</header>
-	
-	<!--Featured Products-->
-	<main>
-		<section class="featured-products py-5" id="featured-products">
-			<div class="container py-md-4">
-				<div class="section-heading text-center mb-4 mb-md-5">
-					<p class="section-kicker mb-2">Bestsellers</p>
-					<h2 class="section-title mb-0">Featured Products</h2>
-				</div>
 
-				<div class="row g-3 g-md-4" id="featuredProductGrid" aria-live="polite"></div>
-				<div class="text-center mt-4 mt-md-5">
-					<a href="shop.html" class="btn btn-view-all">View All Products</a>
-				</div>
+	<main>
+		<section class="checkout-hero py-5">
+			<div class="container text-center py-md-4">
+				<p class="section-kicker mb-2">Secure Checkout</p>
+				<h1 class="section-title mb-2">Finalize Your Order</h1>
+				<p class="hero-copy mb-0">Complete your details and confirm your candle ritual delivery in a few quick steps.</p>
 			</div>
 		</section>
 
-		<!--Our Story-->
-		<section class="our-story py-5" id="our-story">
-			<div class="container py-md-4">
-				<div class="row g-4 g-md-5 align-items-center">
-					<div class="col-12 col-md-6">
-						<div class="story-grid">
-							<div class="story-grid-item tall">
-								<img src="/img/to outside.JPG" alt="Candle workshop atmosphere" class="img-fluid">
-							</div>
-							<div class="story-grid-item">
-								<img src="/img/to inside.JPG" alt="Raw fragrance materials" class="img-fluid">
-							</div>
-							<div class="story-grid-item">
-								<img src="/img/top view.JPG" alt="Minimal home candle styling" class="img-fluid">
-							</div>
+		<section class="checkout-section pb-5">
+			<div class="container">
+				<div class="row g-4 align-items-start">
+					<div class="col-12 col-lg-7">
+						<div class="checkout-card p-3 p-sm-4 p-lg-4 h-100">
+							<h2 class="card-title mb-3">Shipping Information</h2>
+							<form id="checkoutForm" novalidate>
+								<div class="row g-3">
+									<div class="col-12">
+										<label for="fullName" class="form-label">Full name</label>
+										<input type="text" class="form-control form-control-lg" id="fullName" name="fullName" placeholder="*Your name" required>
+										<div class="invalid-feedback">Please enter your full name.</div>
+									</div>
+
+									<div class="col-12 col-md-6">
+										<label for="email" class="form-label">Email</label>
+										<input type="email" class="form-control form-control-lg" id="email" name="email" placeholder="*Email" required>
+										<div class="invalid-feedback">Enter a valid email address.</div>
+									</div>
+
+									<div class="col-12 col-md-6">
+										<label for="phone" class="form-label">Phone</label>
+										<input type="tel" class="form-control form-control-lg" id="phone" name="phone" placeholder="*Phone" required>
+										<div class="invalid-feedback">Enter a valid phone number.</div>
+									</div>
+
+									<div class="col-12">
+										<label for="address" class="form-label">Address</label>
+										<input class="form-control form-control-lg" id="address" name="address" rows="4" placeholder="*Address" required></input>
+										<div class="invalid-feedback">Please provide your delivery address.</div>
+									</div>
+
+									<div class="col-12">
+										<label for="deliveryNote" class="form-label">Delivery Note</label>
+										<textarea class="form-control delivery-note-box" id="deliveryNote" name="deliveryNote" rows="3" placeholder="Add delivery instructions (optional)"></textarea>
+									</div>
+
+									<div class="col-12 d-none d-md-block pt-2">
+										<button type="submit" id="placeOrderBtn" class="checkout-btn desktop-place-order-btn">Continue to payment</button>
+									</div>
+								</div>
+							</form>
 						</div>
 					</div>
 
-					<div class="col-12 col-md-6">
-						<div class="story-content">
-							<p class="section-kicker mb-2">Our Story</p>
-							<h2 class="section-title mb-3">Where Scent Becomes Reflection</h2>
-							<p class="story-text">LUMEN MOE was born from a desire to bring 
-								calm and meaning into everyday rituals. 
-								Each candle transforms scent into a quiet language of 
-								reflection an invitation to slow down, soften, and turn inward.</p>
-							<p class="story-text mb-0">Rooted in honesty, kindness, 
-								and thoughtful craftsmanship, every piece blends fine 
-								fragrance with emotional clarity, shaping an atmosphere 
-								where light, scent, and self-awareness exist in gentle harmony.</p>
+					<div class="col-12 col-lg-5">
+						<div class="checkout-card checkout-summary p-3 p-sm-4 sticky-lg-top">
+							<h2 class="card-title mb-3">Order Summary</h2>
+							<ul class="summary-list list-unstyled mb-3" id="checkoutItems" aria-live="polite"></ul>
+
+							<div class="summary-total d-flex align-items-center justify-content-between">
+								<span>Total</span>
+								<strong id="checkoutTotal">$0.00</strong>
+							</div>
+
+							<p class="small text-muted mt-2 mb-0">Shipping is included for all checkout orders.</p>
+							<div id="orderConfirmation" class="order-confirmation mt-3 d-none" role="status" aria-live="polite"></div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 	</main>
+
+	<div class="mobile-checkout-cta d-md-none">
+		<div class="container">
+			<button type="button" class="checkout-btn" id="mobilePlaceOrderBtn">Continue to payment - $0.00</button>
+		</div>
+	</div>
 
 	<!--FOOTER-->
 	<footer class="footer">
@@ -161,7 +147,6 @@
 					<h5 class="footer-title font-weight-bold">About Store</h5>
 					<p class="footer-text-center">Your one-stop shop for tech gear, delivered fast and backed by support.</p>
 					<p class="footer-text-center"><small><i class="bi bi-geo-alt"></i> Located in Phnom Penh, Cambodia</small></p>
-					
 					<!--<div class="footer-payments mt-3">
 						<span class="footer-payment-label">We accept:</span>
 						<div class="footer-payment-icons mt-2">
@@ -186,6 +171,14 @@
 							</div>
 						</li>
 						<li class="mb-2">
+							<button class="footer-faq-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#faqReturns" aria-expanded="false" aria-controls="faqReturns">
+								Returns
+							</button>
+							<div id="faqReturns" class="collapse footer-faq-answer">
+								<b>You can return items within 14 days in original condition with proof of purchase.</b>
+							</div>
+						</li>
+						<li class="mb-2">
 							<button class="footer-faq-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#faqWarranty" aria-expanded="false" aria-controls="faqWarranty">
 								How should I burn and care for the candle?
 							</button>
@@ -198,7 +191,7 @@
 								Contact Support
 							</button>
 							<div id="faqSupport" class="collapse footer-faq-answer">
-								<b>Contact us via <a href="https://t.me/lumenmoe"><u>Telegram</u></a> for quick assistance.</b>
+								<b>Contact us via <a href="https://t.me/lumenmoe_cs"><u>Telegram</u></a> for quick assistance.</b>
 							</div>
 						</li>
 					</ul>
@@ -216,7 +209,7 @@
 				</div>
 			</div>
 
-			<!-- Second row: newsletter 
+			<!-- Second row: newsletter -->
 			<div class="row justify-content-center mt-5">
 				<div class="col-12 col-md-6">
 					<h5 class="footer-title text-center font-weight-bold">Newsletter</h5>
@@ -227,7 +220,7 @@
 						<button type="submit" class="btn btn-primary">Subscribe</button>
 					</form>
 				</div>
-			</div>-->
+			</div>
 
 			<!-- Third row: social -->
 			<div class="row justify-content-center mt-4">
@@ -248,11 +241,9 @@
 		</div>
 	</footer>
 
-
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-	<script src="./js/navbar.js" defer></script>
 	<script src="./js/products.js" defer></script>
-	<script src="./js/script.js" defer></script>
+	<script src="./js/navbar.js" defer></script>
+	<script src="./js/checkout.js" defer></script>
 </body>
 </html>
