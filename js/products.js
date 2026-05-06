@@ -59,9 +59,9 @@
 			image: "../img/clear night box.jpg",
 			images: [
 				"../img/clear night box.jpg",
-				"../img/clear night pair.jpg",
+				"../img/clear night pair.JPG",
 				"../img/clear night set.jpg",
-				"../img/clear night single.jpg",
+				"../img/clear night single.JPG",
 				
 			],
 			description: "A clean, minimal gourmand fragrance inspired by the quiet neutrality of vodka. Smooth and weightless, it brings clarity without sweetness designed to reset the atmosphere and support focus, stillness, and balance.",
