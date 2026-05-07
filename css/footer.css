@@ -1,0 +1,109 @@
+﻿.footer {
+    background: #fffbf4;
+    color: #11120d;
+    padding: 50px 0;
+    font-size: smaller;
+    border-top: none;
+}
+
+.footer a {
+    color: #11120d;
+}
+
+/*FAQ section*/
+.footer-faq-toggle {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    color: #11120d;
+    text-align: left;
+    font: inherit;
+    cursor: pointer;
+}
+
+.footer-faq-toggle:hover,
+.footer-faq-toggle:focus {
+    color: #565449;
+    outline: none;
+}
+
+.footer-faq-answer {
+    margin-top: 0.35rem;
+    color: rgba(17, 18, 13, 0.85);
+    font-size: 0.88rem;
+    line-height: 1.4;
+}
+
+.footer a:hover {
+    color: #d8cfbc;
+    text-decoration: none;
+}
+
+/*social media icons*/
+.footer-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.85rem;
+    flex-wrap: wrap; 
+}
+
+
+/*buttons*/
+.footer .btn-primary {
+    font-size: smaller;
+    background-color: #11120d;
+    border-color: #11120d;
+    border-radius: 0;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.footer .btn-primary:hover,
+.footer .btn-primary:focus-visible {
+    background-color: #565449;
+    border-color: #565449;
+    color: #fffbf4;
+}
+
+/* make email inputs look like an outline field instead of a solid fill */
+.footer input[type="email"].form-control,
+.footer .form-control[type="email"] {
+    font-size: smaller;
+    background-color: transparent;
+    border: 1px solid #11120d;
+    border-radius: 0;
+}
+
+.footer input[type="*email"].form-control::placeholder {
+    font-size: smaller;
+    color: #11120d;
+    opacity: 1;
+}
+
+.footer .footer-form {
+    gap: 0.5rem;
+    align-items: stretch;
+}
+
+@media (max-width: 575.98px) {
+    .footer .footer-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer .footer-form .form-control[type="email"],
+    .footer .footer-form .btn-primary {
+        width: 100%;
+        margin-right: 0 !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .footer .footer-form {
+        max-width: 28rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
