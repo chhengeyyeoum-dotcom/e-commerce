@@ -97,6 +97,13 @@ body {
     color: #565449;
 }
 
+@media (min-width: 992px) {
+    .nav-link {
+        font-size: 0.82rem;
+        letter-spacing: 0.07em;
+    }
+}
+
 .icon-link {
     width: 34px;
     height: 34px;
