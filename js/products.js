@@ -8,12 +8,9 @@
 			price: 22,
 			category: "Candle Jar",
 			badge: "New",
-			image: "../img/quiet chypre box.JPG",
+			image: "../img/quiet chypre-jar.png",
 			images: [
-				"../img/quiet chypre box.JPG",
-				"../img/quiet chypre s1.JPG",
-				"../img/quiet chypre set.JPG",
-				"../img/quiet chypre single.JPG",
+			
 				
 			],
 			description: "Quiet Chypre brings a sense of calm, intention, and quiet balance to your space. It opens with soft clarity and settles into a clean, earthy warmth that never overwhelms creating a steady atmosphere for slow routines, focused moments, and reflective evenings.",
@@ -56,12 +53,9 @@
 			price: 22,
 			category: "Candle Jar",
 			badge: "",
-			image: "../img/clear night box.jpg",
+			image: "../img/Clear night-jar.png",
 			images: [
-				"../img/clear night box.jpg",
-				"../img/clear night pair.JPG",
-				"../img/clear night set.jpg",
-				"../img/clear night single.JPG",
+			
 				
 			],
 			description: "A clean, minimal gourmand fragrance inspired by the quiet neutrality of vodka. Smooth and weightless, it brings clarity without sweetness designed to reset the atmosphere and support focus, stillness, and balance.",
@@ -104,12 +98,9 @@
 			price: 22,
 			category: "Candle Jar",
 			badge: "Best Seller",
-			image: "../img/neroli veil box.jpg",
+			image: "../img/neroli veil- jar.png",
 			images: [
-				"../img/neroli veil box.jpg",
-				"../img/neroli set.JPG",
-				"../img/neroli veil pair.JPG",
-				"../img/neroli veil single.JPG",
+				
 				
 			],
 			description: "Neroli Veil brings a sense of gentle clarity and quiet refreshment. It opens with soft citrus brightness, then settles into an airy floral calm—creating a light, restorative atmosphere. Subtle and refined, it’s designed for slow mornings, open spaces, and moments of emotional reset.",
@@ -153,12 +144,9 @@
 			price: 22,
 			category: "Candle Jar",
 			badge: "",
-			image: "../img/soft resin box.JPG",
+			image: "../img/soft resin-jar.png",
 			images: [
-				"../img/soft resin box.JPG",
-				"../img/soft resin s1.JPG",
-				"../img/soft resin set.JPG",
-				"../img/soft resin single.JPG",
+				
 				
 			],
 			description: "Soft Resin is a warm, muted scent that feels quietly grounding. It opens with dry herbal clarity, then softens into gentle spice and resin warmth. The result is a calm, steady atmosphere—like a quiet presence that settles the space without demanding attention. Designed to slow the pace and restore balance, it feels earthy, composed, and reassuring.",
@@ -202,9 +190,9 @@
 			price: 10,
 			category: "Candle Tin",
 			badge: "New",
-			image: "../img/soft resin Tin.JPG",
+			image: "../img/soft resin-tin.png",
 			images: [
-				"../img/soft resin Tin.JPG",
+				"../img/soft resin-tin.png",
 				
 			],
 			description: "Soft Resin is a warm, muted scent with a grounded character. It opens with dry herbal notes, softens into gentle spices, and settles into a light resinous warmth. The atmosphere is calm and steady, designed to slow the pace and restore balance. Poured in a compact tin, suitable for travel and small spaces.",
@@ -247,9 +235,9 @@
 			price: 10,
 			category: "Candle Tin",
 			badge: "",
-			image: "../img/neroli veil Tin.JPG",
+			image: "../img/neroli veil-tin.png",
 			images: [
-				"../img/neroli veil Tin.JPG",
+				"../img/neroli veil-tin.png",
 				
 				
 			],
@@ -294,9 +282,9 @@
 			price: 10,
 			category: "Candle Tin",
 			badge: "New",
-			image: "../img/clear night Tin.JPG",
+			image: "../img/Clear night-tin.png",
 			images: [
-				"../img/clear night Tin.JPG",
+				"../img/clear night-tin.png",
 				
 				
 			],
@@ -340,9 +328,9 @@
 			price: 10,
 			category: "Candle Tin",
 			badge: "New",
-			image: "../img/quiet chypre Tin.JPG",
+			image: "../img/quiet chypre-tin.png",
 			images: [
-				"../img/quiet chypre Tin.JPG",
+				"../img/quiet chypre-tin.png",
 				
 			],
 			description: "Quiet Chypre brings a sense of calm, intention, and quiet balance to your space. It opens with soft clarity and settles into a clean, earthy warmth that never overwhelms creating a steady atmosphere for slow routines, focused moments, and reflective evenings.",
@@ -385,9 +373,9 @@
 			price: 27,
 			category: "Bundle",
 			badge: "$32 Value",
-			image: "../img/bundle 1.JPG",
+			image: "../img/Bundle 1.png",
 			images: [
-				"../img/bundle 1.JPG",
+				"../img/bundle 1.png",
 				/*"../img/pexels-vika-glitter-392079-1648771.jpg",
 				"../img/pexels-alleksana-7670761.jpg",
 				"../img/pexels-828860-2586073.jpg"*/
@@ -427,9 +415,9 @@
 			price: 27,
 			category: "Bundle",
 			badge: "$32 Value",
-			image: "../img/bunle 2.JPG",
+			image: "../img/bundle 2.png",
 			images: [
-				"../img/bunle 2.JPG",
+				"../img/bundle 2.png",
 		
 			],
 			description: "A balanced contrast. Quiet Chypre brings an earthy structure. Neroli Veil adds a light, clean lift. The result feels composed and softly refreshing. It's a versatile pairing that works for both mornings and evenings, and creates a calm, steady atmosphere in any space.",
@@ -467,11 +455,10 @@
 			price: 32,
 			category: "Bundle",
 			badge: "$40 Value",
-			image: "../img/tin set.JPG",
+			image: "../img/Tin set.png",
 			images: [
 		
-				"../img/tin set.JPG",
-				"../img/tin sett.JPG",
+				"../img/Tin set.png",
 			],
 			description: "A complete sensory journey with all four signature tin scents. This curated collection brings variety and balance to any space, allowing you to explore each fragrance and discover your perfect moments.",
 			details: [
