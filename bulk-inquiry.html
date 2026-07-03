@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Lumen Moe | Bulk Inquiry</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+	<link rel="stylesheet" href="./css/bulk-inquiry.css">
+	<link rel="stylesheet" href="./css/footer.css">
+	<link rel="stylesheet" href="./css/navbar.css">
+	<link rel="icon" href="img/favicon.png" type="image/svg+xml">
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-expand-md py-3" id="mainNavbar" aria-label="Primary navigation">
+			<div class="container position-relative">
+				<button class="navbar-toggler border-0 p-0 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#primaryNav" aria-controls="primaryNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<ul class="navbar-nav d-none d-md-flex gap-4 align-items-center nav-left">
+					<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="shop.html">Shop All</a></li>
+					<li class="nav-item"><a class="nav-link active" href="bulk-inquiry.html" aria-current="page">Bulking</a></li>
+					<li class="nav-item"><a class="nav-link" href="index.html#our-story">About Us</a></li>
+				</ul>
+
+				<a class="navbar-brand logo mx-auto" href="index.html" aria-label="Lumen Moe home">
+					<img src="img/web.png" alt="Lumen Moe" class="logo-image">
+				</a>
+
+				<div class="d-none d-md-flex gap-3 nav-icons nav-right" aria-label="Quick actions">
+					<a href="cart.html" class="icon-link" aria-label="Cart">
+						<i class="bi bi-bag"></i>
+					</a>
+				</div>
+
+				<a href="cart.html" class="icon-link d-md-none mobile-cart" aria-label="Cart">
+					<i class="bi bi-bag"></i>
+				</a>
+
+				<div class="collapse navbar-collapse mt-3 mt-md-0 d-md-none" id="primaryNav">
+					<ul class="navbar-nav d-md-none gap-1 mobile-menu-list">
+						<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+						<li class="nav-item"><a class="nav-link" href="shop.html">Shop All</a></li>
+						<li class="nav-item"><a class="nav-link active" href="bulk-inquiry.html" aria-current="page">Bulk Inquiry</a></li>
+						<li class="nav-item"><a class="nav-link" href="index.html#our-story">About Us</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+		<section class="inquiry-hero py-5">
+			<div class="container text-center py-md-4">
+				<h1 class="section-title mb-2">Corporate Events, Gifting, and Special Occasions</h1>
+			</div>
+		</section>
+
+		<section class="inquiry-section pb-5">
+			<div class="container">
+				<div class="row g-4 align-items-start">
+					<div class="col-12 col-lg-7">
+						<div class="inquiry-card p-3 p-sm-4 p-lg-4 h-100">
+							<h2 class="card-title mb-3">Request Details</h2>
+							<form id="bulkInquiryForm" novalidate>
+								<div class="row g-3">
+									<div class="col-12 col-md-6">
+										<label for="fullName" class="form-label">Full name</label>
+										<input type="text" class="form-control form-control-lg" id="fullName" name="fullName" placeholder="*Your name" required>
+										<div class="invalid-feedback">Please enter your name.</div>
+									</div>
+
+									<div class="col-12 col-md-6">
+										<label for="companyName" class="form-label">Company or event name</label>
+										<input type="text" class="form-control form-control-lg" id="companyName" name="companyName" placeholder="*Company / event" required>
+										<div class="invalid-feedback">Please add your company or event name.</div>
+									</div>
+
+									<div class="col-12 col-md-6">
+										<label for="email" class="form-label">Email</label>
+										<input type="email" class="form-control form-control-lg" id="email" name="email" placeholder="*Email" required>
+										<div class="invalid-feedback">Enter a valid email address.</div>
+									</div>
+
+									<div class="col-12 col-md-6">
+										<label for="phone" class="form-label">Phone / Telegram</label>
+										<input type="tel" class="form-control form-control-lg" id="phone" name="phone" placeholder="*Phone or Telegram" required>
+										<div class="invalid-feedback">Please provide a contact number.</div>
+									</div>
+
+									<div class="col-12 col-md-6">
+										<label for="requestType" class="form-label">Inquiry type</label>
+										<select class="form-select form-control-lg" id="requestType" name="requestType" required>
+											<option value="">Select one</option>
+											<option>Corporate event</option>
+											<option>Client gifting</option>
+											<option>Wedding / celebration</option>
+											<option>Hotel / spa / hospitality</option>
+											<option>Other</option>
+										</select>
+										<div class="invalid-feedback">Please choose an inquiry type.</div>
+									</div>
+
+									<div class="col-12 col-md-6">
+										<label for="quantity" class="form-label">Estimated quantity</label>
+										<input type="number" min="1" class="form-control form-control-lg" id="quantity" name="quantity" placeholder="*Units needed" required>
+										<div class="invalid-feedback">Enter the approximate quantity.</div>
+									</div>
+
+									<div class="col-12 col-md-6">
+										<label for="eventDate" class="form-label">Event date</label>
+										<input type="date" class="form-control form-control-lg" id="eventDate" name="eventDate" required>
+										<div class="invalid-feedback">Please choose the event date.</div>
+									</div>
+
+									<div class="col-12 col-md-6">
+										<label for="budget" class="form-label">Budget range</label>
+										<select class="form-select form-control-lg" id="budget" name="budget" required>
+											<option value="">Select budget</option>
+											<option>Under $100</option>
+											<option>$100 - $250</option>
+											<option>$250 - $500</option>
+											<option>$500+</option>
+										</select>
+										<div class="invalid-feedback">Please choose a budget range.</div>
+									</div>
+
+									<div class="col-12">
+										<label for="products" class="form-label">Preferred products or scents</label>
+										<textarea class="form-control" id="products" name="products" rows="3" placeholder="Examples: candles, gift sets, jasmine, vanilla, custom labels"></textarea>
+									</div>
+
+									<div class="col-12">
+										<label for="notes" class="form-label">Additional details</label>
+										<textarea class="form-control" id="notes" name="notes" rows="4" placeholder="Tell us about branding, packaging, delivery needs, or special requests" required></textarea>
+										<div class="invalid-feedback">Please share a short description of your request.</div>
+									</div>
+
+									<div class="col-12 d-none d-md-block pt-2">
+										<button type="submit" id="sendInquiryBtn" class="inquiry-btn desktop-send-btn">Send inquiry</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+
+					<div class="col-12 col-lg-5">
+						<div class="inquiry-card inquiry-summary p-3 p-sm-4 sticky-lg-top">
+							<h2 class="card-title mb-3">What Happens Next</h2>
+							<ul class="summary-list list-unstyled mb-3">
+								<li class="summary-item py-2 border-bottom">
+									<strong>1.</strong> We review your quantities and timeline.
+								</li>
+								<li class="summary-item py-2 border-bottom">
+									<strong>2.</strong> We suggest product options, packaging, and pricing.
+								</li>
+								<li class="summary-item py-2 border-bottom">
+									<strong>3.</strong> You receive a reply with next steps for approval.
+								</li>
+							</ul>
+
+							<div class="info-panel mb-3">
+								<p class="mb-2"><strong>Best for:</strong> staff gifts, launches, hotel amenities, client appreciation, and event favors.</p>
+								<p class="mb-0"><strong>Response time:</strong> within 1-2 business days.</p>
+							</div>
+
+							<div id="inquiryConfirmation" class="inquiry-confirmation d-none" role="status" aria-live="polite"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<div class="mobile-inquiry-cta d-md-none">
+		<div class="container">
+			<button type="button" class="inquiry-btn" id="mobileSendInquiryBtn">Send inquiry</button>
+		</div>
+	</div>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="row gy-4 text-center text-md-center">
+				<div class="col-12 col-md-4 mt-5">
+					<h5 class="footer-title font-weight-bold">About Store</h5>
+					<p class="footer-text-center">Your one-stop shop for tech gear, delivered fast and backed by support.</p>
+					<p class="footer-text-center"><small><i class="bi bi-geo-alt"></i> Located in Phnom Penh, Cambodia</small></p>
+				</div>
+
+				<div class="col-12 col-md-4 mt-5">
+					<h5 class="footer-title font-weight-bold">FAQs</h5>
+					<ul class="footer-links list-unstyled">
+						<li class="mb-2">
+							<button class="footer-faq-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#faqShipping" aria-expanded="false" aria-controls="faqShipping">
+								Bulk orders
+							</button>
+							<div id="faqShipping" class="collapse footer-faq-answer">
+								<b>We can help with gifting sets, event favors, and larger corporate quantities.</b>
+							</div>
+						</li>
+						<li class="mb-2">
+							<button class="footer-faq-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#faqSupport" aria-expanded="false" aria-controls="faqSupport">
+								Contact Support
+							</button>
+							<div id="faqSupport" class="collapse footer-faq-answer">
+								<b>Contact us via <a href="https://t.me/lumenmoe"><u>Telegram</u></a> for quick assistance.</b>
+							</div>
+						</li>
+					</ul>
+				</div>
+
+				<div class="col-12 col-md-4 mt-5">
+					<h5 class="footer-title font-weight-bold">Hours</h5>
+					<ul class="footer-hours list-unstyled">
+						<li>Mon-Fri: 9am - 6pm</li>
+						<li>Sat: 10am - 4pm</li>
+						<li>Sun: Closed</li>
+						<li class="mt-2">Holiday hours vary.</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="row justify-content-center mt-4">
+				<div class="col-auto">
+					<div class="footer-social">
+						<a href="https://www.instagram.com/lumenmoe/" aria-label="Instagram" class="footer-social-link"><i class="fab fa-instagram"></i></a>
+						<a href="https://www.facebook.com/LumenMoe/" aria-label="Facebook" class="footer-social-link"><i class="fab fa-facebook-f"></i></a>
+						<a href="https://www.pinterest.com/lumenmoe/" aria-label="Pinterest" class="footer-social-link"><i class="fab fa-pinterest"></i></a>
+						<a href="https://www.tiktok.com/@lumenmoe" aria-label="TikTok" class="footer-social-link"><i class="fab fa-tiktok"></i></a>
+						<a href="https://www.youtube.com/@lumenmoe" aria-label="YouTube" class="footer-social-link"><i class="fab fa-youtube"></i></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer-bottom text-center mt-4 pt-3 border-top border-secondary">
+				<small class="text-muted">&copy; <span id="currentYear"></span> <a href="index.html" class="text-decoration-none">Lumen Moe</a>. All rights reserved.</small>
+			</div>
+		</div>
+	</footer>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1N7N6jIeHz" crossorigin="anonymous"></script>
+	<script src="./js/navbar.js" defer></script>
+	<script src="./js/bulk-inquiry.js" defer></script>
+</body>
+</html>
