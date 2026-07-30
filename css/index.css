@@ -18,10 +18,104 @@
 
 body {
 	margin: 0;
+	padding-top: 74px;
 	font-family: "Montserrat", sans-serif;
 	color: var(--text-main);
 	background: #fffbf4;
 	line-height: 1.6;
+}
+
+.site-nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	padding: 0.8rem 0;
+	background: rgba(255, 251, 244, 0.96);
+	backdrop-filter: blur(10px);
+	border-bottom: 1px solid rgba(17, 18, 13, 0.08);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+}
+/* Use the inner Bootstrap container for horizontal alignment, and make it a flex row */
+.site-nav > .container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+}
+
+.site-nav .brand {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.7rem;
+	color: var(--text-main);
+	font-family: "Playfair Display", serif;
+	font-size: 1.1rem;
+	font-weight: 600;
+	letter-spacing: 0.02em;
+	flex-shrink: 0;
+}
+
+.site-nav .logo {
+	height: 38px;
+	width: auto;
+}
+
+.site-nav .nav-links {
+	display: flex;
+	align-items: center;
+	gap: 1.15rem;
+	margin-left: auto;
+}
+
+.site-nav .nav-links a {
+	color: var(--text-main);
+	font-size: 0.84rem;
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	transition: color 0.2s ease;
+}
+
+.site-nav .nav-links a:hover,
+.site-nav .nav-links a:focus-visible {
+	color: var(--hover-support);
+}
+
+.site-nav .nav-toggle {
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	gap: 0.28rem;
+	border: 0;
+	background: transparent;
+	padding: 0.2rem;
+	cursor: pointer;
+}
+
+.site-nav .nav-toggle span {
+	display: block;
+	width: 22px;
+	height: 2px;
+	background: var(--text-main);
+	border-radius: 999px;
+	transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.site-nav.is-open .nav-toggle span:nth-child(1) {
+	transform: translateY(6px) rotate(45deg);
+}
+
+.site-nav.is-open .nav-toggle span:nth-child(2) {
+	opacity: 0;
+}
+
+.site-nav.is-open .nav-toggle span:nth-child(3) {
+	transform: translateY(-6px) rotate(-45deg);
 }
 
 h1,
@@ -37,6 +131,9 @@ a {
 	text-decoration: none;
 }
 
+.footer {
+	scroll-margin-top: 90px;
+}
 
 .hero {
 	position: relative;
@@ -277,7 +374,42 @@ a {
 }
 
 @media (max-width: 767.98px) {
-	/* mobile nav-link rules moved to css/navbar.css */
+	.site-nav {
+		padding: 0.9rem 1rem;
+	}
+
+	.site-nav .nav-toggle {
+		display: inline-flex;
+	}
+
+	.site-nav .nav-links {
+		position: absolute;
+		top: calc(100% + 0.5rem);
+		left: 1rem;
+		right: 1rem;
+		display: none;
+		flex-direction: column;
+		align-items: stretch;
+		gap: 0;
+		margin-left: 0;
+		padding: 0.7rem 0.8rem;
+		background: rgba(255, 251, 244, 0.98);
+		border: 1px solid rgba(17, 18, 13, 0.08);
+		box-shadow: var(--shadow-soft);
+	}
+
+	.site-nav.is-open .nav-links {
+		display: flex;
+	}
+
+	.site-nav .nav-links a {
+		padding: 0.7rem 0;
+		border-bottom: 1px solid rgba(17, 18, 13, 0.08);
+	}
+
+	.site-nav .nav-links a:last-child {
+		border-bottom: 0;
+	}
 
 	.logo {
 		font-size: 1.5rem;
@@ -382,6 +514,14 @@ a {
 }
 
 @media (max-width: 480px) {
+	.site-nav .brand {
+		font-size: 0.96rem;
+	}
+
+	.site-nav .logo {
+		height: 30px;
+	}
+
 	.toast-container {
 		left: 12px;
 		right: 12px;

@@ -167,7 +167,7 @@ a {
 }
 
 .thumb-btn {
-	border: 1px solid var(--line-soft);
+	
 	background-color: transparent;
 	border-radius: 0;
 	padding: 0.28rem;
@@ -195,7 +195,7 @@ a {
 }
 
 .product-panel {
-	border: 1px solid var(--line-soft);
+	
 	border-radius: 0;
 	padding: 0;
 }
@@ -263,7 +263,7 @@ a {
 .qty-control {
 	display: inline-flex;
 	align-items: center;
-	border: 1px solid #11120d;
+	border: 0;
 	border-radius: 0;
 	overflow: hidden;
 	background-color: transparent;
@@ -289,13 +289,17 @@ a {
 	height: 36px;
 	text-align: center;
 	border: 0;
+	outline: none;
+	box-shadow: none;
 	font-weight: 600;
     background-color: transparent;
 	color: var(--text-main);
 }
 
-#quantityInput:focus {
+#quantityInput:focus,
+#quantityInput:focus-visible {
 	outline: none;
+	box-shadow: none;
 }
 
 .add-cart-btn {
@@ -403,7 +407,7 @@ a {
 .related-card {
 	display: block;
 	color: inherit;
-	border: 1px solid var(--line-soft);
+	
 	background-color: var(--card-bg);
 	border-radius: 0;
 	overflow: hidden;
