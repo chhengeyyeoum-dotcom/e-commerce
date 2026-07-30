@@ -1,6 +1,9 @@
-const navbar = document.getElementById("mainNavbar");
+const navbar = document.getElementById("mainNavbar") || document.querySelector(".site-nav");
 const navCollapse = document.getElementById("primaryNav");
-const navLinks = navCollapse ? navCollapse.querySelectorAll(".nav-link") : [];
+const navToggle = document.getElementById("navToggle");
+const siteNav = document.querySelector(".site-nav");
+const siteNavLinks = document.getElementById("siteNavLinks");
+const navLinks = navCollapse ? navCollapse.querySelectorAll(".nav-link") : (siteNavLinks ? siteNavLinks.querySelectorAll("a") : []);
 const cartLinks = navbar ? navbar.querySelectorAll('a[href="cart.html"]') : [];
 const CART_KEY = "lumen_cart";
 
@@ -12,10 +15,12 @@ const ensureCartBadgeStyles = () => {
     const style = document.createElement("style");
     style.id = "cartCountBadgeStyles";
     style.textContent = `
+        .site-nav a[href="cart.html"],
         #mainNavbar a[href="cart.html"] {
             position: relative;
         }
 
+        .site-nav .cart-count-badge,
         #mainNavbar .cart-count-badge {
             position: absolute;
             top: -6px;
@@ -88,6 +93,16 @@ const updateCartBadge = () => {
     });
 };
 
+const closeMenu = () => {
+    if (siteNav) {
+        siteNav.classList.remove("is-open");
+    }
+
+    if (navToggle) {
+        navToggle.setAttribute("aria-expanded", "false");
+    }
+};
+
 const handleNavbarState = () => {
     if (!navbar) {
         return;
@@ -95,6 +110,24 @@ const handleNavbarState = () => {
 
     navbar.classList.toggle("is-scrolled", window.scrollY > 12);
 };
+
+if (navToggle && siteNav && siteNavLinks) {
+    navToggle.addEventListener("click", () => {
+        const isExpanded = navToggle.getAttribute("aria-expanded") === "true";
+        siteNav.classList.toggle("is-open", !isExpanded);
+        navToggle.setAttribute("aria-expanded", String(!isExpanded));
+    });
+
+    siteNavLinks.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", closeMenu);
+    });
+
+    window.addEventListener("resize", () => {
+        if (window.innerWidth > 767.98) {
+            closeMenu();
+        }
+    });
+}
 
 window.addEventListener("scroll", handleNavbarState, { passive: true });
 window.addEventListener("load", handleNavbarState);
@@ -113,7 +146,9 @@ navLinks.forEach((link) => {
             return;
         }
 
-        const bootstrapCollapse = bootstrap.Collapse.getOrCreateInstance(navCollapse);
-        bootstrapCollapse.hide();
+        if (window.bootstrap && window.bootstrap.Collapse) {
+            const bootstrapCollapse = window.bootstrap.Collapse.getOrCreateInstance(navCollapse);
+            bootstrapCollapse.hide();
+        }
     });
 });

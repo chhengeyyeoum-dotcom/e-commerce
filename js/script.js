@@ -1,6 +1,33 @@
 "use strict";
 
 (() => {
+	const navToggle = document.getElementById("navToggle");
+	const siteNav = document.querySelector(".site-nav");
+	const siteNavLinks = document.getElementById("siteNavLinks");
+
+	if (navToggle && siteNav && siteNavLinks) {
+		const closeMenu = () => {
+			siteNav.classList.remove("is-open");
+			navToggle.setAttribute("aria-expanded", "false");
+		};
+
+		navToggle.addEventListener("click", () => {
+			const isExpanded = navToggle.getAttribute("aria-expanded") === "true";
+			siteNav.classList.toggle("is-open", !isExpanded);
+			navToggle.setAttribute("aria-expanded", String(!isExpanded));
+		});
+
+		siteNavLinks.querySelectorAll("a").forEach((link) => {
+			link.addEventListener("click", closeMenu);
+		});
+
+		window.addEventListener("resize", () => {
+			if (window.innerWidth > 767.98) {
+				closeMenu();
+			}
+		});
+	}
+
 	const store = window.LumenStore;
 	const featuredGrid = document.getElementById("featuredProductGrid");
 

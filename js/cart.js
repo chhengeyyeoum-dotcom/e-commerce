@@ -23,7 +23,7 @@
 		return;
 	}
 
-	const SHIPPING = 1.5;
+	const DELIVERY_FEE = 0;
 	const INSTAGRAM_CHECKOUT_URL = "https://www.instagram.com/lumenmoe/";
 	let cart = store.getCart();
 
@@ -154,9 +154,9 @@
 			.join("");
 
 		const subtotal = getSubtotal();
-		const total = subtotal > 0 ? subtotal + SHIPPING : 0;
+		const total = subtotal > 0 ? subtotal + DELIVERY_FEE : 0;
 		subtotalNode.textContent = store.formatPrice(subtotal);
-		shippingNode.textContent = store.formatPrice(subtotal > 0 ? SHIPPING : 0);
+		shippingNode.textContent = subtotal > 0 ? "Free Delivery" : store.formatPrice(0);
 		totalNode.textContent = store.formatPrice(total);
 		setCheckoutState({ isEmpty: false, total });
 	};

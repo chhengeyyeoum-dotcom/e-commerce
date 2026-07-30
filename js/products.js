@@ -492,6 +492,34 @@
 					description: "Explore a complete palette of our signature scents. Perfect for discovering new favorites, layering fragrances in different spaces, or sharing the Lumen experience with loved ones. Save 20% compared to purchasing tins individually. Ideal as a gift for fragrance enthusiasts."
 				}
 			]
+		},
+		{
+			id: "custom-gift-set",
+			name: "Custom Gift Set From 25",
+			price: 25,
+			category: "Bundle",
+			badge: "Custom",
+			image: "../img/Flower.png",
+			images: [
+				"../img/Flower.png",
+				"../img/custom gift2.png",
+				"../img/Set gitf.png"
+			],
+			description: "A thoughtfully packaged Lumen Moe gift set designed for elegant gifting. Presented in a signature box with premium finishing details, it creates a ready-to-give ritual for birthdays, celebrations, corporate gifts, and personal moments.",
+			details: [
+				{
+					title: "Gift Set Details",
+					description: "Includes a curated Lumen Moe candle gift arrangement packaged in a signature gift box with elevated presentation details. Designed for a polished gifting experience with a calm, premium feel."
+				},
+				{
+					title: "Customization",
+					description: "Suitable for personalized gifting needs, special occasions, event gifting, and corporate orders. Product combinations and presentation details may vary based on availability and request."
+				},
+				{
+					title: "Best For",
+					description: "A refined choice for birthdays, thank-you gifts, client gifts, seasonal gifting, housewarmings, and meaningful everyday gestures."
+				}
+			]
 		}
 	];
 
