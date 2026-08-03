@@ -7,6 +7,61 @@ const navLinks = navCollapse ? navCollapse.querySelectorAll(".nav-link") : (site
 const cartLinks = navbar ? navbar.querySelectorAll('a[href="cart.html"]') : [];
 const CART_KEY = "lumen_cart";
 
+const initializeNavbar = () => {
+    if (window.__lumenNavbarInitialized) {
+        return;
+    }
+
+    const closeMenu = () => {
+        if (siteNav) {
+            siteNav.classList.remove("is-open");
+        }
+
+        if (navToggle) {
+            navToggle.setAttribute("aria-expanded", "false");
+        }
+    };
+
+    const handleNavbarState = () => {
+        if (!navbar) {
+            return;
+        }
+
+        navbar.classList.toggle("is-scrolled", window.scrollY > 12);
+    };
+
+    if (navToggle && siteNav && siteNavLinks) {
+        navToggle.addEventListener("click", () => {
+            const isExpanded = navToggle.getAttribute("aria-expanded") === "true";
+            siteNav.classList.toggle("is-open", !isExpanded);
+            navToggle.setAttribute("aria-expanded", String(!isExpanded));
+        });
+
+        siteNavLinks.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", closeMenu);
+        });
+
+        window.addEventListener("resize", () => {
+            if (window.innerWidth > 767.98) {
+                closeMenu();
+            }
+        });
+    }
+
+    window.addEventListener("scroll", handleNavbarState, { passive: true });
+    window.addEventListener("load", handleNavbarState);
+    window.addEventListener("load", updateCartBadge);
+    window.addEventListener("storage", updateCartBadge);
+    window.addEventListener("lumen:cart-updated", updateCartBadge);
+
+    if (cartLinks.length) {
+        ensureCartBadgeStyles();
+        updateCartBadge();
+    }
+
+    window.__lumenNavbarInitialized = true;
+};
+
 const ensureCartBadgeStyles = () => {
     if (document.getElementById("cartCountBadgeStyles")) {
         return;
@@ -93,52 +148,7 @@ const updateCartBadge = () => {
     });
 };
 
-const closeMenu = () => {
-    if (siteNav) {
-        siteNav.classList.remove("is-open");
-    }
-
-    if (navToggle) {
-        navToggle.setAttribute("aria-expanded", "false");
-    }
-};
-
-const handleNavbarState = () => {
-    if (!navbar) {
-        return;
-    }
-
-    navbar.classList.toggle("is-scrolled", window.scrollY > 12);
-};
-
-if (navToggle && siteNav && siteNavLinks) {
-    navToggle.addEventListener("click", () => {
-        const isExpanded = navToggle.getAttribute("aria-expanded") === "true";
-        siteNav.classList.toggle("is-open", !isExpanded);
-        navToggle.setAttribute("aria-expanded", String(!isExpanded));
-    });
-
-    siteNavLinks.querySelectorAll("a").forEach((link) => {
-        link.addEventListener("click", closeMenu);
-    });
-
-    window.addEventListener("resize", () => {
-        if (window.innerWidth > 767.98) {
-            closeMenu();
-        }
-    });
-}
-
-window.addEventListener("scroll", handleNavbarState, { passive: true });
-window.addEventListener("load", handleNavbarState);
-window.addEventListener("load", updateCartBadge);
-window.addEventListener("storage", updateCartBadge);
-window.addEventListener("lumen:cart-updated", updateCartBadge);
-
-if (cartLinks.length) {
-    ensureCartBadgeStyles();
-    updateCartBadge();
-}
+initializeNavbar();
 
 navLinks.forEach((link) => {
     link.addEventListener("click", () => {

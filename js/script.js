@@ -5,7 +5,7 @@
 	const siteNav = document.querySelector(".site-nav");
 	const siteNavLinks = document.getElementById("siteNavLinks");
 
-	if (navToggle && siteNav && siteNavLinks) {
+	if (!window.__lumenNavbarInitialized && navToggle && siteNav && siteNavLinks) {
 		const closeMenu = () => {
 			siteNav.classList.remove("is-open");
 			navToggle.setAttribute("aria-expanded", "false");
