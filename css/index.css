@@ -39,7 +39,7 @@ body {
 	left: 0;
 	right: 0;
 	z-index: 1000;
-} 
+}
 /* Use the inner Bootstrap container for horizontal alignment, and make it a flex row */
 .site-nav > .container {
 	display: flex;
@@ -161,11 +161,11 @@ a {
 }
 
 .hero-slide-1 {
-	background-image: url("../img/collection1.png");
+	background-image: url("../img/jar collection.jpg");
 }
 
 .hero-slide-2 {
-	background-image: url("../img/Tin collection.png");
+	background-image: url("../img/Tin collection.jpg");
 }
 
 .hero-slide-3 {

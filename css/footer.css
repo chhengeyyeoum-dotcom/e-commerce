@@ -1,4 +1,4 @@
-﻿.footer {
+.footer {
     background: #fffbf4;
     color: #11120d;
     padding: 50px 0;
@@ -10,6 +10,10 @@
     color: #11120d;
 }
 
+.footer .location-link {
+    text-decoration: underline;
+}
+
 /*FAQ section*/
 .footer-faq-toggle {
     background: transparent;
@@ -19,6 +23,7 @@
     text-align: left;
     font: inherit;
     cursor: pointer;
+    text-decoration: underline;
 }
 
 .footer-faq-toggle:hover,
@@ -105,5 +110,3 @@
         margin-right: auto;
     }
 }
-
-
