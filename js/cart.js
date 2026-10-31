@@ -23,8 +23,8 @@
 		return;
 	}
 
-	const DELIVERY_FEE = 0;
-	const INSTAGRAM_CHECKOUT_URL = "https://www.instagram.com/lumenmoe/";
+	const DELIVERY_FEE = 1.50;
+	const TELEGRAM_CHECKOUT_URL = "https://t.me/lumenmoe";
 	let cart = store.getCart();
 
 	const persistCart = () => {
@@ -59,7 +59,7 @@
 			return;
 		}
 
-		mobileCheckoutBtn.textContent = `Continue to Instagram Checkout - ${store.formatPrice(amount)}`;
+		mobileCheckoutBtn.textContent = `Checkout on Telegram - ${store.formatPrice(amount)}`;
 	};
 
 	const setCheckoutState = ({ isEmpty, total = 0 }) => {
@@ -91,20 +91,20 @@
 		}
 
 		if (desktopCheckoutBtn) {
-			desktopCheckoutBtn.textContent = isEmpty ? "Go Shopping" : "Continue to Instagram Checkout";
-			desktopCheckoutBtn.setAttribute("href", isEmpty ? "index.html" : INSTAGRAM_CHECKOUT_URL);
+			desktopCheckoutBtn.textContent = isEmpty ? "Go Shopping" : "Checkout on Telegram";
+			desktopCheckoutBtn.setAttribute("href", isEmpty ? "index.html" : TELEGRAM_CHECKOUT_URL);
 		}
 
 		if (mobileCheckoutBtn) {
 			mobileCheckoutBtn.textContent = isEmpty
 				? "Go Shopping"
-				: `Continue to Instagram Checkout - ${store.formatPrice(total)}`;
-			mobileCheckoutBtn.dataset.destination = isEmpty ? "index.html" : INSTAGRAM_CHECKOUT_URL;
+				: `Checkout on Telegram - ${store.formatPrice(total)}`;
+			mobileCheckoutBtn.dataset.destination = isEmpty ? "index.html" : TELEGRAM_CHECKOUT_URL;
 		}
 	};
 
 	const handleMobileCtaClick = () => {
-		const destination = mobileCheckoutBtn?.dataset.destination || INSTAGRAM_CHECKOUT_URL;
+		const destination = mobileCheckoutBtn?.dataset.destination || TELEGRAM_CHECKOUT_URL;
 		window.location.href = destination;
 	};
 
@@ -156,7 +156,7 @@
 		const subtotal = getSubtotal();
 		const total = subtotal > 0 ? subtotal + DELIVERY_FEE : 0;
 		subtotalNode.textContent = store.formatPrice(subtotal);
-		shippingNode.textContent = subtotal > 0 ? "Free Delivery" : store.formatPrice(0);
+		shippingNode.textContent = subtotal > 0 ? store.formatPrice(DELIVERY_FEE) : store.formatPrice(0);
 		totalNode.textContent = store.formatPrice(total);
 		setCheckoutState({ isEmpty: false, total });
 	};

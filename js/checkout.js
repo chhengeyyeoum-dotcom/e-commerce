@@ -17,7 +17,7 @@
 		return;
 	}
 
-	const DELIVERY_FEE = 0;
+	const DELIVERY_FEE = 1.50;
 	let cart = store.getCart();
 
 	const getSubtotal = () => cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
@@ -98,7 +98,7 @@
 					<hr>
 					<p class="mb-2">
 						<small>Subtotal: ${store.formatPrice(subtotal)}</small><br>
-						<small>Delivery: ${subtotal > 0 ? "Free Delivery" : store.formatPrice(0)}</small><br>
+						<small>Delivery: ${subtotal > 0 ? store.formatPrice(DELIVERY_FEE) : store.formatPrice(0)}</small><br>
 						<strong>Total: ${store.formatPrice(total)}</strong>
 					</p>
 					<hr>

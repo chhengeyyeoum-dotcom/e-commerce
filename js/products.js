@@ -8,9 +8,9 @@
 			price: 22,
 			category: "Candle Jar",
 			badge: "New",
-			image: "../img/quiet chypre-jar.png",
+			image: "img/quiet chypre-jar.jpg",
 			images: [
-			
+				"img/quiet chypre-jar.jpg",
 				
 			],
 			description: "Quiet Chypre brings a sense of calm, intention, and quiet balance to your space. It opens with soft clarity and settles into a clean, earthy warmth that never overwhelms creating a steady atmosphere for slow routines, focused moments, and reflective evenings.",
@@ -18,7 +18,7 @@
 				
 				{
 					title: "Product Details",
-					description: "10 oz / 283 g candle crafted with a natural coconut soy wax blend for a clean, even burn. Infused with fine fragrance oils for a long-lasting scent experience, with a burn time of up to 40 hours.<br><br>Plant-based and non-toxic, free from phthalates, and safe for everyday indoor use when used as directed. Designed for consistent performance and quiet, intentional moments."
+					description: "10 oz / 283 g candle crafted with a natural coconut soy wax blend for a clean, even burn. Infused with fine fragrance oils for a long-lasting scent experience, with a burn time of up to 45 hours.<br><br>Plant-based and non-toxic, free from phthalates, and safe for everyday indoor use when used as directed. Designed for consistent performance and quiet, intentional moments."
 				},
 				{
 					title: "Scent Details",
@@ -53,9 +53,9 @@
 			price: 22,
 			category: "Candle Jar",
 			badge: "",
-			image: "../img/Clear night-jar.png",
+			image: "img/Clear night-jar.jpg",
 			images: [
-			
+				"img/Clear night-jar.jpg"
 				
 			],
 			description: "A clean, minimal gourmand fragrance inspired by the quiet neutrality of vodka. Smooth and weightless, it brings clarity without sweetness designed to reset the atmosphere and support focus, stillness, and balance.",
@@ -63,7 +63,7 @@
 				
 				{
 					title: "Product Details",
-					description: "10 oz / 283 g candle crafted with a natural coconut soy wax blend for a clean, even burn. Infused with fine fragrance oils for a long-lasting scent experience, with a burn time of up to 40 hours.<br><br>Plant-based and non-toxic, free from phthalates, and safe for everyday indoor use when used as directed. Designed for consistent performance and quiet, intentional moments."
+					description: "10 oz / 283 g candle crafted with a natural coconut soy wax blend for a clean, even burn. Infused with fine fragrance oils for a long-lasting scent experience, with a burn time of up to 45 hours.<br><br>Plant-based and non-toxic, free from phthalates, and safe for everyday indoor use when used as directed. Designed for consistent performance and quiet, intentional moments."
 				},
 				{
 					title: "Scent Details",
@@ -98,9 +98,9 @@
 			price: 22,
 			category: "Candle Jar",
 			badge: "Best Seller",
-			image: "../img/neroli veil- jar.png",
+			image: "img/neroli veil- jar.jpg",
 			images: [
-				
+				"img/neroli veil- jar.jpg"
 				
 			],
 			description: "Neroli Veil brings a sense of gentle clarity and quiet refreshment. It opens with soft citrus brightness, then settles into an airy floral calm—creating a light, restorative atmosphere. Subtle and refined, it’s designed for slow mornings, open spaces, and moments of emotional reset.",
@@ -108,7 +108,7 @@
 				
 				{
 					title: "Product Details",
-					description: "10 oz / 283 g candle crafted with a natural coconut soy wax blend for a clean, even burn. Infused with fine fragrance oils for a long-lasting scent experience, with a burn time of up to 40 hours.<br><br>Plant-based and non-toxic, free from phthalates, and safe for everyday indoor use when used as directed. Designed for consistent performance and quiet, intentional moments."
+					description: "10 oz / 283 g candle crafted with a natural coconut soy wax blend for a clean, even burn. Infused with fine fragrance oils for a long-lasting scent experience, with a burn time of up to 45 hours.<br><br>Plant-based and non-toxic, free from phthalates, and safe for everyday indoor use when used as directed. Designed for consistent performance and quiet, intentional moments."
 				},
 				{
 					title: "Scent Details",
@@ -144,9 +144,9 @@
 			price: 22,
 			category: "Candle Jar",
 			badge: "",
-			image: "../img/soft resin-jar.png",
+			image: "img/soft resin-jar.jpg",
 			images: [
-				
+				"img/soft resin-jar.jpg"
 				
 			],
 			description: "Soft Resin is a warm, muted scent that feels quietly grounding. It opens with dry herbal clarity, then softens into gentle spice and resin warmth. The result is a calm, steady atmosphere—like a quiet presence that settles the space without demanding attention. Designed to slow the pace and restore balance, it feels earthy, composed, and reassuring.",
@@ -154,7 +154,7 @@
 				
 				{
 					title: "Product Details",
-					description: "10 oz / 283 g candle crafted with a natural coconut soy wax blend for a clean, even burn. Infused with fine fragrance oils for a long-lasting scent experience, with a burn time of up to 40 hours.<br><br>Plant-based and non-toxic, free from phthalates, and safe for everyday indoor use when used as directed. Designed for consistent performance and quiet, intentional moments."
+					description: "10 oz / 283 g candle crafted with a natural coconut soy wax blend for a clean, even burn. Infused with fine fragrance oils for a long-lasting scent experience, with a burn time of up to 45 hours.<br><br>Plant-based and non-toxic, free from phthalates, and safe for everyday indoor use when used as directed. Designed for consistent performance and quiet, intentional moments."
 				},
 				{
 					title: "Scent Details",
@@ -190,16 +190,16 @@
 			price: 10,
 			category: "Candle Tin",
 			badge: "New",
-			image: "../img/soft resin-tin.png",
+			image: "img/soft resin-tin.jpg",
 			images: [
-				"../img/soft resin-tin.png",
+				"img/soft resin-tin.jpg",
 				
 			],
 			description: "Soft Resin is a warm, muted scent with a grounded character. It opens with dry herbal notes, softens into gentle spices, and settles into a light resinous warmth. The atmosphere is calm and steady, designed to slow the pace and restore balance. Poured in a compact tin, suitable for travel and small spaces.",
 			details: [
 				{
 					title: "Product Details",
-					description: "10 oz / 283 g candle crafted with a natural coconut soy wax blend for a clean, even burn. Infused with fine fragrance oils for a long-lasting scent experience, with a burn time of up to 40 hours.<br><br>Plant-based and non-toxic, free from phthalates, and safe for everyday indoor use when used as directed. Designed for consistent performance and quiet, intentional moments."
+					description: "4 oz / 113 g candle crafted with a natural coconut soy wax blend for a clean, even burn. Infused with fine fragrance oils for a long-lasting scent experience, with a burn time of 20 hours.<br><br>Plant-based and non-toxic, free from phthalates, and safe for everyday indoor use when used as directed. Designed for consistent performance and quiet, intentional moments."
 				},
 				
 				{
@@ -235,9 +235,9 @@
 			price: 10,
 			category: "Candle Tin",
 			badge: "",
-			image: "../img/neroli veil-tin.png",
+			image: "img/neroli veil-tin.jpg",
 			images: [
-				"../img/neroli veil-tin.png",
+				"img/neroli veil-tin.jpg",
 				
 				
 			],
@@ -246,7 +246,7 @@
 				
 				{
 					title: "Product Details",
-					description: "4 oz / 113 g candle crafted with a natural coconut soy wax blend for a clean, even burn. Infused with fine fragrance oils for a long-lasting scent experience, with a burn time of up to 40 hours.<br><br>Plant-based and non-toxic, free from phthalates, and safe for everyday indoor use when used as directed. Designed for consistent performance and quiet, intentional moments."
+					description: "4 oz / 113 g candle crafted with a natural coconut soy wax blend for a clean, even burn. Infused with fine fragrance oils for a long-lasting scent experience, with a burn time of 20 hours.<br><br>Plant-based and non-toxic, free from phthalates, and safe for everyday indoor use when used as directed. Designed for consistent performance and quiet, intentional moments."
 				},
 				{
 					title: "Scent Details",
@@ -282,9 +282,9 @@
 			price: 10,
 			category: "Candle Tin",
 			badge: "New",
-			image: "../img/Clear night-tin.png",
+			image: "img/Clear night-tin.jpg",
 			images: [
-				"../img/clear night-tin.png",
+				"img/clear night-tin.jpg",
 				
 				
 			],
@@ -293,7 +293,7 @@
 				
 				{
 					title: "Product Details",
-					description: "10 oz / 283 g candle crafted with a natural coconut soy wax blend for a clean, even burn. Infused with fine fragrance oils for a long-lasting scent experience, with a burn time of up to 40 hours.<br><br>Plant-based and non-toxic, free from phthalates, and safe for everyday indoor use when used as directed. Designed for consistent performance and quiet, intentional moments."
+					description: "4 oz / 113 g candle crafted with a natural coconut soy wax blend for a clean, even burn. Infused with fine fragrance oils for a long-lasting scent experience, with a burn time of 20 hours.<br><br>Plant-based and non-toxic, free from phthalates, and safe for everyday indoor use when used as directed. Designed for consistent performance and quiet, intentional moments."
 				},
 				{
 					title: "Scent Details",
@@ -328,9 +328,9 @@
 			price: 10,
 			category: "Candle Tin",
 			badge: "New",
-			image: "../img/quiet chypre-tin.png",
+			image: "img/quiet chypre-tin.jpg",
 			images: [
-				"../img/quiet chypre-tin.png",
+				"img/quiet chypre-tin.jpg",
 				
 			],
 			description: "Quiet Chypre brings a sense of calm, intention, and quiet balance to your space. It opens with soft clarity and settles into a clean, earthy warmth that never overwhelms creating a steady atmosphere for slow routines, focused moments, and reflective evenings.",
@@ -338,7 +338,7 @@
 				
 				{
 					title: "Product Details",
-					description: "4 oz / 113 g candle crafted with a natural coconut soy wax blend for a clean, even burn. Infused with fine fragrance oils for a long-lasting scent experience, with a burn time of up to 40 hours.<br><br>Plant-based and non-toxic, free from phthalates, and safe for everyday indoor use when used as directed. Designed for consistent performance and quiet, intentional moments."
+					description: "4 oz / 113 g candle crafted with a natural coconut soy wax blend for a clean, even burn. Infused with fine fragrance oils for a long-lasting scent experience, with a burn time of 20 hours.<br><br>Plant-based and non-toxic, free from phthalates, and safe for everyday indoor use when used as directed. Designed for consistent performance and quiet, intentional moments."
 				},
 				{
 					title: "Scent Details",
@@ -373,12 +373,9 @@
 			price: 27,
 			category: "Bundle",
 			badge: "$32 Value",
-			image: "../img/Bundle 1.png",
+			image: "img/Bundle 1.jpg",
 			images: [
-				"../img/bundle 1.png",
-				/*"../img/pexels-vika-glitter-392079-1648771.jpg",
-				"../img/pexels-alleksana-7670761.jpg",
-				"../img/pexels-828860-2586073.jpg"*/
+				"img/bundle 1.jpg",
 			],
 			description: "A calm, low-light pairing. Clear Night brings a cool, quiet atmosphere, while Soft Resin adds a warm, grounded layer. The balance feels steady and composed, suited for evening routines and slow transitions.",
 			details: [
@@ -415,9 +412,9 @@
 			price: 27,
 			category: "Bundle",
 			badge: "$32 Value",
-			image: "../img/bundle 2.png",
+			image: "img/bundle 2.jpg",
 			images: [
-				"../img/bundle 2.png",
+				"img/bundle 2.jpg",
 		
 			],
 			description: "A balanced contrast. Quiet Chypre brings an earthy structure. Neroli Veil adds a light, clean lift. The result feels composed and softly refreshing. It's a versatile pairing that works for both mornings and evenings, and creates a calm, steady atmosphere in any space.",
@@ -455,16 +452,16 @@
 			price: 32,
 			category: "Bundle",
 			badge: "$40 Value",
-			image: "../img/Tin set.png",
+			image: "img/Tin set.jpg",
 			images: [
 		
-				"../img/Tin set.png",
+				"img/Tin set.jpg",
 			],
 			description: "A complete sensory journey with all four signature tin scents. This curated collection brings variety and balance to any space, allowing you to explore each fragrance and discover your perfect moments.",
 			details: [
 				{
 					title: "Bundle Contents",
-					description: "Includes four 4 oz / 113 g candle tins: Clear Night, Soft Resin, Neroli Veil, and Quiet Chypre. Each crafted with a natural coconut soy wax blend for a clean, even burn. Infused with fine fragrance oils for a long-lasting scent experience, with a burn time of up to 20 hours each.<br><br>Plant-based and non-toxic, free from phthalates, and safe for everyday indoor use when used as directed. Designed for consistent performance and quiet, intentional moments."
+					description: "Includes four 4 oz / 113 g of each candle tin: Clear Night, Soft Resin, Neroli Veil, and Quiet Chypre. Each crafted with a natural coconut soy wax blend for a clean, even burn. Infused with fine fragrance oils for a long-lasting scent experience, with a burn time of 20 hours each.<br><br>Plant-based and non-toxic, free from phthalates, and safe for everyday indoor use when used as directed. Designed for consistent performance and quiet, intentional moments."
 				},
 				{
 					title: "Fragrance Collection",
@@ -494,30 +491,80 @@
 			]
 		},
 		{
-			id: "custom-gift-set",
-			name: "Custom Gift Set From 25",
+			id: "the signature-gift-set",
+			name: "The Signature Gift Set",
 			price: 25,
 			category: "Bundle",
 			badge: "Custom",
-			image: "../img/Flower.png",
+			image: "img/Signature set.jpg",
 			images: [
-				"../img/Flower.png",
-				"../img/custom gift2.png",
-				"../img/Set gitf.png"
+				"img/Signature set.jpg",
 			],
-			description: "A thoughtfully packaged Lumen Moe gift set designed for elegant gifting. Presented in a signature box with premium finishing details, it creates a ready-to-give ritual for birthdays, celebrations, corporate gifts, and personal moments.",
+			description: "A beautifully paired candle jar and handcrafted concrete tray, perfect for creating a calm and elegant atmosphere in any space.",
 			details: [
 				{
 					title: "Gift Set Details",
-					description: "Includes a curated Lumen Moe candle gift arrangement packaged in a signature gift box with elevated presentation details. Designed for a polished gifting experience with a calm, premium feel."
+					description: "Includes a Lumen Moe candle jar paired with a handcrafted concrete tray (color variant). Together, they create a calm and elegant presentation for any space."
 				},
 				{
 					title: "Customization",
-					description: "Suitable for personalized gifting needs, special occasions, event gifting, and corporate orders. Product combinations and presentation details may vary based on availability and request."
+					description: "The candle jar and concrete tray are designed to complement each other as a complete, ready-to-display set."
 				},
 				{
 					title: "Best For",
-					description: "A refined choice for birthdays, thank-you gifts, client gifts, seasonal gifting, housewarmings, and meaningful everyday gestures."
+					description: "Ideal for adding a calm, elegant touch to living spaces, bedside tables, desks, and thoughtful gifts."
+				}
+			]
+		},
+		{
+			id: "the-floral-set",
+			name: "The Floral Set",
+			price: null,
+			category: "Bundle",
+			badge: "Custom",
+			image: "img/Flower.jpg",
+			images: [
+				"img/Flower.jpg",
+			],
+			description: "A personalized candle arrangement adorned with decorative flowers. Customize your set to suit your style, occasion, and preferred quantity. Price varies depending on customization and quantity.",
+			details: [
+				{
+					title: "Gift Set Details",
+					description: "Includes a personalized candle arrangement decorated with flowers for a beautiful and thoughtful presentation."
+				},
+				{
+					title: "Customization",
+					description: "Customize the arrangement to match your preferred style, occasion, and quantity. Pricing varies based on your selections."
+				},
+				{
+					title: "Best For",
+					description: "Ideal for birthdays, celebrations, special occasions, event styling, and personalized gifts."
+				}
+			]
+		},
+		{
+			id: "decorative-casting-trays",
+			name: "Decorative Casting Trays",
+			price: "Coming Soon",
+			category: "Home Decor",
+			badge: "Coming Soon",
+			image: "img/Coming Soon.jpg",
+			images: [
+				"img/Coming Soon.jpg",
+			],
+			description: "A handcrafted decorative tray with a timeless, minimalist aesthetic. Perfect for candles, jewelry, and everyday essentials, bringing a touch of quiet elegance to your space.",
+			details: [
+				{
+					title: "Product Details",
+					description: "Each tray is carefully cast and finished by hand, creating a refined piece with a timeless, minimalist form. Made with quality materials for a smooth surface, dependable durability, and an elevated everyday display."
+				},
+				{
+					title: "Customization",
+					description: "Future options may include different finishes, tones, and sizes, with every piece retaining its handcrafted character and premium feel."
+				},
+				{
+					title: "Best For",
+					description: "Designed for displaying candles, jewelry, and everyday essentials while adding a quiet, elegant accent to coffee tables, shelves, desks, and bedside spaces."
 				}
 			]
 		}
@@ -527,7 +574,11 @@
 
 	const getProductById = (id) => PRODUCT_CATALOG.find((product) => product.id === id) || null;
 
-	const formatPrice = (value) => `$${Number(value).toFixed(2)}`;
+	const formatPrice = (value) => typeof value === "string"
+		? value
+		: value === null || value === undefined
+			? "Custom Price"
+			: `$${Number(value).toFixed(2)}`;
 
 	const getCart = () => {
 		try {
@@ -537,7 +588,14 @@
 			}
 
 			const parsed = JSON.parse(raw);
-			return Array.isArray(parsed) ? parsed : [];
+			return Array.isArray(parsed)
+				? parsed.map((item) => ({
+					...item,
+					image: typeof item.image === "string"
+						? item.image.replace(/^\.\.\/img\//, "img/")
+						: item.image
+				}))
+				: [];
 		} catch (error) {
 			return [];
 		}
@@ -550,6 +608,10 @@
 
 	const addToCart = (product, quantity) => {
 		if (!product) {
+			return;
+		}
+		if (typeof product.price === "string" || product.price === null || product.price === undefined) {
+			showToast("Please contact us to customize this set and confirm its price.");
 			return;
 		}
 

@@ -11,7 +11,7 @@ const formData = {
     notes: form.notes.value
 };
 
-fetch("https://script.google.com/macros/s/AKfycbwlLfW8_h1pY2wb0ntA0FMOAWrseKEsCqhKG0mgjgqoC-ah89f8rszvmHyHQ0QHFTKs/exec", {
+fetch("https://script.google.com/macros/s/AKfycbx0iRyDkSZq8I-KabO3vxD3smnzNmRGBZT21uK6Gr_90FmZwC1MoJ8uPDQRUGooW7xSpA/exec", {
     method: "POST",
     body: JSON.stringify(formData)
 })
