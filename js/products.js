@@ -582,7 +582,7 @@
 
 	const getCart = () => {
 		try {
-			const raw = localStorage.getItem(CART_KEY);
+			const raw = sessionStorage.getItem(CART_KEY);
 			if (!raw) {
 				return [];
 			}
@@ -602,7 +602,7 @@
 	};
 
 	const saveCart = (cart) => {
-		localStorage.setItem(CART_KEY, JSON.stringify(cart));
+		sessionStorage.setItem(CART_KEY, JSON.stringify(cart));
 		window.dispatchEvent(new CustomEvent("lumen:cart-updated"));
 	};
 

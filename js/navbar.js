@@ -99,7 +99,7 @@ const ensureCartBadgeStyles = () => {
 
 const getCartCount = () => {
     try {
-        const raw = localStorage.getItem(CART_KEY);
+        const raw = sessionStorage.getItem(CART_KEY);
         if (!raw) {
             return 0;
         }
