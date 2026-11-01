@@ -26,6 +26,7 @@
 	const decreaseQtyBtn = document.getElementById("decreaseQty");
 	const addToCartBtn = document.getElementById("addToCartBtn");
 	const cartStatusNode = document.getElementById("cartStatus");
+	const productOptionsNode = document.getElementById("productOptions");
 
 	const descriptionAccordionNode = document.getElementById("productDescriptionAccordion");
 	const tastingNotesNode = document.getElementById("productTastingNotes");
@@ -39,6 +40,7 @@
 	}
 
 	let quantity = 1;
+	let selectedOption = product.options?.[0] || null;
 
 	const setMainImage = (src, altText) => {
 		mainImageNode.style.opacity = "0.2";
@@ -104,8 +106,47 @@
 			descriptionNode.textContent = product.description || "Hand-poured in small batches for clean burn performance and modern atmosphere.";
 		}
 
+		renderProductOptions();
 		renderAccordion();
 		renderThumbnails();
+	};
+
+	const renderProductOptions = () => {
+		if (!productOptionsNode || !Array.isArray(product.options) || !product.options.length) {
+			return;
+		}
+
+		productOptionsNode.innerHTML = `
+			<fieldset class="mb-3">
+				<legend class="quantity-label mb-2">Choose size</legend>
+				${product.options.map((option, index) => `
+					<div class="form-check">
+						<input class="form-check-input product-option-input" type="checkbox" name="productOption" id="product-option-${option.id}" data-option-id="${option.id}" ${index === 0 ? "checked" : ""}>
+						<label class="form-check-label" for="product-option-${option.id}">
+							${option.label} ${store.formatPrice(option.price)} <span class="text-muted">(${option.description})</span>
+						</label>
+					</div>
+				`).join("")}
+			</fieldset>
+		`;
+
+		productOptionsNode.querySelectorAll(".product-option-input").forEach((input) => {
+			input.addEventListener("change", () => {
+				if (!input.checked) {
+					input.checked = true;
+					return;
+				}
+
+				productOptionsNode.querySelectorAll(".product-option-input").forEach((otherInput) => {
+					if (otherInput !== input) {
+						otherInput.checked = false;
+					}
+				});
+
+				selectedOption = product.options.find((option) => option.id === input.dataset.optionId) || product.options[0];
+				priceNode.textContent = store.formatPrice(selectedOption.price);
+			});
+		});
 	};
 
 	const renderAccordion = () => {
@@ -178,9 +219,7 @@
 	};
 
 	const renderRelatedProducts = () => {
-		const related = store.products
-			.filter((item) => item.id !== product.id)
-			.slice(0, 4);
+		const related = store.getRecommendations(product.id, 4);
 
 		relatedGridNode.innerHTML = related
 			.map((item) => {
@@ -281,7 +320,7 @@
 
 	if (addToCartBtn) {
 		addToCartBtn.addEventListener("click", () => {
-			store.addToCart(product, quantity);
+			store.addToCart(product, quantity, selectedOption);
 			store.showToast(`${quantity} ${quantity === 1 ? "item" : "items"} added to cart`);
 			setStatus("");
 		});
@@ -298,6 +337,8 @@
 			scrollRelatedProducts(1);
 		});
 	}
+
+	window.addEventListener("lumen:recommendations-updated", renderRelatedProducts);
 
 	relatedGridNode.addEventListener("click", (event) => {
 		const addButton = event.target.closest(".related-add-cart-btn");
@@ -353,6 +394,7 @@
 		});
 	});
 
+	store.recordProductView(product);
 	renderProduct();
 	renderRelatedProducts();
 	updateQuantityView();

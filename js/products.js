@@ -543,34 +543,470 @@
 			]
 		},
 		{
-			id: "decorative-casting-trays",
-			name: "Decorative Casting Trays",
-			price: "Coming Soon",
+			id: "blue-heart-tray-with-lumen-moe-band",
+			name: "Blue Heart Tray",
+			price: 4.8,
 			category: "Home Decor",
-			badge: "Coming Soon",
-			image: "img/Coming Soon.jpg",
+			badge: "NEW",
+			image: "img/Blue Heart Tray with Lumen Moe Band.jpg",
 			images: [
-				"img/Coming Soon.jpg",
+				"img/Blue Heart Tray with Lumen Moe Band.jpg",
 			],
-			description: "A handcrafted decorative tray with a timeless, minimalist aesthetic. Perfect for candles, jewelry, and everyday essentials, bringing a touch of quiet elegance to your space.",
+			description: "A handcrafted heart-shaped tray with a soft blue finish and Lumen Moe branding, designed to bring a playful accent to quiet spaces.",
 			details: [
 				{
 					title: "Product Details",
-					description: "Each tray is carefully cast and finished by hand, creating a refined piece with a timeless, minimalist form. Made with quality materials for a smooth surface, dependable durability, and an elevated everyday display."
-				},
-				{
-					title: "Customization",
-					description: "Future options may include different finishes, tones, and sizes, with every piece retaining its handcrafted character and premium feel."
+					description: "Hand-cast and finished with a smooth surface for displaying candles, jewelry, and small everyday essentials.<br><br>Size: 9 cm wide x 17.5 cm long x 1.5 cm thick."
 				},
 				{
 					title: "Best For",
-					description: "Designed for displaying candles, jewelry, and everyday essentials while adding a quiet, elegant accent to coffee tables, shelves, desks, and bedside spaces."
+					description: "Bedside tables, dressers, desks, gifting, and small decorative displays."
 				}
 			]
-		}
+		},
+		{
+			id: "cobalt-marbled-tray-with-brand-band",
+			name: "Cobalt Marbled Tray",
+			price: 4.8,
+			category: "Home Decor",
+			badge: "NEW",
+			image: "img/Cobalt Marbled Tray with Brand Band.jpg",
+			images: [
+				"img/Cobalt Marbled Tray with Brand Band.jpg",
+			],
+			description: "A handcrafted cobalt marbled tray with a rich, expressive finish for elevated everyday display.",
+			details: [
+				{
+					title: "Product Details",
+					description: "Hand-cast and finished with a unique marbled surface. Each piece has its own natural variation.<br><br>Size: 9 cm wide x 17.5 cm long x 1.5 cm thick."
+				},
+				{
+					title: "Best For",
+					description: "Coffee tables, shelves, desks, and displaying candles or small essentials."
+				}
+			]
+		},
+		{
+			id: "lavender-tray-with-lumen-moe-band",
+			name: "Lavender Tray",
+			price: 4.8,
+			category: "Home Decor",
+			badge: "NEW",
+			image: "img/Lavender Tray with Lumen Moe Band.jpg",
+			images: [
+				"img/Lavender Tray with Lumen Moe Band.jpg",
+			],
+			description: "A softly toned lavender tray that adds a calm, refined accent to your everyday rituals.",
+			details: [
+				{
+					title: "Product Details",
+					description: "Hand-cast with a smooth finish for displaying candles, jewelry, and small personal items.<br><br>Size: 9 cm wide x 17.5 cm long x 1.5 cm thick."
+				},
+				{
+					title: "Best For",
+					description: "Bedside tables, vanities, desks, and thoughtful gifts."
+				}
+			]
+		},
+		{
+			id: "marbled-blue-tray",
+			name: "Marbled Blue Tray",
+			price: 4.8,
+			category: "Home Decor",
+			badge: "NEW",
+			image: "img/Marbled Blue Tray.jpg",
+			images: [
+				"img/Marbled Blue Tray.jpg",
+			],
+			description: "A cool-toned marbled tray with an organic pattern that brings texture and character to a space.",
+			details: [
+				{
+					title: "Product Details",
+					description: "Hand-cast and finished with a one-of-a-kind blue marbled surface.<br><br>Size: 9 cm wide x 17.5 cm long x 1.5 cm thick."
+				},
+				{
+					title: "Best For",
+					description: "Displaying candles, jewelry, and small everyday essentials."
+				}
+			]
+		},
+		{
+			id: "marbled-orange-lumen-moe-tray",
+			name: "Marbled Orange Tray",
+			price: 4.8,
+			category: "Home Decor",
+			badge: "NEW",
+			image: "img/Marbled Orange Lumen Moe Tray.jpg",
+			images: [
+				"img/Marbled Orange Lumen Moe Tray.jpg",
+			],
+			description: "A warm orange marbled tray that brings a bright, handcrafted accent to quiet interiors.",
+			details: [
+				{
+					title: "Product Details",
+					description: "Hand-cast and finished with a distinctive orange marbled surface and Lumen Moe character.<br><br>Size: 9 cm wide x 17.5 cm long x 1.5 cm thick."
+				},
+				{
+					title: "Best For",
+					description: "Coffee tables, shelves, desks, and decorative displays."
+				}
+			]
+		},
+		{
+			id: "marbled-resin-tray-with-lumen-moe-sleeve",
+			name: "Marbled Red Tray",
+			price: 4.8,
+			category: "Home Decor",
+			badge: "NEW",
+			image: "img/Marbled Resin Tray with Lumen Moe Sleeve.jpg",
+			images: [
+				"img/Marbled Resin Tray with Lumen Moe Sleeve.jpg",
+			],
+			description: "A refined marbled red tray with a smooth finish for styling candles and daily essentials.",
+			details: [
+				{
+					title: "Product Details",
+					description: "Hand-finished marbled red tray with a unique marbled pattern and durable smooth surface.<br><br>Size: 9 cm wide x 17.5 cm long x 1.5 cm thick."
+				},
+				{
+					title: "Best For",
+					description: "Candle displays, entryway styling, bedside tables, and gifting."
+				}
+			]
+		},
+		{
+			id: "marbled-tray-with-lumen-moe-band",
+			name: "Mocha Swirl Tray",
+			price: 4.8,
+			category: "Home Decor",
+			badge: "NEW",
+			image: "img/Marbled Tray with Lumen Moe Band.jpg",
+			images: [
+				"img/Marbled Tray with Lumen Moe Band.jpg",
+			],
+			description: "Inspired by the coffee-like marbling. A handcrafted tray with a smooth finish for everyday styling.",
+			details: [
+				{
+					title: "Product Details",
+					description: "Hand-cast and finished with a distinctive marbled surface. Each tray is naturally unique.<br><br>Size: 9 cm wide x 17.5 cm long x 1.5 cm thick."
+				},
+				{
+					title: "Best For",
+					description: "Candles, jewelry, small essentials, and curated home displays."
+				}
+			]
+		},
+		{
+			id: "mauve-lumen-moe-tray",
+			name: "Dusty Rose Tray",
+			price: 4.8,
+			category: "Home Decor",
+			badge: "NEW",
+			image: "img/Mauve Lumen Moe Tray.jpg",
+			images: [
+				"img/Mauve Lumen Moe Tray.jpg",
+			],
+			description: "A muted Dusty Rose tray with a soft, modern presence for intentional everyday styling.",
+			details: [
+				{
+					title: "Product Details",
+					description: "Hand-cast with a smooth Dusty Rose finish and Lumen Moe branding.<br><br>Size: 9 cm wide x 17.5 cm long x 1.5 cm thick."
+				},
+				{
+					title: "Best For",
+					description: "Vanities, bedside tables, desks, and gifting."
+				}
+			]
+		},
+		{
+			id: "minimalist-lumen-moe-tray",
+			name: "Minimalist Tray",
+			price: 4.8,
+			category: "Home Decor",
+			badge: "NEW",
+			image: "img/Minimalist Lumen Moe Tray Product Shot.jpg",
+			images: [
+				"img/Minimalist Lumen Moe Tray Product Shot.jpg",
+			],
+			description: "A clean-lined minimalist tray designed to keep everyday objects beautifully grounded.",
+			details: [
+				{
+					title: "Product Details",
+					description: "Hand-finished with a simple, timeless form and a smooth surface for everyday use.<br><br>Size: 9 cm wide x 17.5 cm long x 1.5 cm thick."
+				},
+				{
+					title: "Best For",
+					description: "Candles, jewelry, keys, desks, shelves, and bedside styling."
+				}
+			]
+		},
+		{
+			id: "red-heart-tray",
+			name: "Red Heart Tray",
+			price: 4.8,
+			category: "Home Decor",
+			badge: "NEW",
+			image: "img/Red Heart Tray.jpg",
+			images: [
+				"img/Red Heart Tray.jpg",
+			],
+			description: "A handcrafted red heart-shaped tray that adds a warm, expressive touch to a room.",
+			details: [
+				{
+					title: "Product Details",
+					description: "Hand-cast with a smooth finish for small decorative objects and everyday essentials.<br><br>Size: 9 cm wide x 17.5 cm long x 1.5 cm thick."
+				},
+				{
+					title: "Best For",
+					description: "Gifting, bedside tables, vanities, and joyful decorative displays."
+				}
+			]
+		},
+		{
+			id: "sage-green-tray",
+			name: "Sage Green Tray",
+			price: 4.8,
+			category: "Home Decor",
+			badge: "NEW",
+			image: "img/Sage Green Tray.jpg",
+			images: [
+				"img/Sage Green Tray.jpg",
+			],
+			description: "A calm sage green tray that brings a natural, understated accent to everyday spaces.",
+			details: [
+				{
+					title: "Product Details",
+					description: "Hand-cast and finished with a smooth sage green surface.<br><br>Size: 9 cm wide x 17.5 cm long x 1.5 cm thick."
+				},
+				{
+					title: "Best For",
+					description: "Candles, jewelry, desks, shelves, and bedside tables."
+				}
+			]
+		},
+		{
+			id: "tan-oval-tray",
+			name: "Tan Oval Tray",
+			price: 4.8,
+			category: "Home Decor",
+			badge: "NEW",
+			image: "img/Tan Oval Tray.jpg",
+			images: [
+				"img/Tan Oval Tray.jpg",
+			],
+			description: "A warm tan oval tray with a timeless silhouette for simple, considered styling.",
+			details: [
+				{
+					title: "Product Details",
+					description: "Hand-finished oval tray with a smooth surface and a versatile neutral tone.<br><br>Size: 9 cm wide x 17.5 cm long x 1.5 cm thick."
+				},
+				{
+					title: "Best For",
+					description: "Coffee tables, entryways, bedside tables, and candle displays."
+				}
+			]
+		},
+		{
+			id: "two-tone-teal-and-cream-resin-tray",
+			name: "Two-Tone Teal and Cream Tray",
+			price: 4.8,
+			category: "Home Decor",
+			badge: "NEW",
+			image: "img/Two-Tone Teal and Cream Resin Tray.jpg",
+			images: [
+				"img/Two-Tone Teal and Cream Resin Tray.jpg",
+			],
+			description: "A two-tone casting tray pairing teal and cream for a balanced, contemporary accent.",
+			details: [
+				{
+					title: "Product Details",
+					description: "Hand-finished casting tray with a smooth two-tone surface. Each piece has its own character.<br><br>Size: 9 cm wide x 17.5 cm long x 1.5 cm thick."
+				},
+				{
+					title: "Best For",
+					description: "Displaying candles, jewelry, small essentials, and curated home accents."
+				}
+			]
+		},
+		{
+			id: "matches",
+			name: "Matches",
+			price: 1,
+			category: "Accessories",
+			badge: "NEW",
+			image: "img/Lumen Moe Match Bottle Arrangement.jpg",
+			images: [
+				"img/Lumen Moe Match Bottle Arrangement.jpg",
+			],
+			options: [
+				{
+					id: "small",
+					label: "Small",
+					price: 1,
+					description: "Best for candles tins"
+				},
+				{
+					id: "large",
+					label: "Large",
+					price: 1.5,
+					description: "Best for candle jars"
+				}
+			],
+			description: "A Lumen Moe match bottle arrangement designed to pair beautifully with your candle ritual.",
+			details: [
+				{
+					title: "Product Details",
+					description: "Small — $1.00, best for candles tins. Large — $1.50, best for candle jars, each bottle contains 10 matches."
+				},
+				{
+					title: "Best For",
+					description: "Lighting candles and keeping your home fragrance ritual beautifully styled."
+				}
+			]
+		},
 	];
 
 	const CART_KEY = "lumen_cart";
+	const RECOMMENDATION_KEY = "lumen_recommendations";
+	const MAX_RECOMMENDATION_HISTORY = 40;
+	const RECOMMENDATION_EXPIRY_MS = 30 * 24 * 60 * 60 * 1000;
+
+	const readRecommendationState = () => {
+		try {
+			const raw = localStorage.getItem(RECOMMENDATION_KEY);
+			const parsed = raw ? JSON.parse(raw) : {};
+			const productActivity = parsed && typeof parsed.products === "object" && parsed.products !== null
+				? Object.values(parsed.products)
+				: [];
+			const lastRecordedActivityAt = productActivity.reduce((latest, activity) => Math.max(
+				latest,
+				Number(activity?.lastViewedAt) || 0,
+				Number(activity?.lastAddedAt) || 0
+			), 0);
+			const lastActivityAt = Number(parsed?.lastActivityAt) || lastRecordedActivityAt;
+			if (lastActivityAt && Date.now() - lastActivityAt >= RECOMMENDATION_EXPIRY_MS) {
+				localStorage.removeItem(RECOMMENDATION_KEY);
+				return { products: {}, recent: [], lastActivityAt: 0 };
+			}
+
+			return {
+				products: parsed && typeof parsed.products === "object" && parsed.products !== null
+					? parsed.products
+					: {},
+				recent: Array.isArray(parsed?.recent) ? parsed.recent.filter(Boolean).slice(0, MAX_RECOMMENDATION_HISTORY) : [],
+				lastActivityAt
+			};
+		} catch (error) {
+			return { products: {}, recent: [], lastActivityAt: 0 };
+		}
+	};
+
+	const saveRecommendationState = (state) => {
+		try {
+			localStorage.setItem(RECOMMENDATION_KEY, JSON.stringify(state));
+		} catch (error) {
+			return false;
+		}
+		return true;
+	};
+
+	const updateRecommendationActivity = (product, activity) => {
+		if (!product || !product.id) {
+			return;
+		}
+
+		const state = readRecommendationState();
+		const existing = state.products[product.id] || {
+			views: 0,
+			additions: 0,
+			lastViewedAt: 0,
+			lastAddedAt: 0
+		};
+
+		state.products[product.id] = {
+			views: existing.views + (activity.views || 0),
+			additions: existing.additions + (activity.additions || 0),
+			lastViewedAt: activity.views ? Date.now() : existing.lastViewedAt,
+			lastAddedAt: activity.additions ? Date.now() : existing.lastAddedAt
+		};
+
+		if (activity.views) {
+			state.recent = [product.id, ...state.recent.filter((id) => id !== product.id)]
+				.slice(0, MAX_RECOMMENDATION_HISTORY);
+		}
+
+		state.lastActivityAt = Date.now();
+		saveRecommendationState(state);
+		window.dispatchEvent(new CustomEvent("lumen:recommendations-updated"));
+	};
+
+	const getProductMetadata = (product) => {
+		const detailText = (product.details || [])
+			.flatMap((detail) => detail.notes || [detail])
+			.map((detail) => `${detail.title || ""} ${detail.description || ""}`)
+			.join(" ");
+
+		return `${product.category || ""} ${product.description || ""} ${detailText}`
+			.toLowerCase()
+			.split(/[^a-z0-9]+/)
+			.filter((word) => word.length > 2);
+	};
+
+	const getRecommendations = (currentProductId, limit = 4) => {
+		const available = PRODUCT_CATALOG.filter((product) => (
+			product.id !== currentProductId &&
+			typeof product.price === "number" &&
+			Number.isFinite(product.price) &&
+			typeof product.image === "string" &&
+			product.image.length > 0
+		));
+
+		if (available.length <= limit) {
+			return [...available];
+		}
+
+		const state = readRecommendationState();
+		const activityEntries = Object.entries(state.products);
+		const hasBehavior = activityEntries.some(([, activity]) => (
+			(activity.views || 0) > 0 || (activity.additions || 0) > 0
+		));
+		const metadata = new Map(available.map((item) => [item.id, getProductMetadata(item)]));
+		const recentProducts = state.recent
+			.map((id) => PRODUCT_CATALOG.find((item) => item.id === id))
+			.filter(Boolean);
+		const recentCategories = recentProducts.map((item) => item.category).filter(Boolean);
+		const recentTokens = new Set(recentProducts.flatMap((item) => getProductMetadata(item)));
+		const now = Date.now();
+
+		const scored = available.map((product) => {
+			const activity = state.products[product.id] || {};
+			const tokens = metadata.get(product.id) || [];
+			const categoryMatches = recentCategories.filter((category) => category === product.category).length;
+			const noteMatches = tokens.filter((token) => recentTokens.has(token)).length;
+			const daysSinceActivity = activity.lastViewedAt
+				? Math.max((now - activity.lastViewedAt) / 86400000, 0)
+				: Infinity;
+			const recencyScore = Number.isFinite(daysSinceActivity) ? 3 / (1 + daysSinceActivity) : 0;
+			const behaviorScore = hasBehavior
+				? (activity.views || 0) + ((activity.additions || 0) * 4) + recencyScore + (categoryMatches * 2) + (noteMatches * 0.15)
+				: 0;
+
+			return {
+				product,
+				score: behaviorScore + (Math.random() * (hasBehavior ? 0.8 : 10))
+			};
+		});
+
+		return scored
+			.sort((a, b) => b.score - a.score)
+			.slice(0, limit)
+			.map(({ product }) => product);
+	};
+
+	const recordProductView = (product) => updateRecommendationActivity(product, { views: 1 });
+	const recordCartAddition = (product, quantity = 1) => updateRecommendationActivity(product, {
+		additions: Math.max(Number(quantity) || 1, 1)
+	});
 
 	const getProductById = (id) => PRODUCT_CATALOG.find((product) => product.id === id) || null;
 
@@ -606,7 +1042,7 @@
 		window.dispatchEvent(new CustomEvent("lumen:cart-updated"));
 	};
 
-	const addToCart = (product, quantity) => {
+	const addToCart = (product, quantity, selectedOption) => {
 		if (!product) {
 			return;
 		}
@@ -616,16 +1052,22 @@
 		}
 
 		const qty = Math.min(Math.max(Number(quantity) || 1, 1), 99);
+		const option = product.options?.find((item) => item.id === selectedOption?.id) || product.options?.[0];
+		const price = option ? option.price : product.price;
+		const itemId = option ? `${product.id}:${option.id}` : product.id;
+		const itemName = option ? `${product.name} (${option.label})` : product.name;
+		recordCartAddition(product, qty);
 		const cart = getCart();
-		const existing = cart.find((item) => item.id === product.id);
+		const existing = cart.find((item) => item.id === itemId);
 
 		if (existing) {
 			existing.quantity = Math.min(existing.quantity + qty, 99);
 		} else {
 			cart.push({
-				id: product.id,
-				name: product.name,
-				price: product.price,
+				id: itemId,
+				productId: product.id,
+				name: itemName,
+				price,
 				image: product.image,
 				quantity: qty
 			});
@@ -666,6 +1108,8 @@
 	window.LumenStore = {
 		products: PRODUCT_CATALOG,
 		getProductById,
+		getRecommendations,
+		recordProductView,
 		formatPrice,
 		getCart,
 		saveCart,
