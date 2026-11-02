@@ -41,6 +41,9 @@
 
 	let quantity = 1;
 	let selectedOption = product.options?.[0] || null;
+	let selectedFragrances = [];
+	let selectedTrays = [];
+	let selectedTrayImage = null;
 
 	const setMainImage = (src, altText) => {
 		mainImageNode.style.opacity = "0.2";
@@ -52,13 +55,16 @@
 		});
 	};
 
-	const renderThumbnails = () => {
-		const gallery = Array.isArray(product.images) && product.images.length ? product.images : [product.image];
-		setMainImage(gallery[0], product.name);
+	const renderThumbnails = (activeImage) => {
+		const productGallery = Array.isArray(product.images) && product.images.length ? product.images : [product.image];
+		const trayImages = product.bundleConfig?.trays?.map((tray) => tray.image) || [];
+		const gallery = [...new Set([...productGallery, ...trayImages])];
+		const selectedImage = activeImage || gallery[0];
+		setMainImage(selectedImage, product.name);
 
 		thumbnailsNode.innerHTML = gallery
 			.map((image, index) => {
-				const isActive = index === 0 ? "active" : "";
+				const isActive = image === selectedImage ? "active" : "";
 				return `
 					<button type="button" class="thumb-btn ${isActive}" data-image="${image}" aria-label="View image ${index + 1} of ${product.name}">
 						<img src="${image}" alt="${product.name} thumbnail ${index + 1}" loading="lazy">
@@ -100,7 +106,15 @@
 		}
 
 		nameNode.textContent = product.name;
-		priceNode.textContent = store.formatPrice(product.price);
+		const bundlePricing = store.getBundlePricing(product);
+		if (bundlePricing) {
+			priceNode.innerHTML = `
+				<span class="bundle-value-price">${store.formatPrice(bundlePricing.valuePrice)}</span>
+				<strong class="bundle-price">${store.formatPrice(product.price)}</strong>
+			`;
+		} else {
+			priceNode.textContent = store.formatPrice(product.price);
+		}
 
 		if (descriptionNode) {
 			descriptionNode.textContent = product.description || "Hand-poured in small batches for clean burn performance and modern atmosphere.";
@@ -112,7 +126,121 @@
 	};
 
 	const renderProductOptions = () => {
-		if (!productOptionsNode || !Array.isArray(product.options) || !product.options.length) {
+		if (!productOptionsNode) {
+			return;
+		}
+
+		if (product.bundleConfig) {
+			selectedFragrances = [];
+			selectedTrays = [];
+			productOptionsNode.innerHTML = `
+				<section class="bundle-option-accordion" data-option-section="fragrance">
+					<button type="button" class="bundle-option-header" aria-expanded="true" aria-controls="bundle-fragrance-panel">
+						<span>
+							<strong>Choose a fragrance</strong>
+							<small class="bundle-option-summary" id="bundleFragranceSummary">None selected</small>
+						</span>
+						<i class="bi bi-chevron-down" aria-hidden="true"></i>
+					</button>
+					<div class="bundle-option-panel show" id="bundle-fragrance-panel">
+						<fieldset class="mb-3">
+							<p class="bundle-selection-help">Select ${product.bundleConfig.size} of 4 available fragrances.</p>
+							${product.bundleConfig.fragrances.map((fragrance) => `
+								<div class="form-check">
+									<input class="form-check-input bundle-fragrance-input" type="checkbox" name="bundleFragrance" id="bundle-fragrance-${fragrance.id}" data-fragrance-id="${fragrance.id}" data-fragrance-label="${fragrance.label}">
+									<label class="form-check-label" for="bundle-fragrance-${fragrance.id}">${fragrance.label}</label>
+								</div>
+							`).join("")}
+							<p class="bundle-selection-status mb-0" id="bundleSelectionStatus" aria-live="polite">0 of ${product.bundleConfig.size} selected</p>
+						</fieldset>
+					</div>
+				</section>
+				${product.bundleConfig.trays ? `
+					<section class="bundle-option-accordion" data-option-section="tray">
+						<button type="button" class="bundle-option-header" aria-expanded="false" aria-controls="bundle-tray-panel">
+							<span>
+								<strong>Choose a tray</strong>
+								<small class="bundle-option-summary" id="bundleTraySummary">None selected</small>
+							</span>
+							<i class="bi bi-chevron-down" aria-hidden="true"></i>
+						</button>
+						<div class="bundle-option-panel" id="bundle-tray-panel">
+							<fieldset class="mb-3">
+								<p class="bundle-selection-help">Select one tray.</p>
+								<div class="bundle-tray-name-options">
+									${product.bundleConfig.trays.map((tray) => `
+										<div class="form-check">
+											<input class="form-check-input bundle-tray-input" type="radio" name="bundleTray" id="bundle-tray-${tray.id}" data-tray-id="${tray.id}">
+											<label class="form-check-label" for="bundle-tray-${tray.id}">${tray.label}</label>
+										</div>
+									`).join("")}
+								</div>
+							</fieldset>
+						</div>
+					</section>
+				` : ""}
+			`;
+
+			const updateBundleSelection = () => {
+				selectedFragrances = [...productOptionsNode.querySelectorAll(".bundle-fragrance-input:checked")]
+					.map((input) => ({ id: input.dataset.fragranceId, label: input.dataset.fragranceLabel }));
+				const statusNode = productOptionsNode.querySelector("#bundleSelectionStatus");
+				if (statusNode) {
+					statusNode.textContent = `${selectedFragrances.length} of ${product.bundleConfig.size} selected`;
+				}
+				const summaryNode = productOptionsNode.querySelector("#bundleFragranceSummary");
+				if (summaryNode) {
+					summaryNode.textContent = selectedFragrances.length
+						? selectedFragrances.map(({ label }) => label).join(", ")
+						: "None selected";
+				}
+			};
+
+			const setSectionExpanded = (section, expanded) => {
+				const header = section.querySelector(".bundle-option-header");
+				const panel = section.querySelector(".bundle-option-panel");
+				header.setAttribute("aria-expanded", String(expanded));
+				panel.classList.toggle("show", expanded);
+			};
+
+			productOptionsNode.querySelectorAll(".bundle-option-header").forEach((header) => {
+				header.addEventListener("click", () => {
+					const section = header.closest(".bundle-option-accordion");
+					setSectionExpanded(section, header.getAttribute("aria-expanded") !== "true");
+				});
+			});
+
+			productOptionsNode.querySelectorAll(".bundle-fragrance-input").forEach((input) => {
+				input.addEventListener("change", () => {
+					const checkedInputs = productOptionsNode.querySelectorAll(".bundle-fragrance-input:checked");
+					if (checkedInputs.length > product.bundleConfig.size) {
+						input.checked = false;
+					}
+					updateBundleSelection();
+					if (selectedFragrances.length === product.bundleConfig.size) {
+						setSectionExpanded(input.closest(".bundle-option-accordion"), false);
+					}
+				});
+			});
+
+			productOptionsNode.querySelectorAll(".bundle-tray-input").forEach((input) => {
+				input.addEventListener("change", () => {
+					selectedTrays = [...productOptionsNode.querySelectorAll(".bundle-tray-input:checked")]
+						.map((checkedInput) => product.bundleConfig.trays.find((tray) => tray.id === checkedInput.dataset.trayId))
+						.filter(Boolean);
+					selectedTrayImage = selectedTrays[0]?.image || null;
+					renderThumbnails(selectedTrayImage || undefined);
+					const summaryNode = productOptionsNode.querySelector("#bundleTraySummary");
+					if (summaryNode) {
+						summaryNode.textContent = selectedTrays[0]?.label || "None selected";
+					}
+					setSectionExpanded(input.closest(".bundle-option-accordion"), false);
+				});
+			});
+			return;
+		}
+
+		if (!Array.isArray(product.options) || !product.options.length) {
 			return;
 		}
 
@@ -234,7 +362,7 @@
 							</a>
 							<div class="related-meta">
 								<h3 class="related-name"><a class="related-link" href="${href}">${item.name}</a></h3>
-								<p class="related-price">${store.formatPrice(item.price)}</p>
+								<p class="related-price">${store.getBundlePricing(item) ? `<span class="bundle-value-price">${store.formatPrice(store.getBundlePricing(item).valuePrice)}</span><span class="bundle-price">${store.formatPrice(item.price)}</span>` : store.formatPrice(item.price)}</p>
 								<button type="button" class="related-add-cart-btn" data-product-id="${item.id}">Add to Cart</button>
 							</div>
 						</article>
@@ -297,6 +425,20 @@
 			return;
 		}
 
+		const matchingTray = product.bundleConfig?.trays?.find((tray) => tray.image === image);
+		if (matchingTray) {
+			const trayInput = productOptionsNode.querySelector(`[data-tray-id="${matchingTray.id}"]`);
+			if (trayInput) {
+				trayInput.checked = true;
+				selectedTrays = [matchingTray];
+				selectedTrayImage = matchingTray.image;
+				const traySummary = productOptionsNode.querySelector("#bundleTraySummary");
+				if (traySummary) {
+					traySummary.textContent = matchingTray.label;
+				}
+			}
+		}
+
 		thumbnailsNode.querySelectorAll(".thumb-btn").forEach((button) => {
 			button.classList.remove("active");
 		});
@@ -320,6 +462,25 @@
 
 	if (addToCartBtn) {
 		addToCartBtn.addEventListener("click", () => {
+			if (product.bundleConfig) {
+				if (selectedFragrances.length !== product.bundleConfig.size) {
+					setStatus(`Please select exactly ${product.bundleConfig.size} fragrances.`);
+					return;
+				}
+				if (product.bundleConfig.trays && !selectedTrays.length) {
+					setStatus("Please select a tray.");
+					return;
+				}
+
+				selectedOption = {
+					id: [...selectedFragrances, ...selectedTrays].map(({ id }) => id).sort().join("-"),
+					label: [...selectedFragrances, ...selectedTrays].map(({ label }) => label).join(", "),
+					price: product.price,
+					selectedFragrances,
+					selectedTrays
+				};
+			}
+
 			store.addToCart(product, quantity, selectedOption);
 			store.showToast(`${quantity} ${quantity === 1 ? "item" : "items"} added to cart`);
 			setStatus("");
@@ -353,6 +514,11 @@
 
 		const relatedProduct = store.getProductById(relatedProductId);
 		if (!relatedProduct) {
+			return;
+		}
+
+		if (relatedProduct.bundleConfig) {
+			window.location.href = `product.html?id=${encodeURIComponent(relatedProduct.id)}`;
 			return;
 		}
 

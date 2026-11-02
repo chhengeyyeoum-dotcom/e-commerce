@@ -10,6 +10,7 @@
 	const placeOrderBtn = document.getElementById("placeOrderBtn");
 	const mobilePlaceOrderBtn = document.getElementById("mobilePlaceOrderBtn");
 	const checkoutItemsNode = document.getElementById("checkoutItems");
+	const checkoutShippingNode = document.getElementById("checkoutShipping");
 	const checkoutTotalNode = document.getElementById("checkoutTotal");
 	const orderConfirmationNode = document.getElementById("orderConfirmation");
 
@@ -18,13 +19,19 @@
 	}
 
 	const DELIVERY_FEE = 1.50;
+	const FREE_DELIVERY_THRESHOLD = 50;
 	let cart = store.getCart();
 
 	const getSubtotal = () => cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+	const getDeliveryFee = (subtotal) => subtotal >= FREE_DELIVERY_THRESHOLD ? 0 : DELIVERY_FEE;
+	const formatDelivery = (subtotal) => subtotal >= FREE_DELIVERY_THRESHOLD ? "FREE" : store.formatPrice(DELIVERY_FEE);
 
 	const renderCheckoutItems = () => {
 		if (!cart.length) {
 			checkoutItemsNode.innerHTML = '<li class="text-muted">Your cart is empty</li>';
+			if (checkoutShippingNode) {
+				checkoutShippingNode.textContent = store.formatPrice(0);
+			}
 			checkoutTotalNode.textContent = store.formatPrice(0);
 			if (placeOrderBtn) {
 				placeOrderBtn.disabled = true;
@@ -39,7 +46,7 @@
 					<li class="summary-item d-flex justify-content-between align-items-center py-2 border-bottom">
 						<div>
 							<span class="d-block">${item.name}</span>
-							<small class="text-muted">Qty: ${item.quantity}</small>
+							<small class="text-muted">Qty: ${item.quantity}${item.selectedFragrances?.length ? ` · ${item.selectedFragrances.map((fragrance) => fragrance.label).join(", ")}` : ""}${item.selectedTrays?.length ? ` · ${item.selectedTrays.map((tray) => tray.label).join(", ")}` : ""}</small>
 						</div>
 						<strong>${store.formatPrice(lineTotal)}</strong>
 					</li>
@@ -48,7 +55,11 @@
 			.join("");
 
 		const subtotal = getSubtotal();
-		const total = subtotal + (subtotal > 0 ? DELIVERY_FEE : 0);
+		const deliveryFee = getDeliveryFee(subtotal);
+		const total = subtotal + (subtotal > 0 ? deliveryFee : 0);
+		if (checkoutShippingNode) {
+			checkoutShippingNode.textContent = formatDelivery(subtotal);
+		}
 		checkoutTotalNode.textContent = store.formatPrice(total);
 
 		if (mobilePlaceOrderBtn) {
@@ -69,7 +80,7 @@
 		cart = [];
 	};
 
-	const showOrderConfirmation = (formData) => {
+	const showOrderConfirmation = (formData, orderSummary) => {
 		checkoutForm.classList.add("d-none");
 		placeOrderBtn.classList.add("d-none");
 
@@ -86,8 +97,8 @@
 				day: "numeric"
 			});
 
-			const subtotal = getSubtotal();
-			const total = subtotal + (subtotal > 0 ? DELIVERY_FEE : 0);
+			const { subtotal, total } = orderSummary;
+			const deliveryLabel = subtotal > 0 ? formatDelivery(subtotal) : store.formatPrice(0);
 
 			orderConfirmationNode.innerHTML = `
 				<div class="alert alert-success" role="alert">
@@ -98,7 +109,7 @@
 					<hr>
 					<p class="mb-2">
 						<small>Subtotal: ${store.formatPrice(subtotal)}</small><br>
-						<small>Delivery: ${subtotal > 0 ? store.formatPrice(DELIVERY_FEE) : store.formatPrice(0)}</small><br>
+						<small>Delivery: ${deliveryLabel}</small><br>
 						<strong>Total: ${store.formatPrice(total)}</strong>
 					</p>
 					<hr>
@@ -198,8 +209,11 @@
 			}
 
 			setTimeout(() => {
+				const subtotal = getSubtotal();
+				const deliveryFee = getDeliveryFee(subtotal);
+				const total = subtotal + (subtotal > 0 ? deliveryFee : 0);
 				clearCart();
-				showOrderConfirmation(formData);
+				showOrderConfirmation(formData, { subtotal, total });
 				store.showToast("Order placed successfully!");
 
 				// Update cart badge automatically

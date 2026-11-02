@@ -407,6 +407,72 @@
 			]
 		},
 		{
+			id: "the-duo-set",
+			name: "The Duo Set",
+			price: 40,
+			valuePrice: 44,
+			savings: 4,
+			category: "Bundle",
+			badge: "$44 Value",
+			image: "img/Bundle 1.jpg",
+			images: [
+				"img/Bundle 1.jpg"
+			],
+			bundleConfig: {
+				size: 2,
+				fragrances: [
+					{ id: "quiet-chypre-jar", label: "Quiet Chypre" },
+					{ id: "clear-night-jar", label: "Clear Night" },
+					{ id: "neroli-veil-jar", label: "Neroli Veil" },
+					{ id: "soft-resin-jar", label: "Soft Resin" }
+				]
+			},
+			description: "Create your own pair of signature 10 oz candle jars. Choose any two fragrances and enjoy a considered bundle price.",
+			details: [
+				{
+					title: "Bundle Contents",
+					description: "Includes 2 x 10 oz / 283 g candle jars. Choose any two fragrances from Quiet Chypre, Clear Night, Neroli Veil, and Soft Resin. Each candle is crafted with a natural coconut soy wax blend for a clean, even burn of up to 45 hours."
+				},
+				{
+					title: "Bundle Value",
+					description: "Individual value: $44. Bundle price: $40."
+				}
+			]
+		},
+		{
+			id: "the-collection-set",
+			name: "The Collection Set",
+			price: 78,
+			valuePrice: 88,
+			savings: 10,
+			category: "Bundle",
+			badge: "$88 Value",
+			image: "img/bundle 2.jpg",
+			images: [
+				"img/bundle 2.jpg"
+			],
+			bundleConfig: {
+				size: 4,
+				fragrances: [
+					{ id: "quiet-chypre-jar", label: "Quiet Chypre" },
+					{ id: "clear-night-jar", label: "Clear Night" },
+					{ id: "neroli-veil-jar", label: "Neroli Veil" },
+					{ id: "soft-resin-jar", label: "Soft Resin" }
+				]
+			},
+			description: "Bring home all four signature 10 oz candle jars in one complete collection, with the freedom to choose your fragrance mix.",
+			details: [
+				{
+					title: "Bundle Contents",
+					description: "Includes 4 x 10 oz / 283 g candle jars. Choose four fragrances from Quiet Chypre, Clear Night, Neroli Veil, and Soft Resin. Each candle is crafted with a natural coconut soy wax blend for a clean, even burn of up to 45 hours."
+				},
+				{
+					title: "Bundle Value",
+					description: "Individual value: $88. Bundle price: $78."
+				}
+			]
+		},
+		{
 			id: "veiled-chypre-set",
 			name: "Veiled Chypre Set",
 			price: 27,
@@ -491,15 +557,72 @@
 			]
 		},
 		{
+			id: "candle-tin-duo-set",
+			name: "Candle Tin Duo Set",
+			price: 18,
+			valuePrice: 20,
+			category: "Bundle",
+			badge: "$20 Value",
+			image: "img/Tin set.jpg",
+			images: [
+				"img/Tin set.jpg"
+			],
+			bundleConfig: {
+				size: 4,
+				fragrances: [
+					{ id: "clear-night-tin", label: "Clear Night" },
+					{ id: "soft-resin-tin", label: "Soft Resin" },
+					{ id: "neroli-veil-tin", label: "Neroli Veil" },
+					{ id: "quiet-chypre-tin", label: "Quiet Chypre" }
+				]
+			},
+			description: "Build your own set of four signature 4 oz candle tins. Choose from all four fragrances and enjoy a special bundle price.",
+			details: [
+				{
+					title: "Bundle Contents",
+					description: "Includes 4 x 4 oz / 113 g candle tins. Choose four fragrances from Clear Night, Soft Resin, Neroli Veil, and Quiet Chypre. Each tin is crafted with a natural coconut soy wax blend for a clean, even burn of up to 20 hours."
+				},
+				{
+					title: "Bundle Value",
+					description: "Individual value: $20. Bundle price: $18."
+				}
+			]
+		},
+		{
 			id: "the signature-gift-set",
 			name: "The Signature Gift Set",
 			price: 25,
+			valuePrice: 26.8,
 			category: "Bundle",
-			badge: "Custom",
+			badge: "$26.80 Value",
 			image: "img/Signature set.jpg",
 			images: [
 				"img/Signature set.jpg",
 			],
+			bundleConfig: {
+				size: 1,
+				fragrances: [
+					{ id: "quiet-chypre-jar", label: "Quiet Chypre" },
+					{ id: "clear-night-jar", label: "Clear Night" },
+					{ id: "neroli-veil-jar", label: "Neroli Veil" },
+					{ id: "soft-resin-jar", label: "Soft Resin" }
+				],
+				trays: [
+					{ id: "blue-heart-tray-with-lumen-moe-band", label: "Blue Heart Tray", image: "img/Blue Heart Tray with Lumen Moe Band.jpg" },
+					{ id: "cobalt-marbled-tray-with-brand-band", label: "Cobalt Marbled Tray", image: "img/Cobalt Marbled Tray with Brand Band.jpg" },
+					{ id: "lavender-tray-with-lumen-moe-band", label: "Lavender Tray", image: "img/Lavender Tray with Lumen Moe Band.jpg" },
+					{ id: "marbled-blue-tray", label: "Marbled Blue Tray", image: "img/Marbled Blue Tray.jpg" },
+					{ id: "marbled-orange-lumen-moe-tray", label: "Marbled Orange Tray", image: "img/Marbled Orange Lumen Moe Tray.jpg" },
+					{ id: "marbled-resin-tray-with-lumen-moe-sleeve", label: "Marbled Red Tray", image: "img/Marbled Resin Tray with Lumen Moe Sleeve.jpg" },
+					{ id: "marbled-tray-with-lumen-moe-band", label: "Mocha Swirl Tray", image: "img/Marbled Tray with Lumen Moe Band.jpg" },
+					{ id: "mauve-lumen-moe-tray", label: "Dusty Rose Tray", image: "img/Mauve Lumen Moe Tray.jpg" },
+					{ id: "minimalist-lumen-moe-tray", label: "Minimalist Tray", image: "img/Minimalist Lumen Moe Tray Product Shot.jpg" },
+					{ id: "red-heart-tray", label: "Red Heart Tray", image: "img/Red Heart Tray.jpg" },
+					{ id: "sage-green-tray", label: "Sage Green Tray", image: "img/Sage Green Tray.jpg" },
+					{ id: "tan-oval-tray", label: "Tan Oval Tray", image: "img/Tan Oval Tray.jpg" },
+					{ id: "two-tone-teal-and-cream-resin-tray", label: "Two-Tone Teal and Cream Tray", image: "img/Two-Tone Teal and Cream Resin Tray.jpg" }
+				]
+			},
 			description: "A beautifully paired candle jar and handcrafted concrete tray, perfect for creating a calm and elegant atmosphere in any space.",
 			details: [
 				{
@@ -866,6 +989,25 @@
 		},
 	];
 
+	const getBundlePricing = (product) => {
+		if (!product || product.category !== "Bundle" || typeof product.price !== "number") {
+			return null;
+		}
+
+		const valuePrice = typeof product.valuePrice === "number"
+			? product.valuePrice
+			: Number.parseFloat(String(product.badge || "").match(/\$([\d.]+)\s*Value/i)?.[1]);
+
+		if (!Number.isFinite(valuePrice) || valuePrice <= product.price) {
+			return null;
+		}
+
+		return {
+			valuePrice,
+			savings: valuePrice - product.price
+		};
+	};
+
 	const CART_KEY = "lumen_cart";
 	const RECOMMENDATION_KEY = "lumen_recommendations";
 	const MAX_RECOMMENDATION_HISTORY = 40;
@@ -1052,7 +1194,8 @@
 		}
 
 		const qty = Math.min(Math.max(Number(quantity) || 1, 1), 99);
-		const option = product.options?.find((item) => item.id === selectedOption?.id) || product.options?.[0];
+		const option = product.options?.find((item) => item.id === selectedOption?.id)
+			|| (selectedOption?.id && product.bundleConfig ? selectedOption : product.options?.[0]);
 		const price = option ? option.price : product.price;
 		const itemId = option ? `${product.id}:${option.id}` : product.id;
 		const itemName = option ? `${product.name} (${option.label})` : product.name;
@@ -1069,7 +1212,9 @@
 				name: itemName,
 				price,
 				image: product.image,
-				quantity: qty
+				quantity: qty,
+				selectedFragrances: option?.selectedFragrances || undefined,
+				selectedTrays: option?.selectedTrays || undefined
 			});
 		}
 
@@ -1108,6 +1253,7 @@
 	window.LumenStore = {
 		products: PRODUCT_CATALOG,
 		getProductById,
+		getBundlePricing,
 		getRecommendations,
 		recordProductView,
 		formatPrice,

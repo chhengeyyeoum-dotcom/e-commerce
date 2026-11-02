@@ -24,6 +24,7 @@
 	}
 
 	const DELIVERY_FEE = 1.50;
+	const FREE_DELIVERY_THRESHOLD = 50;
 	const TELEGRAM_CHECKOUT_URL = "https://t.me/lumenmoe";
 	let cart = store.getCart();
 
@@ -53,6 +54,8 @@
 	};
 
 	const getSubtotal = () => cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+	const getDeliveryFee = (subtotal) => subtotal >= FREE_DELIVERY_THRESHOLD ? 0 : DELIVERY_FEE;
+	const formatDelivery = (subtotal) => subtotal >= FREE_DELIVERY_THRESHOLD ? "FREE" : store.formatPrice(DELIVERY_FEE);
 
 	const updateMobileCheckoutText = (amount) => {
 		if (!mobileCheckoutBtn) {
@@ -136,7 +139,7 @@
 							</div>
 							<div class="flex-grow-1">
 								<h3 class="product-name mb-1">${item.name}</h3>
-								<p class="product-price mb-2">${store.formatPrice(item.price)} each</p>
+								<p class="product-price mb-2">${store.formatPrice(item.price)} each${item.selectedFragrances?.length ? `<br><small>Fragrances: ${item.selectedFragrances.map((fragrance) => fragrance.label).join(", ")}</small>` : ""}${item.selectedTrays?.length ? `<br><small>Tray: ${item.selectedTrays.map((tray) => tray.label).join(", ")}</small>` : ""}</p>
 								<div class="d-flex flex-wrap gap-2 align-items-center justify-content-between">
 									<div class="d-inline-flex align-items-center overflow-hidden">
 										<button type="button" class="qty-btn" data-action="decrease" aria-label="Decrease quantity">-</button>
@@ -154,9 +157,10 @@
 			.join("");
 
 		const subtotal = getSubtotal();
-		const total = subtotal > 0 ? subtotal + DELIVERY_FEE : 0;
+		const deliveryFee = getDeliveryFee(subtotal);
+		const total = subtotal > 0 ? subtotal + deliveryFee : 0;
 		subtotalNode.textContent = store.formatPrice(subtotal);
-		shippingNode.textContent = subtotal > 0 ? store.formatPrice(DELIVERY_FEE) : store.formatPrice(0);
+		shippingNode.textContent = subtotal > 0 ? formatDelivery(subtotal) : store.formatPrice(0);
 		totalNode.textContent = store.formatPrice(total);
 		setCheckoutState({ isEmpty: false, total });
 	};

@@ -48,8 +48,17 @@
 	};
 
 	const createProductCard = (product) => {
-		const badgeMarkup = product.badge ? `<span class="product-badge">${product.badge}</span>` : "";
+		const isValueBadge = /^\$[\d.]+\s+Value$/i.test(product.badge || "");
+		const badgeMarkup = product.badge && !isValueBadge
+			? `<span class="product-badge">${product.badge}</span>`
+			: "";
 		const productLink = `product.html?id=${encodeURIComponent(product.id)}`;
+
+		const bundlePricing = store.getBundlePricing(product);
+		const priceMarkup = bundlePricing
+			? `<span class="bundle-value-price">${store.formatPrice(bundlePricing.valuePrice)}</span><span class="bundle-price">${store.formatPrice(product.price)}</span>`
+			: store.formatPrice(product.price);
+		const actionLabel = product.bundleConfig ? "Choose Fragrances" : "Add to Cart";
 
 		return `
 			<div class="col-6 col-md-3">
@@ -64,8 +73,8 @@
 						<h3 class="product-name">
 							<a class="product-link" href="${productLink}">${product.name}</a>
 						</h3>
-						<p class="product-price">${store.formatPrice(product.price)}</p>
-						<button type="button" class="shop-add-cart-btn" data-product-id="${product.id}">Add to Cart</button>
+						<p class="product-price">${priceMarkup}</p>
+						<button type="button" class="shop-add-cart-btn" data-product-id="${product.id}">${actionLabel}</button>
 					</div>
 				</article>
 			</div>
@@ -133,6 +142,11 @@
 
 		const product = store.getProductById(productId);
 		if (!product) {
+			return;
+		}
+
+		if (product.bundleConfig) {
+			window.location.href = `product.html?id=${encodeURIComponent(product.id)}`;
 			return;
 		}
 
