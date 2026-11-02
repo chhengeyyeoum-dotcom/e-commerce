@@ -166,7 +166,9 @@ a {
 
 .product-card {
 	position: relative;
-	display: block;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
 	border-radius: 0;
 	overflow: hidden;
 	background-color: var(--card-bg);
@@ -234,6 +236,9 @@ a {
 
 .product-meta {
 	padding: 0.95rem 0 0;
+	display: flex;
+	flex-direction: column;
+	flex: 1;
 }
 
 .product-name {
@@ -251,11 +256,22 @@ a {
 	font-size: 0.9rem;
 	padding-inline: 0.95rem;
 	outline: none;
+	min-height: 2.7rem;
+}
+
+.bundle-value-price {
+	margin-right: 0.35rem;
+	text-decoration: line-through;
+}
+
+.bundle-price {
+	color: #11120d;
+	font-weight: 700;
 }
 
 .shop-add-cart-btn {
 	width: 100%;
-	margin-top: 0.65rem;
+	margin-top: auto;
 	padding: 0.58rem 0.75rem;
 	border: 1px solid #11120d;
 	background-color: #11120d;
@@ -433,6 +449,3 @@ a {
 		padding: 12px 16px;
 	}
 }
-
-
-

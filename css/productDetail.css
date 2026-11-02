@@ -1,4 +1,4 @@
-﻿:root {
+:root {
 	--bg-main: #fffbf4;
 	--bg-alt: #fffbf4;
 	--text-main: #11120d;
@@ -103,6 +103,8 @@ a {
 	gap: 0.7rem;
 	flex-shrink: 0;
 	width: 80px;
+	max-height: 520px;
+	overflow-y: auto;
 	margin-top: clamp(0.65rem, 1.3vw, 0.95rem);
 }
 
@@ -234,6 +236,108 @@ a {
 	font-weight: 600;
 	color: #11120d;
 	letter-spacing: 0.02em;
+}
+
+.bundle-value-price {
+	margin-right: 0.5rem;
+	color: var(--text-muted);
+	font-size: 0.95rem;
+	text-decoration: line-through;
+	font-weight: 500;
+}
+
+.bundle-price {
+	margin-right: 0.5rem;
+	color: #11120d;
+}
+
+.bundle-selection-help,
+.bundle-selection-status {
+	color: var(--text-muted);
+	font-size: 0.8rem;
+}
+
+.bundle-option-accordion {
+	border-bottom: 1px solid var(--line-soft);
+}
+
+.bundle-option-header {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	padding: 0.85rem 0;
+	border: 0;
+	background: transparent;
+	color: var(--text-main);
+	text-align: left;
+	cursor: pointer;
+}
+
+.bundle-option-header > span {
+	display: flex;
+	flex-direction: column;
+	gap: 0.15rem;
+}
+
+.bundle-option-header i {
+	transition: transform 0.25s ease;
+}
+
+.bundle-option-header[aria-expanded="true"] i {
+	transform: rotate(180deg);
+}
+
+.bundle-option-summary {
+	color: var(--text-muted);
+	font-size: 0.75rem;
+	font-weight: 400;
+}
+
+.bundle-option-panel {
+	display: grid;
+	grid-template-rows: 0fr;
+	transition: grid-template-rows 0.25s ease, opacity 0.25s ease;
+	opacity: 0;
+}
+
+.bundle-option-panel > fieldset {
+	overflow: hidden;
+	min-height: 0;
+	margin: 0;
+}
+
+.bundle-option-panel.show {
+	grid-template-rows: 1fr;
+	opacity: 1;
+	padding-bottom: 0.75rem;
+}
+
+.bundle-tray-options {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(88px, 1fr));
+	gap: 0.65rem;
+}
+
+.bundle-tray-option {
+	display: flex;
+	flex-direction: column;
+	gap: 0.3rem;
+	color: var(--text-main);
+	font-size: 0.7rem;
+	cursor: pointer;
+}
+
+.bundle-tray-option img {
+	width: 100%;
+	aspect-ratio: 1;
+	object-fit: cover;
+	border: 1px solid transparent;
+}
+
+.bundle-tray-option:has(.bundle-tray-input:checked) img {
+	border-color: var(--text-main);
 }
 
 .product-description {
@@ -645,17 +749,17 @@ a {
 
 	.thumbnail-gallery {
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
+		max-height: 240px;
 		width: 100%;
 		order: 2;
-		overflow-x: auto;
-		scroll-snap-type: x mandatory;
+		overflow-y: auto;
 		-webkit-overflow-scrolling: touch;
 		padding-bottom: 0.35rem;
 	}
 
 	.thumbnail-gallery::-webkit-scrollbar {
-		height: 6px;
+		width: 6px;
 	}
 
 	.thumbnail-gallery::-webkit-scrollbar-thumb {
@@ -667,7 +771,6 @@ a {
 		flex: 0 0 auto;
 		width: 80px;
 		height: 100px;
-		scroll-snap-align: start;
 	}
 
 	.quantity-wrap {
@@ -750,6 +853,3 @@ a {
 		overflow: visible;
 	}
 }
-
-
-
