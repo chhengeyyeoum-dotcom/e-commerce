@@ -21,7 +21,7 @@
         <section class="admin-card" aria-labelledby="setupTitle">
             <p class="admin-kicker">Administrator access</p>
             <h1 id="setupTitle">Create your password</h1>
-            <p id="setupIntro" class="admin-intro">Checking your invitation securely...</p>
+            <p id="setupIntro" class="admin-intro">Checking your administrator link securely...</p>
             <form id="setupForm" class="admin-form" hidden>
                 <label for="password">Password
                     <input id="password" name="password" type="password" autocomplete="new-password" minlength="8" required>
@@ -32,6 +32,15 @@
                 <button class="admin-button" type="submit">Set password</button>
             </form>
             <p id="setupStatus" class="admin-status" role="status" aria-live="polite"></p>
+            <div class="admin-divider" aria-hidden="true"></div>
+            <h2 class="admin-subtitle">Forgot your password?</h2>
+            <p class="admin-intro">Request a secure password-reset link by email.</p>
+            <form id="resetForm" class="admin-form">
+                <label for="resetEmail">Email
+                    <input id="resetEmail" name="resetEmail" type="email" autocomplete="email" required>
+                </label>
+                <button class="admin-button" type="submit">Request reset link</button>
+            </form>
             <a id="setupLoginLink" class="admin-link" href="./login.html" hidden>Go to administrator login</a>
         </section>
     </main>
