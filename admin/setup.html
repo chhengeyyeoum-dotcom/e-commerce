@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set up administrator access | Lumen Moe</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./admin.css">
+    <link rel="icon" href="../img/Monogram.png" type="image/png">
+</head>
+<body>
+    <header class="admin-nav">
+        <a class="admin-brand" href="../index.html" aria-label="Lumen Moe home">
+            <img src="../img/web.png" alt="Lumen Moe">
+        </a>
+    </header>
+    <main class="admin-main">
+        <section class="admin-card" aria-labelledby="setupTitle">
+            <p class="admin-kicker">Administrator access</p>
+            <h1 id="setupTitle">Create your password</h1>
+            <p id="setupIntro" class="admin-intro">Checking your invitation securely...</p>
+            <form id="setupForm" class="admin-form" hidden>
+                <label for="password">Password
+                    <input id="password" name="password" type="password" autocomplete="new-password" minlength="8" required>
+                </label>
+                <label for="passwordConfirmation">Confirm password
+                    <input id="passwordConfirmation" name="passwordConfirmation" type="password" autocomplete="new-password" minlength="8" required>
+                </label>
+                <button class="admin-button" type="submit">Set password</button>
+            </form>
+            <p id="setupStatus" class="admin-status" role="status" aria-live="polite"></p>
+            <a id="setupLoginLink" class="admin-link" href="./login.html" hidden>Go to administrator login</a>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/supabase-client.js" defer></script>
+    <script src="./setup.js" defer></script>
+</body>
+</html>

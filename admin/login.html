@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrator login | Lumen Moe</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./admin.css">
+    <link rel="icon" href="../img/Monogram.png" type="image/png">
+</head>
+<body>
+    <header class="admin-nav">
+        <a class="admin-brand" href="../index.html" aria-label="Lumen Moe home">
+            <img src="../img/web.png" alt="Lumen Moe">
+        </a>
+    </header>
+    <main class="admin-main">
+        <section class="admin-card" aria-labelledby="loginTitle">
+            <p class="admin-kicker">Administrator access</p>
+            <h1 id="loginTitle">Sign in</h1>
+            <p class="admin-intro">Use the administrator account invited by Lumen Moe.</p>
+            <form id="loginForm" class="admin-form">
+                <label for="email">Email
+                    <input id="email" name="email" type="email" autocomplete="username" required>
+                </label>
+                <label for="password">Password
+                    <input id="password" name="password" type="password" autocomplete="current-password" required>
+                </label>
+                <button class="admin-button" type="submit">Sign in</button>
+            </form>
+            <p id="loginStatus" class="admin-status" role="status" aria-live="polite"></p>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/supabase-client.js" defer></script>
+    <script src="./login.js" defer></script>
+</body>
+</html>

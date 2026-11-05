@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrator dashboard | Lumen Moe</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./admin.css">
+    <link rel="icon" href="../img/Monogram.png" type="image/png">
+</head>
+<body>
+    <header class="admin-nav">
+        <a class="admin-brand" href="../index.html" aria-label="Lumen Moe home">
+            <img src="../img/web.png" alt="Lumen Moe">
+        </a>
+    </header>
+    <main class="admin-main">
+        <section class="admin-card dashboard-card" aria-labelledby="dashboardTitle">
+            <div class="dashboard-header">
+                <div>
+                    <p class="admin-kicker">Lumen Moe administration</p>
+                    <h1 id="dashboardTitle">Dashboard</h1>
+                </div>
+                <button id="logoutButton" class="admin-button" type="button">Log out</button>
+            </div>
+            <p id="dashboardStatus" class="admin-status" role="status" aria-live="polite">Checking administrator access...</p>
+            <p id="dashboardCopy" class="dashboard-copy" hidden>This protected workspace is ready for administrator tools.</p>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/supabase-client.js" defer></script>
+    <script src="./index.js" defer></script>
+</body>
+</html>
